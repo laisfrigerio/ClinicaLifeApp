@@ -1,0 +1,600 @@
+
+
+Version:	3.10
+CmdLine:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\Clinica Life App.exe --l4j-debug
+WOW64:		yes
+Working dir:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\.
+Java min ver:	1.8.0
+Java max ver:	
+64-bit search:	SOFTWARE\JavaSoft\Java Runtime Environment...
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8
+Ignore:		1.8
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8.0_60
+Check launcher:	C:\Program Files\Java\jre1.8.0_60\bin\javaw.exe (OK)
+Match:		1.8.0_060
+64-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8
+Ignore:		1.8
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8.0_60
+Ignore:		1.8.0_060
+64-bit search:	SOFTWARE\JavaSoft\JRE...
+64-bit search:	SOFTWARE\JavaSoft\JDK...
+Runtime used:	1.8.0_060 (64-bit)
+Main class:	clinicalife.ClinicaLife
+Add classpath:	lib\AbsoluteLayout.jar
+Add classpath:	lib\dom4j-1.6.1.jar
+Add classpath:	lib\mysql-connector-java-5.1.23-bin.jar
+Add classpath:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\lib\jcalendar-1.4.jar
+Launcher:	C:\Program Files\Java\jre1.8.0_60\bin\javaw.exe
+Launcher args:	-classpath "C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\Clinica Life App.exe;lib\AbsoluteLayout.jar;lib\dom4j-1.6.1.jar;lib\mysql-connector-java-5.1.23-bin.jar;C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\lib\jcalendar-1.4.jar" clinicalife.ClinicaLife
+Args length:	276/32768 chars
+Exit code:	0
+
+
+Version:	3.10
+CmdLine:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\Clinica Life App.exe --l4j-debug
+WOW64:		yes
+Working dir:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\.
+Java min ver:	1.8.0
+Java max ver:	
+64-bit search:	SOFTWARE\JavaSoft\Java Runtime Environment...
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8
+Ignore:		1.8
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8.0_60
+Check launcher:	C:\Program Files\Java\jre1.8.0_60\bin\javaw.exe (OK)
+Match:		1.8.0_060
+64-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8
+Ignore:		1.8
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8.0_60
+Ignore:		1.8.0_060
+64-bit search:	SOFTWARE\JavaSoft\JRE...
+64-bit search:	SOFTWARE\JavaSoft\JDK...
+Runtime used:	1.8.0_060 (64-bit)
+Main class:	clinicalife.ClinicaLife
+Add classpath:	lib\AbsoluteLayout.jar
+Add classpath:	lib\dom4j-1.6.1.jar
+Add classpath:	lib\mysql-connector-java-5.1.23-bin.jar
+Add classpath:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\lib\jcalendar-1.4.jar
+Launcher:	C:\Program Files\Java\jre1.8.0_60\bin\javaw.exe
+Launcher args:	-classpath "C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\Clinica Life App.exe;lib\AbsoluteLayout.jar;lib\dom4j-1.6.1.jar;lib\mysql-connector-java-5.1.23-bin.jar;C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\lib\jcalendar-1.4.jar" clinicalife.ClinicaLife
+Args length:	276/32768 chars
+Exit code:	0
+
+
+Version:	3.10
+CmdLine:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\Clinica Life App.exe --l4j-debug
+WOW64:		yes
+Working dir:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\.
+Java min ver:	1.8.0
+Java max ver:	
+64-bit search:	SOFTWARE\JavaSoft\Java Runtime Environment...
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8
+Ignore:		1.8
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8.0_60
+Check launcher:	C:\Program Files\Java\jre1.8.0_60\bin\javaw.exe (OK)
+Match:		1.8.0_060
+64-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8
+Ignore:		1.8
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8.0_60
+Ignore:		1.8.0_060
+64-bit search:	SOFTWARE\JavaSoft\JRE...
+64-bit search:	SOFTWARE\JavaSoft\JDK...
+Runtime used:	1.8.0_060 (64-bit)
+Main class:	clinicalife.ClinicaLife
+Add classpath:	lib\AbsoluteLayout.jar
+Add classpath:	lib\dom4j-1.6.1.jar
+Add classpath:	lib\mysql-connector-java-5.1.23-bin.jar
+Add classpath:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\lib\jcalendar-1.4.jar
+Launcher:	C:\Program Files\Java\jre1.8.0_60\bin\javaw.exe
+Launcher args:	-classpath "C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\Clinica Life App.exe;lib\AbsoluteLayout.jar;lib\dom4j-1.6.1.jar;lib\mysql-connector-java-5.1.23-bin.jar;C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\lib\jcalendar-1.4.jar" clinicalife.ClinicaLife
+Args length:	276/32768 chars
+Exit code:	0
+
+
+Version:	3.10
+CmdLine:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\Clinica Life App.exe --l4j-debug
+WOW64:		yes
+Working dir:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\.
+Java min ver:	1.8.0
+Java max ver:	
+64-bit search:	SOFTWARE\JavaSoft\Java Runtime Environment...
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8
+Ignore:		1.8
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8.0_60
+Check launcher:	C:\Program Files\Java\jre1.8.0_60\bin\javaw.exe (OK)
+Match:		1.8.0_060
+64-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8
+Ignore:		1.8
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8.0_60
+Ignore:		1.8.0_060
+64-bit search:	SOFTWARE\JavaSoft\JRE...
+64-bit search:	SOFTWARE\JavaSoft\JDK...
+Runtime used:	1.8.0_060 (64-bit)
+Main class:	clinicalife.ClinicaLife
+Add classpath:	lib\absolutelayout\AbsoluteLayout.jar
+Add classpath:	lib\dom4j-1.6.1.jar
+Add classpath:	lib\mysql-connector-java-5.1.23-bin.jar
+Add classpath:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\lib\jcalendar-1.4.jar
+Launcher:	C:\Program Files\Java\jre1.8.0_60\bin\javaw.exe
+Launcher args:	-classpath "C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\Clinica Life App.exe;lib\absolutelayout\AbsoluteLayout.jar;lib\dom4j-1.6.1.jar;lib\mysql-connector-java-5.1.23-bin.jar;C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\lib\jcalendar-1.4.jar" clinicalife.ClinicaLife
+Args length:	291/32768 chars
+Exit code:	0
+
+
+Version:	3.10
+CmdLine:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\Clinica Life App.exe --l4j-debug
+WOW64:		yes
+Working dir:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\.
+Java min ver:	1.8.0
+Java max ver:	
+64-bit search:	SOFTWARE\JavaSoft\Java Runtime Environment...
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8
+Ignore:		1.8
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8.0_60
+Check launcher:	C:\Program Files\Java\jre1.8.0_60\bin\javaw.exe (OK)
+Match:		1.8.0_060
+64-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8
+Ignore:		1.8
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8.0_60
+Ignore:		1.8.0_060
+64-bit search:	SOFTWARE\JavaSoft\JRE...
+64-bit search:	SOFTWARE\JavaSoft\JDK...
+Runtime used:	1.8.0_060 (64-bit)
+Main class:	clinicalife.ClinicaLife
+Add classpath:	lib\absolutelayout\AbsoluteLayout.jar
+Add classpath:	lib\dom4j-1.6.1.jar
+Add classpath:	lib\mysql-connector-java-5.1.23-bin.jar
+Add classpath:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\lib\jcalendar-1.4.jar
+Launcher:	C:\Program Files\Java\jre1.8.0_60\bin\javaw.exe
+Launcher args:	-classpath "C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\Clinica Life App.exe;lib\absolutelayout\AbsoluteLayout.jar;lib\dom4j-1.6.1.jar;lib\mysql-connector-java-5.1.23-bin.jar;C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\lib\jcalendar-1.4.jar" clinicalife.ClinicaLife
+Args length:	291/32768 chars
+Exit code:	0
+
+
+Version:	3.10
+CmdLine:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\Clinica Life App.exe --l4j-debug
+WOW64:		yes
+Working dir:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\.
+Java min ver:	1.8.0
+Java max ver:	
+64-bit search:	SOFTWARE\JavaSoft\Java Runtime Environment...
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8
+Ignore:		1.8
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8.0_60
+Check launcher:	C:\Program Files\Java\jre1.8.0_60\bin\javaw.exe (OK)
+Match:		1.8.0_060
+64-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8
+Ignore:		1.8
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8.0_60
+Ignore:		1.8.0_060
+64-bit search:	SOFTWARE\JavaSoft\JRE...
+64-bit search:	SOFTWARE\JavaSoft\JDK...
+Runtime used:	1.8.0_060 (64-bit)
+Main class:	clinicalife.ClinicaLife
+Add classpath:	lib\absolutelayout\AbsoluteLayout.jar
+Add classpath:	lib\dom4j-1.6.1.jar
+Add classpath:	lib\mysql-connector-java-5.1.23-bin.jar
+Add classpath:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\lib\jcalendar-1.4.jar
+Launcher:	C:\Program Files\Java\jre1.8.0_60\bin\javaw.exe
+Launcher args:	-classpath "C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\Clinica Life App.exe;lib\absolutelayout\AbsoluteLayout.jar;lib\dom4j-1.6.1.jar;lib\mysql-connector-java-5.1.23-bin.jar;C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\lib\jcalendar-1.4.jar" clinicalife.ClinicaLife
+Args length:	291/32768 chars
+Exit code:	0
+
+
+Version:	3.10
+CmdLine:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\Clinica Life App.exe --l4j-debug
+WOW64:		yes
+Working dir:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\.
+Java min ver:	1.8.0
+Java max ver:	
+64-bit search:	SOFTWARE\JavaSoft\Java Runtime Environment...
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8
+Ignore:		1.8
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8.0_60
+Check launcher:	C:\Program Files\Java\jre1.8.0_60\bin\javaw.exe (OK)
+Match:		1.8.0_060
+64-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8
+Ignore:		1.8
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8.0_60
+Ignore:		1.8.0_060
+64-bit search:	SOFTWARE\JavaSoft\JRE...
+64-bit search:	SOFTWARE\JavaSoft\JDK...
+Runtime used:	1.8.0_060 (64-bit)
+Main class:	clinicalife.ClinicaLife
+Add classpath:	lib\absolutelayout\AbsoluteLayout.jar
+Add classpath:	lib\dom4j-1.6.1.jar
+Add classpath:	lib\mysql-connector-java-5.1.23-bin.jar
+Add classpath:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\lib\jcalendar-1.4.jar
+Launcher:	C:\Program Files\Java\jre1.8.0_60\bin\javaw.exe
+Launcher args:	-classpath "C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\Clinica Life App.exe;lib\absolutelayout\AbsoluteLayout.jar;lib\dom4j-1.6.1.jar;lib\mysql-connector-java-5.1.23-bin.jar;C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\lib\jcalendar-1.4.jar" clinicalife.ClinicaLife
+Args length:	291/32768 chars
+Exit code:	0
+
+
+Version:	3.10
+CmdLine:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\Clinica Life App.exe --l4j-debug
+WOW64:		yes
+Working dir:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\.
+Java min ver:	1.8.0
+Java max ver:	
+64-bit search:	SOFTWARE\JavaSoft\Java Runtime Environment...
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8
+Ignore:		1.8
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8.0_60
+Check launcher:	C:\Program Files\Java\jre1.8.0_60\bin\javaw.exe (OK)
+Match:		1.8.0_060
+64-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8
+Ignore:		1.8
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8.0_60
+Ignore:		1.8.0_060
+64-bit search:	SOFTWARE\JavaSoft\JRE...
+64-bit search:	SOFTWARE\JavaSoft\JDK...
+Runtime used:	1.8.0_060 (64-bit)
+Main class:	clinicalife.ClinicaLife
+Add classpath:	lib\absolutelayout\AbsoluteLayout.jar
+Add classpath:	lib\dom4j-1.6.1.jar
+Add classpath:	lib\mysql-connector-java-5.1.23-bin.jar
+Add classpath:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\lib\jcalendar-1.4.jar
+Launcher:	C:\Program Files\Java\jre1.8.0_60\bin\javaw.exe
+Launcher args:	-classpath "C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\Clinica Life App.exe;lib\absolutelayout\AbsoluteLayout.jar;lib\dom4j-1.6.1.jar;lib\mysql-connector-java-5.1.23-bin.jar;C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\lib\jcalendar-1.4.jar" clinicalife.ClinicaLife
+Args length:	291/32768 chars
+Exit code:	0
+
+
+Version:	3.10
+CmdLine:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\Clinica Life App.exe --l4j-debug
+WOW64:		yes
+Working dir:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\.
+Java min ver:	1.8.0
+Java max ver:	
+64-bit search:	SOFTWARE\JavaSoft\Java Runtime Environment...
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8
+Ignore:		1.8
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8.0_60
+Check launcher:	C:\Program Files\Java\jre1.8.0_60\bin\javaw.exe (OK)
+Match:		1.8.0_060
+64-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8
+Ignore:		1.8
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8.0_60
+Ignore:		1.8.0_060
+64-bit search:	SOFTWARE\JavaSoft\JRE...
+64-bit search:	SOFTWARE\JavaSoft\JDK...
+Runtime used:	1.8.0_060 (64-bit)
+Main class:	clinicalife.ClinicaLife
+Add classpath:	lib\absolutelayout\AbsoluteLayout.jar
+Add classpath:	lib\dom4j-1.6.1.jar
+Add classpath:	lib\mysql-connector-java-5.1.23-bin.jar
+Add classpath:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\lib\jcalendar-1.4.jar
+Launcher:	C:\Program Files\Java\jre1.8.0_60\bin\javaw.exe
+Launcher args:	-classpath "C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\Clinica Life App.exe;lib\absolutelayout\AbsoluteLayout.jar;lib\dom4j-1.6.1.jar;lib\mysql-connector-java-5.1.23-bin.jar;C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\lib\jcalendar-1.4.jar" clinicalife.ClinicaLife
+Args length:	291/32768 chars
+Exit code:	0
+
+
+Version:	3.10
+CmdLine:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\Clinica Life App.exe --l4j-debug
+WOW64:		yes
+Working dir:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\.
+Java min ver:	1.8.0
+Java max ver:	
+64-bit search:	SOFTWARE\JavaSoft\Java Runtime Environment...
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8
+Ignore:		1.8
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8.0_60
+Check launcher:	C:\Program Files\Java\jre1.8.0_60\bin\javaw.exe (OK)
+Match:		1.8.0_060
+64-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8
+Ignore:		1.8
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8.0_60
+Ignore:		1.8.0_060
+64-bit search:	SOFTWARE\JavaSoft\JRE...
+64-bit search:	SOFTWARE\JavaSoft\JDK...
+Runtime used:	1.8.0_060 (64-bit)
+Main class:	clinicalife.ClinicaLife
+Add classpath:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\dist\lib\absolutelayout\AbsoluteLayout.jar
+Add classpath:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\dist\lib\dom4j-1.6.1.jar
+Add classpath:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\dist\lib\mysql-connector-java-5.1.23-bin.jar
+Add classpath:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\lib\jcalendar-1.4.jar
+Launcher:	C:\Program Files\Java\jre1.8.0_60\bin\javaw.exe
+Launcher args:	-classpath "C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\Clinica Life App.exe;C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\dist\lib\absolutelayout\AbsoluteLayout.jar;C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\dist\lib\dom4j-1.6.1.jar;C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\dist\lib\mysql-connector-java-5.1.23-bin.jar;C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\lib\jcalendar-1.4.jar" clinicalife.ClinicaLife
+Args length:	477/32768 chars
+Exit code:	1
+
+
+Version:	3.10
+CmdLine:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\Clinica Life App.exe --l4j-debug
+WOW64:		yes
+Working dir:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\.
+Java min ver:	1.8.0
+Java max ver:	
+64-bit search:	SOFTWARE\JavaSoft\Java Runtime Environment...
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8
+Ignore:		1.8
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8.0_60
+Check launcher:	C:\Program Files\Java\jre1.8.0_60\bin\javaw.exe (OK)
+Match:		1.8.0_060
+64-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8
+Ignore:		1.8
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8.0_60
+Ignore:		1.8.0_060
+64-bit search:	SOFTWARE\JavaSoft\JRE...
+64-bit search:	SOFTWARE\JavaSoft\JDK...
+Runtime used:	1.8.0_060 (64-bit)
+Main class:	clinicalife.ClinicaLife
+Add classpath:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\lib\absolutelayout\AbsoluteLayout.jar
+Add classpath:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\dist\lib\dom4j-1.6.1.jar
+Add classpath:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\dist\lib\mysql-connector-java-5.1.23-bin.jar
+Add classpath:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\lib\jcalendar-1.4.jar
+Launcher:	C:\Program Files\Java\jre1.8.0_60\bin\javaw.exe
+Launcher args:	-classpath "C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\Clinica Life App.exe;C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\lib\absolutelayout\AbsoluteLayout.jar;C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\dist\lib\dom4j-1.6.1.jar;C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\dist\lib\mysql-connector-java-5.1.23-bin.jar;C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\lib\jcalendar-1.4.jar" clinicalife.ClinicaLife
+Args length:	472/32768 chars
+Exit code:	0
+
+
+Version:	3.10
+CmdLine:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\Clinica Life App.exe --l4j-debug
+WOW64:		yes
+Working dir:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\.
+Java min ver:	1.8.0
+Java max ver:	
+64-bit search:	SOFTWARE\JavaSoft\Java Runtime Environment...
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8
+Ignore:		1.8
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8.0_60
+Check launcher:	C:\Program Files\Java\jre1.8.0_60\bin\javaw.exe (OK)
+Match:		1.8.0_060
+64-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8
+Ignore:		1.8
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8.0_60
+Ignore:		1.8.0_060
+64-bit search:	SOFTWARE\JavaSoft\JRE...
+64-bit search:	SOFTWARE\JavaSoft\JDK...
+Runtime used:	1.8.0_060 (64-bit)
+Launcher:	C:\Program Files\Java\jre1.8.0_60\bin\javaw.exe
+Launcher args:	-jar "C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\Clinica Life App.exe"
+Args length:	84/32768 chars
+Exit code:	0
+
+
+Version:	3.10
+CmdLine:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\Clinica Life App.exe --l4j-debug
+WOW64:		yes
+Working dir:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\.
+Java min ver:	1.8.0
+Java max ver:	
+64-bit search:	SOFTWARE\JavaSoft\Java Runtime Environment...
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8
+Ignore:		1.8
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8.0_60
+Check launcher:	C:\Program Files\Java\jre1.8.0_60\bin\javaw.exe (OK)
+Match:		1.8.0_060
+64-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8
+Ignore:		1.8
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8.0_60
+Ignore:		1.8.0_060
+64-bit search:	SOFTWARE\JavaSoft\JRE...
+64-bit search:	SOFTWARE\JavaSoft\JDK...
+Runtime used:	1.8.0_060 (64-bit)
+Launcher:	C:\Program Files\Java\jre1.8.0_60\bin\javaw.exe
+Launcher args:	-jar "C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\Clinica Life App.exe"
+Args length:	84/32768 chars
+Exit code:	0
+
+
+Version:	3.10
+CmdLine:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\Clinica Life App.exe --l4j-debug
+WOW64:		yes
+Working dir:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\.
+Java min ver:	1.8.0
+Java max ver:	
+64-bit search:	SOFTWARE\JavaSoft\Java Runtime Environment...
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8
+Ignore:		1.8
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8.0_60
+Check launcher:	C:\Program Files\Java\jre1.8.0_60\bin\javaw.exe (OK)
+Match:		1.8.0_060
+64-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8
+Ignore:		1.8
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8.0_60
+Ignore:		1.8.0_060
+64-bit search:	SOFTWARE\JavaSoft\JRE...
+64-bit search:	SOFTWARE\JavaSoft\JDK...
+Runtime used:	1.8.0_060 (64-bit)
+Launcher:	C:\Program Files\Java\jre1.8.0_60\bin\javaw.exe
+Launcher args:	-jar "C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\Clinica Life App.exe"
+Args length:	84/32768 chars
+Exit code:	0
+
+
+Version:	3.10
+CmdLine:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\Clinica Life App.exe --l4j-debug
+WOW64:		yes
+Working dir:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\.
+Java min ver:	1.8.0
+Java max ver:	
+64-bit search:	SOFTWARE\JavaSoft\Java Runtime Environment...
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8
+Ignore:		1.8
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8.0_60
+Check launcher:	C:\Program Files\Java\jre1.8.0_60\bin\javaw.exe (OK)
+Match:		1.8.0_060
+64-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8
+Ignore:		1.8
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8.0_60
+Ignore:		1.8.0_060
+64-bit search:	SOFTWARE\JavaSoft\JRE...
+64-bit search:	SOFTWARE\JavaSoft\JDK...
+Runtime used:	1.8.0_060 (64-bit)
+Launcher:	C:\Program Files\Java\jre1.8.0_60\bin\javaw.exe
+Launcher args:	-jar "C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\Clinica Life App.exe"
+Args length:	84/32768 chars
+Exit code:	0
+
+
+Version:	3.10
+CmdLine:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\Clinica Life App.exe --l4j-debug
+WOW64:		yes
+Working dir:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\.
+Java min ver:	1.8.0
+Java max ver:	
+64-bit search:	SOFTWARE\JavaSoft\Java Runtime Environment...
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8
+Ignore:		1.8
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8.0_60
+Check launcher:	C:\Program Files\Java\jre1.8.0_60\bin\javaw.exe (OK)
+Match:		1.8.0_060
+64-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8
+Ignore:		1.8
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8.0_60
+Ignore:		1.8.0_060
+64-bit search:	SOFTWARE\JavaSoft\JRE...
+64-bit search:	SOFTWARE\JavaSoft\JDK...
+Runtime used:	1.8.0_060 (64-bit)
+Main class:	clinicalife.ClinicaLife
+Add classpath:	lib\AbsoluteLayout.jar
+Add classpath:	lib\dom4j-1.6.1
+Add classpath:	lib\jcalendar-1.4
+Add classpath:	lib\jcalendar-1.4
+Launcher:	C:\Program Files\Java\jre1.8.0_60\bin\javaw.exe
+Launcher args:	-classpath "C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\Clinica Life App.exe;lib\AbsoluteLayout.jar;lib\dom4j-1.6.1;lib\jcalendar-1.4;lib\jcalendar-1.4" clinicalife.ClinicaLife
+Args length:	189/32768 chars
+Exit code:	0
+
+
+Version:	3.10
+CmdLine:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\Clinica Life App.exe --l4j-debug
+WOW64:		yes
+Working dir:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\.
+Java min ver:	1.8.0
+Java max ver:	
+64-bit search:	SOFTWARE\JavaSoft\Java Runtime Environment...
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8
+Ignore:		1.8
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8.0_60
+Check launcher:	C:\Program Files\Java\jre1.8.0_60\bin\javaw.exe (OK)
+Match:		1.8.0_060
+64-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8
+Ignore:		1.8
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8.0_60
+Ignore:		1.8.0_060
+64-bit search:	SOFTWARE\JavaSoft\JRE...
+64-bit search:	SOFTWARE\JavaSoft\JDK...
+Runtime used:	1.8.0_060 (64-bit)
+Main class:	clinicalife.ClinicaLife
+Add classpath:	lib\AbsoluteLayout.jar
+Add classpath:	lib\dom4j-1.6.1
+Add classpath:	lib\jcalendar-1.4
+Add classpath:	lib\jcalendar-1.4
+Launcher:	C:\Program Files\Java\jre1.8.0_60\bin\javaw.exe
+Launcher args:	-classpath "C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\Clinica Life App.exe;lib\AbsoluteLayout.jar;lib\dom4j-1.6.1;lib\jcalendar-1.4;lib\jcalendar-1.4" clinicalife.ClinicaLife
+Args length:	189/32768 chars
+Exit code:	0
+
+
+Version:	3.10
+CmdLine:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\Clinica Life App.exe --l4j-debug
+WOW64:		yes
+Working dir:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\.
+Java min ver:	1.8.0
+Java max ver:	
+64-bit search:	SOFTWARE\JavaSoft\Java Runtime Environment...
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8
+Ignore:		1.8
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8.0_60
+Check launcher:	C:\Program Files\Java\jre1.8.0_60\bin\javaw.exe (OK)
+Match:		1.8.0_060
+64-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8
+Ignore:		1.8
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8.0_60
+Ignore:		1.8.0_060
+64-bit search:	SOFTWARE\JavaSoft\JRE...
+64-bit search:	SOFTWARE\JavaSoft\JDK...
+Runtime used:	1.8.0_060 (64-bit)
+Main class:	clinicalife.ClinicaLife
+Add classpath:	lib\AbsoluteLayout.jar
+Add classpath:	lib\dom4j-1.6.1
+Add classpath:	lib\jcalendar-1.4
+Add classpath:	lib\mysql-connector-java-5.1.23-bin
+Launcher:	C:\Program Files\Java\jre1.8.0_60\bin\javaw.exe
+Launcher args:	-classpath "C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\Clinica Life App.exe;lib\AbsoluteLayout.jar;lib\dom4j-1.6.1;lib\jcalendar-1.4;lib\mysql-connector-java-5.1.23-bin" clinicalife.ClinicaLife
+Args length:	207/32768 chars
+Exit code:	0
+
+
+Version:	3.10
+CmdLine:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\Clinica Life App.exe --l4j-debug
+WOW64:		yes
+Working dir:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\.
+Java min ver:	1.8.0
+Java max ver:	
+64-bit search:	SOFTWARE\JavaSoft\Java Runtime Environment...
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8
+Ignore:		1.8
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8.0_60
+Check launcher:	C:\Program Files\Java\jre1.8.0_60\bin\javaw.exe (OK)
+Match:		1.8.0_060
+64-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8
+Ignore:		1.8
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8.0_60
+Ignore:		1.8.0_060
+64-bit search:	SOFTWARE\JavaSoft\JRE...
+64-bit search:	SOFTWARE\JavaSoft\JDK...
+Runtime used:	1.8.0_060 (64-bit)
+Main class:	clinicalife.ClinicaLife
+Add classpath:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\dist\lib\AbsoluteLayout.jar
+Add classpath:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\dist\lib\dom4j-1.6.1
+Add classpath:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\dist\lib\jcalendar-1.4
+Add classpath:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\dist\lib\mysql-connector-java-5.1.23-bin
+Launcher:	C:\Program Files\Java\jre1.8.0_60\bin\javaw.exe
+Launcher args:	-classpath "C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\Clinica Life App.exe;C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\dist\lib\AbsoluteLayout.jar;C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\dist\lib\dom4j-1.6.1;C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\dist\lib\jcalendar-1.4;C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\dist\lib\mysql-connector-java-5.1.23-bin" clinicalife.ClinicaLife
+Args length:	455/32768 chars
+Exit code:	0
+
+
+Version:	3.10
+CmdLine:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\Clinica Life App.exe --l4j-debug
+WOW64:		yes
+Working dir:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\.
+Java min ver:	1.8.0
+Java max ver:	
+64-bit search:	SOFTWARE\JavaSoft\Java Runtime Environment...
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8
+Ignore:		1.8
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8.0_60
+Check launcher:	C:\Program Files\Java\jre1.8.0_60\bin\javaw.exe (OK)
+Match:		1.8.0_060
+64-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8
+Ignore:		1.8
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8.0_60
+Ignore:		1.8.0_060
+64-bit search:	SOFTWARE\JavaSoft\JRE...
+64-bit search:	SOFTWARE\JavaSoft\JDK...
+Runtime used:	1.8.0_060 (64-bit)
+Main class:	clinicalife.ClinicaLife
+Add classpath:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\dist\lib\AbsoluteLayout.jar
+Add classpath:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\dist\lib\dom4j-1.6.1
+Add classpath:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\dist\lib\jcalendar-1.4
+Add classpath:	C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\dist\lib\mysql-connector-java-5.1.23-bin
+Launcher:	C:\Program Files\Java\jre1.8.0_60\bin\javaw.exe
+Launcher args:	-classpath "C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\Clinica Life App.exe;C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\dist\lib\AbsoluteLayout.jar;C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\dist\lib\dom4j-1.6.1;C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\dist\lib\jcalendar-1.4;C:\Users\laisf\Documents\NetBeansProjects\ClinicaLifeApp\dist\lib\mysql-connector-java-5.1.23-bin" clinicalife.ClinicaLife
+Args length:	455/32768 chars
+Exit code:	0
