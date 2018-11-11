@@ -1,0 +1,78 @@
+CREATE TABLE `clinica_life`.`especialidade` ( 
+	`id` INT NOT NULL AUTO_INCREMENT,
+	 `nome` VARCHAR(255) NOT NULL, 
+	PRIMARY KEY (`id`)
+) ENGINE = InnoDB;
+
+INSERT INTO especialidade (nome) VALUES ('Fisioterapeuta'),('Nutricionista'),('Esteticista');
+
+RENAME TABLE fisioterapeuta TO profissional;
+
+ALTER TABLE profissional CHANGE id_fisioterapeuta id INT(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE profissional DROP FOREIGN KEY profissional_ibfk_1;
+ALTER TABLE profissional CHANGE id_endereco_fisioterapeuta endereco_id INT(11) NULL;
+ALTER TABLE profissional ADD CONSTRAINT fk_endereco_id FOREIGN KEY(endereco_id) REFERENCES endereco(id_endereco);
+
+ALTER TABLE `profissional` ADD `especialidade_id` INT NULL;
+ALTER TABLE profissional ADD CONSTRAINT fk_especialidade_id FOREIGN KEY(`especialidade_id` ) REFERENCES especialidade(id);
+
+ALTER TABLE agenda DROP FOREIGN KEY agenda_ibfk_3;
+ALTER TABLE agenda CHANGE id_fisioterapeuta_agenda profissional_id INT(11) NULL;
+ALTER TABLE agenda ADD CONSTRAINT fk_agenda_profissional_id FOREIGN KEY(profissional_id) REFERENCES profissional(id);
+
+RENAME TABLE fisioterapia TO consulta;
+ALTER TABLE consulta CHANGE id_fisioterapia id INT(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE consulta CHANGE id_paciente_fisioterapia consulta_id INT(11) NOT NULL;
+ALTER TABLE consulta ADD CONSTRAINT fk_consulta_paciente_id FOREIGN KEY(paciente_id) REFERENCES paciente(id_paciente);
+
+ALTER TABLE consulta ADD COLUMN especialidade_id INT(11) NULL;
+ALTER TABLE consulta ADD CONSTRAINT fk_consulta_especialidade_id FOREIGN KEY(especialidade_id) REFERENCES especialidade(id);
+
+ALTER TABLE agenda DROP FOREIGN KEY agenda_ibfk_2;
+ALTER TABLE agenda CHANGE id_fisioterapia_agenda consulta_id INT(11) NULL;
+ALTER TABLE agenda ADD CONSTRAINT fk_agenda_consulta_id FOREIGN KEY(consulta_id) REFERENCES consulta(id);
+
+
+CREATE TABLE `clinica_life`.`procedimento` ( 
+	`id` INT NOT NULL AUTO_INCREMENT,
+	 `nome` VARCHAR(255) NOT NULL, 
+	PRIMARY KEY (`id`)
+) ENGINE = InnoDB;
+
+INSERT INTO procedimento (nome) VALUES ('Fisioterapia Convencional'),('Avaliação'),('Acupuntura'),('Drenagem Linfática'),('Auriculoterapia'),('Ventosaterapia'),
+('Isostreching (Postural)'), ('Kinesiotape (Bandagem Funcional)'),
+('Terapias de Reabilitação vestibular'), ('Massagem Relaxante ou Modeladora');
+
+ALTER TABLE consulta ADD COLUMN procedimento_id INT(11) NULL;
+ALTER TABLE consulta ADD CONSTRAINT fk_consulta_procedimento_id FOREIGN KEY(procedimento_id) REFERENCES procedimento(id);
+
+ALTER TABLE consulta DROP FOREIGN KEY fk_consulta_especialidade_id;
+
+DELIMITER ;;
+CREATE PROCEDURE CREATE_AVALICAO_IN_CONSULTAS()
+BEGIN
+DECLARE total INT DEFAULT 0;
+DECLARE i INT DEFAULT 0;
+DECLARE lastID INT DEFAULT 0;
+DECLARE paciente_id INT DEFAULT 0;
+DECLARE profissional_id INT DEFAULT 0;
+DECLARE data_agenda DATE DEFAULT NOW();
+DECLARE observacao TEXT DEFAULT "";
+SELECT COUNT(*) FROM avaliacao INTO total;
+SET i=0;
+WHILE i<total DO
+
+  SELECT id_paciente_avaliacao, id_fisioterapeuta_avaliacao, data_avaliacao, CONCAT(diag_cli, "\n\n", diag_fis) as obs
+  INTO paciente_id, profissional_id, data_agenda, observacao
+  FROM avaliacao LIMIT i,1;
+  
+  INSERT INTO consulta(qntd,valor, paciente_id, procedimento_id) VALUES(1,0.00, paciente_id, 2);
+  SET lastID = LAST_INSERT_ID();
+  
+  INSERT INTO agenda (consulta_id, profissional_id, data_agendamento, observacao) VALUES(lastID, profissional_id, CONCAT(data_agenda, " 07:30:00"), observacao);
+  SET i = i + 1;
+END WHILE;
+End;
+;;
+DELIMITER ;
+ALTER TABLE consulta DROP COLUMN especialidade_id;
