@@ -14,11 +14,11 @@ Sistema para o gerenciamento de uma clínica de fisioterapias e estética. A seg
 
 ## Funcionalidades
 
-- **Login:**: Sistema de autenticação;
+- **Login:** Sistema de autenticação;
 
 <br/><br/>
 
-[![Login](https://raw.githubusercontent.com/laisfrigerio/ClinicaLifeApp/master/screens/login.png)]
+[!Login](https://raw.githubusercontent.com/laisfrigerio/ClinicaLifeApp/master/screens/login.png)
 
 - **Agenda:** é possível agendar consultas, além de realizar o agendamento recorrente - diariamente, semanalmente, quinzenalmente, mensalmente e anualmente;
 <br/><br/>
