@@ -119,6 +119,9 @@ public class NovoAgendamento extends javax.swing.JFrame implements TelaAnteceden
         jLabel19 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
         jComboBoxRepetir = new javax.swing.JComboBox<>();
+        jLabel22 = new javax.swing.JLabel();
+        tQuantidade = new javax.swing.JTextField();
+        radioButtonRepetirSabado = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Novo Usuário");
@@ -255,6 +258,11 @@ public class NovoAgendamento extends javax.swing.JFrame implements TelaAnteceden
                 bCancelarAgendamentoMouseExited(evt);
             }
         });
+        bCancelarAgendamento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bCancelarAgendamentoActionPerformed(evt);
+            }
+        });
         bCancelarAgendamento.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 bCancelarAgendamentoKeyPressed(evt);
@@ -286,6 +294,11 @@ public class NovoAgendamento extends javax.swing.JFrame implements TelaAnteceden
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 bSalvarAgendamentoMouseExited(evt);
+            }
+        });
+        bSalvarAgendamento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bSalvarAgendamentoActionPerformed(evt);
             }
         });
 
@@ -404,17 +417,24 @@ public class NovoAgendamento extends javax.swing.JFrame implements TelaAnteceden
         jLabel19.setPreferredSize(new java.awt.Dimension(5, 20));
 
         jLabel20.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        jLabel20.setText("Repetir");
+        jLabel20.setText("Recorrência");
         jLabel20.setMaximumSize(new java.awt.Dimension(40, 20));
         jLabel20.setMinimumSize(new java.awt.Dimension(40, 20));
         jLabel20.setPreferredSize(new java.awt.Dimension(40, 20));
+
+        jLabel22.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        jLabel22.setText("Quantidade");
+
+        radioButtonRepetirSabado.setBackground(new java.awt.Color(247, 247, 247));
+        radioButtonRepetirSabado.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        radioButtonRepetirSabado.setText("Recorrência no sábado");
 
         javax.swing.GroupLayout inputLayout = new javax.swing.GroupLayout(input);
         input.setLayout(inputLayout);
         inputLayout.setHorizontalGroup(
             inputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(inputLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(25, 25, 25)
                 .addGroup(inputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(inputLayout.createSequentialGroup()
                         .addGroup(inputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -472,10 +492,6 @@ public class NovoAgendamento extends javax.swing.JFrame implements TelaAnteceden
                             .addComponent(tCodigoProfissional, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
                             .addComponent(tCodigoPaciente)
                             .addComponent(tSessoes, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, inputLayout.createSequentialGroup()
-                        .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jComboBoxRepetir, javax.swing.GroupLayout.PREFERRED_SIZE, 464, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(inputLayout.createSequentialGroup()
                         .addGroup(inputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 5, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -484,15 +500,28 @@ public class NovoAgendamento extends javax.swing.JFrame implements TelaAnteceden
                                 .addGap(18, 18, 18)
                                 .addComponent(bBuscarProfissional, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(inputLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 412, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, inputLayout.createSequentialGroup()
+                        .addGroup(inputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel22))
+                        .addGroup(inputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(inputLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(radioButtonRepetirSabado))
+                            .addGroup(inputLayout.createSequentialGroup()
+                                .addGap(75, 75, 75)
+                                .addComponent(jScrollObservacoes))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, inputLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(bSalvarAgendamento, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(bCancelarAgendamento, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(inputLayout.createSequentialGroup()
-                        .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jScrollObservacoes, javax.swing.GroupLayout.PREFERRED_SIZE, 464, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, inputLayout.createSequentialGroup()
+                        .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 75, Short.MAX_VALUE)
+                        .addGroup(inputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(tQuantidade, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jComboBoxRepetir, javax.swing.GroupLayout.PREFERRED_SIZE, 464, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap())
         );
         inputLayout.setVerticalGroup(
@@ -544,17 +573,28 @@ public class NovoAgendamento extends javax.swing.JFrame implements TelaAnteceden
                 .addGroup(inputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jComboBoxRepetir, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(16, 16, 16)
                 .addGroup(inputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(inputLayout.createSequentialGroup()
-                        .addGap(14, 14, 14)
+                        .addGap(30, 30, 30)
+                        .addComponent(jLabel22))
+                    .addGroup(inputLayout.createSequentialGroup()
+                        .addGap(22, 22, 22)
+                        .addComponent(radioButtonRepetirSabado))
+                    .addGroup(inputLayout.createSequentialGroup()
+                        .addGap(16, 16, 16)
+                        .addComponent(tQuantidade, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(inputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(inputLayout.createSequentialGroup()
+                        .addGap(36, 36, 36)
                         .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jScrollObservacoes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(inputLayout.createSequentialGroup()
+                        .addGap(16, 16, 16)
+                        .addComponent(jScrollObservacoes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(16, 16, 16)
                 .addGroup(inputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bCancelarAgendamento, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(bSalvarAgendamento, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(365, 365, 365))
+                .addGap(338, 338, 338))
         );
 
         javax.swing.GroupLayout bgLayout = new javax.swing.GroupLayout(bg);
@@ -562,7 +602,7 @@ public class NovoAgendamento extends javax.swing.JFrame implements TelaAnteceden
         bgLayout.setHorizontalGroup(
             bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bgLayout.createSequentialGroup()
-                .addGap(0, 13, Short.MAX_VALUE)
+                .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(input, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -570,7 +610,7 @@ public class NovoAgendamento extends javax.swing.JFrame implements TelaAnteceden
             bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(bgLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(input, javax.swing.GroupLayout.PREFERRED_SIZE, 521, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(input, javax.swing.GroupLayout.PREFERRED_SIZE, 574, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -580,115 +620,26 @@ public class NovoAgendamento extends javax.swing.JFrame implements TelaAnteceden
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void bSalvarAgendamentoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bSalvarAgendamentoMouseClicked
-        if(this.paciente==null) {
-            JOptionPane.showMessageDialog(null, "É obrigatório selecionar um Paciente", "Atenção", JOptionPane.WARNING_MESSAGE);
-        } else if (this.profissional==null) {
-            JOptionPane.showMessageDialog(null, "É obrigatório selecionar um(a) Profissional", "Atenção", JOptionPane.WARNING_MESSAGE);
-        } else if (this.consulta==null) {
-            JOptionPane.showMessageDialog(null, "É obrigatório selecionar uma Consulta", "Atenção", JOptionPane.WARNING_MESSAGE);
-        } else if (!Validacao.dateIsValid(tData.getText())) {
-            JOptionPane.showMessageDialog(null, "Informe uma data válida", "Atenção", JOptionPane.WARNING_MESSAGE);
-        } else {
-            String repetir = (String)jComboBoxRepetir.getSelectedItem();
-            AgendaController ac = new AgendaController();
-            this.agenda.setRecorrencia(repetir);
-            this.agenda.setConsulta(this.consulta);
-            this.agenda.setProfissional(this.profissional);
-            this.agenda.getConsulta().setPaciente(this.paciente);
-            this.agenda.setObservacao(tObservacao.getText());
-            if (ac.checkNumeroSessoesFisioterapia(this.agenda) < this.consulta.getQntdSessao()) {
-                switch (ac.cadastrar(this.agenda)) {
-                    case 0:
-                        JOptionPane.showMessageDialog(null, "Ocorreu um erro ao realizar o cadastro. Tente novamente mais tarde ou contate o Administrador do sistema", "Atenção", JOptionPane.ERROR_MESSAGE);
-                        break;
-                    case 1:
-                        JOptionPane.showMessageDialog(null, "Agendamento efetuado com sucesso", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
-                        if (this.tela.getTDate().getDate() != null) {
-                            List<Horario> lista = ac.agendamentos(Formatacao.date2StringScreen(this.tela.getTDate().getDate()));
-                            if(lista != null) {
-                                this.tela.tableModelAgenda.addLista(lista);
-                                for(int i = 0; i<20; i++)
-                                this.tela.getTableAgenda().setRowHeight(i, 30);
-                                DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
-                                centerRenderer.setHorizontalAlignment( JLabel.CENTER );
-                                this.tela.getTableAgenda().getColumnModel().getColumn(0).setCellRenderer( centerRenderer );
-                                this.tela.getTableAgenda().getColumnModel().getColumn(0).setMinWidth(100);
-                                this.tela.getTableAgenda().getColumnModel().getColumn(0).setMaxWidth(100);
-                            }
-                        }
-                        this.dispose();
-                        break;
-                    case 2:
-                        JOptionPane.showMessageDialog(null, "Não foi possível replicar o agendamento, por motivo de horário cheio.", "Atenção", JOptionPane.ERROR_MESSAGE);
-                        break;
-                }
-            } else {
-                JOptionPane.showMessageDialog(null, "Não é mais possível realziar um novo agendamento para esta consulta, pois a mesma já atingiu a quantidade máxima de sessões.", "Atenção", JOptionPane.ERROR_MESSAGE);
-            }
-        }
-    }//GEN-LAST:event_bSalvarAgendamentoMouseClicked
-
-    private void bSalvarAgendamentoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bSalvarAgendamentoMouseEntered
-        bSalvarAgendamento.setBackground(Color.decode("#008542"));
-    }//GEN-LAST:event_bSalvarAgendamentoMouseEntered
-
-    private void bSalvarAgendamentoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bSalvarAgendamentoMouseExited
-        bSalvarAgendamento.setBackground(Color.decode("#006634"));
-    }//GEN-LAST:event_bSalvarAgendamentoMouseExited
-
-    private void bCancelarAgendamentoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bCancelarAgendamentoMouseClicked
-        this.dispose();
-    }//GEN-LAST:event_bCancelarAgendamentoMouseClicked
-
-    private void bCancelarAgendamentoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bCancelarAgendamentoMouseEntered
-        bCancelarAgendamento.setBackground(Color.decode("#AD0000"));
-    }//GEN-LAST:event_bCancelarAgendamentoMouseEntered
-
-    private void bCancelarAgendamentoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bCancelarAgendamentoMouseExited
-        bCancelarAgendamento.setBackground(Color.decode("#D30000"));
-    }//GEN-LAST:event_bCancelarAgendamentoMouseExited
-
-    private void bCancelarAgendamentoFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_bCancelarAgendamentoFocusGained
-        bCancelarAgendamento.setBackground(Color.decode("#AD0000"));
-    }//GEN-LAST:event_bCancelarAgendamentoFocusGained
-
-    private void bCancelarAgendamentoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_bCancelarAgendamentoFocusLost
-        bCancelarAgendamento.setBackground(Color.decode("#D30000"));
-    }//GEN-LAST:event_bCancelarAgendamentoFocusLost
-
-    private void bSalvarAgendamentoFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_bSalvarAgendamentoFocusGained
-        bSalvarAgendamento.setBackground(Color.decode("#008542"));
-    }//GEN-LAST:event_bSalvarAgendamentoFocusGained
-
-    private void bSalvarAgendamentoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_bSalvarAgendamentoFocusLost
-        bSalvarAgendamento.setBackground(Color.decode("#006634"));
-    }//GEN-LAST:event_bSalvarAgendamentoFocusLost
-
-    private void bCancelarAgendamentoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_bCancelarAgendamentoKeyPressed
-        this.dispose();
-    }//GEN-LAST:event_bCancelarAgendamentoKeyPressed
-
-    private void bBuscarProfissionalFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_bBuscarProfissionalFocusGained
-        bBuscarProfissional.setBackground(Color.decode("#008542"));
-    }//GEN-LAST:event_bBuscarProfissionalFocusGained
-
-    private void bBuscarProfissionalFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_bBuscarProfissionalFocusLost
+    private void bBuscarProfissionalMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bBuscarProfissionalMouseExited
         bBuscarProfissional.setBackground(Color.decode("#006634"));
-    }//GEN-LAST:event_bBuscarProfissionalFocusLost
+    }//GEN-LAST:event_bBuscarProfissionalMouseExited
+
+    private void bBuscarProfissionalMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bBuscarProfissionalMouseEntered
+        bBuscarProfissional.setBackground(Color.decode("#008542"));
+    }//GEN-LAST:event_bBuscarProfissionalMouseEntered
 
     private void bBuscarProfissionalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bBuscarProfissionalMouseClicked
         BuscarProfissional bf = new BuscarProfissional(this);
         bf.setVisible(true);
     }//GEN-LAST:event_bBuscarProfissionalMouseClicked
 
-    private void bBuscarProfissionalMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bBuscarProfissionalMouseEntered
-         bBuscarProfissional.setBackground(Color.decode("#008542"));
-    }//GEN-LAST:event_bBuscarProfissionalMouseEntered
-
-    private void bBuscarProfissionalMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bBuscarProfissionalMouseExited
+    private void bBuscarProfissionalFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_bBuscarProfissionalFocusLost
         bBuscarProfissional.setBackground(Color.decode("#006634"));
-    }//GEN-LAST:event_bBuscarProfissionalMouseExited
+    }//GEN-LAST:event_bBuscarProfissionalFocusLost
+
+    private void bBuscarProfissionalFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_bBuscarProfissionalFocusGained
+        bBuscarProfissional.setBackground(Color.decode("#008542"));
+    }//GEN-LAST:event_bBuscarProfissionalFocusGained
 
     private void bBuscarConsultaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bBuscarConsultaMouseExited
         bBuscarConsulta.setBackground(Color.decode("#006634"));
@@ -710,6 +661,129 @@ public class NovoAgendamento extends javax.swing.JFrame implements TelaAnteceden
     private void bBuscarConsultaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_bBuscarConsultaFocusGained
         bBuscarConsulta.setBackground(Color.decode("#008542"));
     }//GEN-LAST:event_bBuscarConsultaFocusGained
+
+    private void bSalvarAgendamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSalvarAgendamentoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bSalvarAgendamentoActionPerformed
+
+    private void bSalvarAgendamentoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bSalvarAgendamentoMouseExited
+        bSalvarAgendamento.setBackground(Color.decode("#006634"));
+    }//GEN-LAST:event_bSalvarAgendamentoMouseExited
+
+    private void bSalvarAgendamentoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bSalvarAgendamentoMouseEntered
+        bSalvarAgendamento.setBackground(Color.decode("#008542"));
+    }//GEN-LAST:event_bSalvarAgendamentoMouseEntered
+
+    private void bSalvarAgendamentoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bSalvarAgendamentoMouseClicked
+        if(this.paciente==null) {
+            JOptionPane.showMessageDialog(null, "É obrigatório selecionar um Paciente", "Atenção", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        
+        if (this.profissional==null) {
+            JOptionPane.showMessageDialog(null, "É obrigatório selecionar um(a) Profissional", "Atenção", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        
+        if (this.consulta==null) {
+            JOptionPane.showMessageDialog(null, "É obrigatório selecionar uma Consulta", "Atenção", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        
+        if (!Validacao.dateIsValid(tData.getText())) {
+            JOptionPane.showMessageDialog(null, "Informe uma data válida", "Atenção", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        
+        if (!Validacao.isEmpty(tQuantidade.getText()) && !Validacao.isNumeric(tQuantidade.getText())) {
+            JOptionPane.showMessageDialog(null, "O campo (Quantidade) deve conter apenas números", "Atenção", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        
+        if (!Validacao.isEmpty(tQuantidade.getText()) && Validacao.isNumeric(tQuantidade.getText())) {
+            int quantidade = Integer.parseInt(tQuantidade.getText());
+            if (quantidade > this.consulta.getQntdSessao()) {
+                JOptionPane.showMessageDialog(null, "O campo (Quantidade) deve ser menor ou igual ao campo (Total Sessões)", "Atenção", JOptionPane.WARNING_MESSAGE);
+                return;
+            } else {
+                this.agenda.setQuantidade(quantidade);
+            }
+        }
+        
+        String repetir = (String)jComboBoxRepetir.getSelectedItem();
+        AgendaController ac = new AgendaController();
+        this.agenda.setRecorrenciaSabado(radioButtonRepetirSabado.isSelected());
+        this.agenda.setRecorrencia(repetir);
+        this.agenda.setConsulta(this.consulta);
+        this.agenda.setProfissional(this.profissional);
+        this.agenda.getConsulta().setPaciente(this.paciente);
+        this.agenda.setObservacao(tObservacao.getText());
+        if (ac.checkNumeroSessoesFisioterapia(this.agenda) < this.consulta.getQntdSessao()) {
+            switch (ac.cadastrar(this.agenda)) {
+                case 0:
+                    JOptionPane.showMessageDialog(null, "Ocorreu um erro ao realizar o cadastro. Tente novamente mais tarde ou contate o Administrador do sistema", "Atenção", JOptionPane.ERROR_MESSAGE);
+                    break;
+                case 1:
+                    JOptionPane.showMessageDialog(null, "Agendamento efetuado com sucesso", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
+                    if (this.tela.getTDate().getDate() != null) {
+                        List<Horario> lista = ac.agendamentos(Formatacao.date2StringScreen(this.tela.getTDate().getDate()));
+                        if(lista != null) {
+                            this.tela.tableModelAgenda.addLista(lista);
+                            for(int i = 0; i<20; i++)
+                            this.tela.getTableAgenda().setRowHeight(i, 30);
+                            DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
+                            centerRenderer.setHorizontalAlignment( JLabel.CENTER );
+                            this.tela.getTableAgenda().getColumnModel().getColumn(0).setCellRenderer( centerRenderer );
+                            this.tela.getTableAgenda().getColumnModel().getColumn(0).setMinWidth(100);
+                            this.tela.getTableAgenda().getColumnModel().getColumn(0).setMaxWidth(100);
+                        }
+                    }
+                    this.dispose();
+                    break;
+                case 2:
+                    JOptionPane.showMessageDialog(null, "Não foi possível replicar o agendamento, por motivo de horário cheio.", "Atenção", JOptionPane.ERROR_MESSAGE);
+                    break;
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Não é mais possível realziar um novo agendamento para esta consulta, pois a mesma já atingiu a quantidade máxima de sessões.", "Atenção", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_bSalvarAgendamentoMouseClicked
+
+    private void bSalvarAgendamentoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_bSalvarAgendamentoFocusLost
+        bSalvarAgendamento.setBackground(Color.decode("#006634"));
+    }//GEN-LAST:event_bSalvarAgendamentoFocusLost
+
+    private void bSalvarAgendamentoFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_bSalvarAgendamentoFocusGained
+        bSalvarAgendamento.setBackground(Color.decode("#008542"));
+    }//GEN-LAST:event_bSalvarAgendamentoFocusGained
+
+    private void bCancelarAgendamentoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_bCancelarAgendamentoKeyPressed
+        this.dispose();
+    }//GEN-LAST:event_bCancelarAgendamentoKeyPressed
+
+    private void bCancelarAgendamentoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bCancelarAgendamentoMouseExited
+        bCancelarAgendamento.setBackground(Color.decode("#D30000"));
+    }//GEN-LAST:event_bCancelarAgendamentoMouseExited
+
+    private void bCancelarAgendamentoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bCancelarAgendamentoMouseEntered
+        bCancelarAgendamento.setBackground(Color.decode("#AD0000"));
+    }//GEN-LAST:event_bCancelarAgendamentoMouseEntered
+
+    private void bCancelarAgendamentoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bCancelarAgendamentoMouseClicked
+        this.dispose();
+    }//GEN-LAST:event_bCancelarAgendamentoMouseClicked
+
+    private void bCancelarAgendamentoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_bCancelarAgendamentoFocusLost
+        bCancelarAgendamento.setBackground(Color.decode("#D30000"));
+    }//GEN-LAST:event_bCancelarAgendamentoFocusLost
+
+    private void bCancelarAgendamentoFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_bCancelarAgendamentoFocusGained
+        bCancelarAgendamento.setBackground(Color.decode("#AD0000"));
+    }//GEN-LAST:event_bCancelarAgendamentoFocusGained
+
+    private void bCancelarAgendamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCancelarAgendamentoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bCancelarAgendamentoActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -823,6 +897,7 @@ public class NovoAgendamento extends javax.swing.JFrame implements TelaAnteceden
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -831,6 +906,7 @@ public class NovoAgendamento extends javax.swing.JFrame implements TelaAnteceden
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollObservacoes;
+    private javax.swing.JRadioButton radioButtonRepetirSabado;
     private javax.swing.JTextField tCodigoFisioterapia;
     private javax.swing.JTextField tCodigoPaciente;
     private javax.swing.JTextField tCodigoProfissional;
@@ -840,6 +916,7 @@ public class NovoAgendamento extends javax.swing.JFrame implements TelaAnteceden
     private javax.swing.JTextField tNomePaciente;
     private javax.swing.JTextArea tObservacao;
     private javax.swing.JTextField tProcedimento;
+    private javax.swing.JTextField tQuantidade;
     private javax.swing.JTextField tSessoes;
     // End of variables declaration//GEN-END:variables
 }

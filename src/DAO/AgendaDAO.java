@@ -105,13 +105,26 @@ public class AgendaDAO {
             conn = new ConectionFactory().getConnection();
             conn.setAutoCommit(false);
             int total = checkNumeroSessoesFisioterapia(agenda);
-            for(int i = total; i<agenda.getConsulta().getQntdSessao(); i++) {
+            int quantidade = agenda.getQuantidade() > 0 ? agenda.getQuantidade() : agenda.getConsulta().getQntdSessao();
+            for(int i = total; i<quantidade; i++) {
                 Calendar c = Calendar.getInstance();
                 c.setTimeInMillis(agenda.getDataAgendamento().getTime());
                 if (!first) {
                     switch (agenda.getRecorrencia()) {
                         case Agenda.DIARIAMENTE:
                             c.add(Calendar.DATE, 1);
+                            
+                            if (c.get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY) {
+                                agenda.setDataAgendamento(new Timestamp(c.getTime().getTime()));
+                                i--;
+                                continue;
+                            }
+                            
+                            if (c.get(Calendar.DAY_OF_WEEK) == Calendar.SATURDAY && !agenda.isRecorrenciaSabado()) {
+                                agenda.setDataAgendamento(new Timestamp(c.getTime().getTime()));
+                                i--;
+                                continue;
+                            }
                             break;
                         case Agenda.SEMANALMENTE:
                             c.add(Calendar.DAY_OF_MONTH, 7);

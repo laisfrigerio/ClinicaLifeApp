@@ -14,12 +14,18 @@ public class Agenda {
     private int numeroSessao;
     private String observacao;
     private String recorrencia;
+    private int quantidade;
+    private boolean recorrenciaSabado;
     
     public static final String DIARIAMENTE = "Diariamente";
     public static final String SEMANALMENTE = "Semanalmente";
     public static final String QUINZENALMENTE = "Quinzenalmente";
     public static final String MENSALMENTE = "Mensalmente";
     public static final String ANUALMENTE = "Anualmente";
+    
+    public Agenda() {
+        this.recorrenciaSabado = false;
+    }
 
     public int getId() {
         return id;
@@ -75,5 +81,21 @@ public class Agenda {
 
     public void setRecorrencia(String recorrencia) {
         this.recorrencia = recorrencia;
+    }
+
+    public boolean isRecorrenciaSabado() {
+        return recorrenciaSabado;
+    }
+
+    public void setRecorrenciaSabado(boolean recorrenciaSabado) {
+        this.recorrenciaSabado = recorrenciaSabado;
+    }
+
+    public int getQuantidade() {
+        return quantidade;
+    }
+
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
     }
 }
