@@ -1,3 +1,8 @@
+/**
+ * @author Lais Frigério da Silva
+ * @data 27.10.2018
+ */
+
 package tables;
 
 import java.util.ArrayList;
@@ -5,10 +10,7 @@ import java.util.List;
 import javax.swing.table.AbstractTableModel;
 import model.Especialidade;
 
-/**
- *
- * @author Lais Frigério da Silva | 27.10.2018
- */
+
 public class EspecialidadeTable extends AbstractTableModel {
     private List<Especialidade> especialidades;
     private final String[] colunas = {"Código", "Nome"};

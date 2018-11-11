@@ -1,3 +1,7 @@
+/**
+ * @author Lais Frigério da Silva
+ */
+
 package DAO;
 
 import java.io.IOException;
@@ -105,7 +109,7 @@ public class AgendaDAO {
                 Calendar c = Calendar.getInstance();
                 c.setTimeInMillis(agenda.getDataAgendamento().getTime());
                 if (!first) {
-                    switch (agenda.getRepetir()) {
+                    switch (agenda.getRecorrencia()) {
                         case Agenda.DIARIAMENTE:
                             c.add(Calendar.DATE, 1);
                             break;
@@ -128,7 +132,7 @@ public class AgendaDAO {
                 if(this.checkNumeroSessoesFisioterapia(agenda) == 5)
                     return 2;
                 this.newAgendamento(conn, psInsert, agenda);
-                if (Validacao.isEmpty(agenda.getRepetir())) break;
+                if (Validacao.isEmpty(agenda.getRecorrencia())) break;
             }
             conn.commit();
             return 1;

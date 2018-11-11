@@ -1,3 +1,7 @@
+/**
+ * @author Lais Frigério da Silva
+ */
+
 package model;
 
 import controller.PacienteController;

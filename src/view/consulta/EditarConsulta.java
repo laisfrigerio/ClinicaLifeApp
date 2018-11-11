@@ -1,3 +1,7 @@
+/**
+ * @author Lais Frigério da Silva
+ */
+
 package view.consulta;
 
 import view.paciente.BuscarPaciente;

@@ -1,3 +1,8 @@
+/**
+ * @author Lais Frigério da Silva
+ * @data 29.10.2018
+ */
+
 package comboBox;
 
 import java.util.List;
@@ -5,8 +10,6 @@ import javax.swing.AbstractListModel;
 import javax.swing.ComboBoxModel;
 
 /**
- *
- * @author Lais Frigério da Silva | 29.10.2018
  * @param <E>
  */
 public class GenericComboBox<E> extends AbstractListModel<E> implements ComboBoxModel<E> {

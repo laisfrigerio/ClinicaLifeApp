@@ -1,3 +1,7 @@
+/**
+ * @author Lais Frigério da Silva
+ */
+
 package tables;
 
 import java.util.ArrayList;
@@ -7,10 +11,6 @@ import model.Agenda;
 import model.Formatacao;
 import model.Horario;
 
-/**
- *
- * @author Lais Frigério da Silva
- */
 public class AgendaTable extends AbstractTableModel{
     private List<Horario> agenda;
     private final String[] colunas = {"Horário", "Paciente","Paciente", "Paciente", "Paciente", "Paciente"};

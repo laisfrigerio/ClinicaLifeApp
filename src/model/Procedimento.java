@@ -1,9 +1,10 @@
+/**
+ * @author Lais Frigério da Silva
+ * @data 02.11.2018
+ */
+
 package model;
 
-/**
- *
- * @author Lais Frigério da Silva | 02.11.2018
- */
 public class Procedimento {
     
     private int id;

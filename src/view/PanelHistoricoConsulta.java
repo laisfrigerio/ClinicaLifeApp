@@ -1,8 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * @author Lais Frigério da Silva
  */
+
 package view;
 
 import java.awt.Color;
@@ -13,10 +12,6 @@ import javax.swing.JTextField;
 import model.Agenda;
 import model.Formatacao;
 
-/**
- *
- * @author laisf
- */
 public class PanelHistoricoConsulta extends javax.swing.JPanel {
     private final Agenda agenda;
 

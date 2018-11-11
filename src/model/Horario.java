@@ -1,13 +1,13 @@
+/**
+ * @author Lais Frigério da Silva
+ */
+
 package model;
 
 import java.sql.Time;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * @author Lais Frigério da Silva
- */
 public class Horario {
     private int id;
     private Time hora;

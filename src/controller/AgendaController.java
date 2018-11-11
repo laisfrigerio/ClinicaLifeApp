@@ -1,3 +1,7 @@
+/**
+ * @author Lais Frigério da Silva
+ */
+
 package controller;
 
 import DAO.AgendaDAO;
@@ -5,11 +9,6 @@ import java.util.List;
 import model.Agenda;
 import model.Consulta;
 import model.Horario;
-
-/**
- *
- * @author Lais Frigério da Silva
- */
 
 public class AgendaController {
     private final AgendaDAO aDAO;

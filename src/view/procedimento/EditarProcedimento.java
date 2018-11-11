@@ -1,8 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * @author Lais Frigério da Silva
  */
+
 package view.procedimento;
 
 import controller.ProcedimentoController;
@@ -19,10 +18,6 @@ import model.Validacao;
 import view.FixedButtonModel;
 import view.Main;
 
-/**
- *
- * @author laisf
- */
 public class EditarProcedimento extends javax.swing.JFrame {
 
     private final Procedimento editarProcedimento;

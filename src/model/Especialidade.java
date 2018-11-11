@@ -1,9 +1,9 @@
-package model;
-
 /**
- *
- * @author Lais Frigério da Silva | 27.10.2018
+ * @author Lais Frigério da Silva
+ * @data 27.10.2018
  */
+
+package model;
 
 public class Especialidade {
     

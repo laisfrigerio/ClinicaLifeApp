@@ -1,3 +1,7 @@
+/**
+ * @author Lais Frigério da Silva
+ */
+
 package model;
 
 import java.sql.Timestamp;
@@ -9,7 +13,7 @@ public class Agenda {
     private Timestamp dataAgendamento;
     private int numeroSessao;
     private String observacao;
-    private String repetir;
+    private String recorrencia;
     
     public static final String DIARIAMENTE = "Diariamente";
     public static final String SEMANALMENTE = "Semanalmente";
@@ -65,11 +69,11 @@ public class Agenda {
         this.observacao = observacao;
     }
     
-    public String getRepetir() {
-        return repetir;
+    public String getRecorrencia() {
+        return recorrencia;
     }
 
-    public void setRepetir(String repetir) {
-        this.repetir = repetir;
+    public void setRecorrencia(String recorrencia) {
+        this.recorrencia = recorrencia;
     }
 }

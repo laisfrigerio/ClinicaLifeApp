@@ -1,3 +1,7 @@
+/**
+ * @author Lais Frigério da Silva
+ */
+
 package view.agenda;
 
 import controller.AgendaController;

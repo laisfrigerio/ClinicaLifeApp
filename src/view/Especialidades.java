@@ -1,8 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * @author Lais Frigério da Silva
  */
+
 package view;
 
 import com.sun.glass.events.KeyEvent;
@@ -19,10 +18,6 @@ import model.Especialidade;
 import model.Validacao;
 import tables.EspecialidadeTable;
 
-/**
- *
- * @author Lais Frigério da Silva
- */
 public class Especialidades extends javax.swing.JFrame {
     EspecialidadeTable tableModelEspecialidades;
     EspecialidadeController ec;

@@ -1,13 +1,14 @@
+/**
+ * @author Lais Frigério da Silva
+ * @data 02.11.2018
+ */
+
 package controller;
 
 import DAO.ProcedimentoDAO;
 import java.util.List;
 import model.Procedimento;
 
-/**
- *
- * @author Lais Frigério da Silva | 02.11.2018
- */
 public class ProcedimentoController {
     private final ProcedimentoDAO pDAO;
     
