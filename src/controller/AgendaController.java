@@ -41,8 +41,8 @@ public class AgendaController {
         return this.aDAO.agendamentos(c);
     }
     
-    public int checkNumeroSessoesFisioterapia(Agenda a) {
-        return this.aDAO.checkNumeroSessoesFisioterapia(a);
+    public int checkNumeroSessoesConsulta(Agenda a) {
+        return this.aDAO.checkNumeroSessoesConsulta(a);
     }
     
 }

@@ -64,7 +64,7 @@ public class Validacao {
         int mes = Integer.parseInt(vetor[1]);
         int dia = Integer.parseInt(vetor[0]);
         int anoAtual = Calendar.getInstance().get(Calendar.YEAR);
-        if(ano < 1850 || ano > anoAtual)
+        if(ano < 1850 || ano > (anoAtual+1))
             return false;
         if(mes < 1 || mes > 12)
             return false;

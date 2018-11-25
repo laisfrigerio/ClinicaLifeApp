@@ -258,11 +258,6 @@ public class NovoAgendamento extends javax.swing.JFrame implements TelaAnteceden
                 bCancelarAgendamentoMouseExited(evt);
             }
         });
-        bCancelarAgendamento.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bCancelarAgendamentoActionPerformed(evt);
-            }
-        });
         bCancelarAgendamento.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 bCancelarAgendamentoKeyPressed(evt);
@@ -294,11 +289,6 @@ public class NovoAgendamento extends javax.swing.JFrame implements TelaAnteceden
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 bSalvarAgendamentoMouseExited(evt);
-            }
-        });
-        bSalvarAgendamento.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bSalvarAgendamentoActionPerformed(evt);
             }
         });
 
@@ -662,10 +652,6 @@ public class NovoAgendamento extends javax.swing.JFrame implements TelaAnteceden
         bBuscarConsulta.setBackground(Color.decode("#008542"));
     }//GEN-LAST:event_bBuscarConsultaFocusGained
 
-    private void bSalvarAgendamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSalvarAgendamentoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bSalvarAgendamentoActionPerformed
-
     private void bSalvarAgendamentoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bSalvarAgendamentoMouseExited
         bSalvarAgendamento.setBackground(Color.decode("#006634"));
     }//GEN-LAST:event_bSalvarAgendamentoMouseExited
@@ -700,52 +686,67 @@ public class NovoAgendamento extends javax.swing.JFrame implements TelaAnteceden
             return;
         }
         
+        AgendaController ac = new AgendaController();
+        this.agenda.setConsulta(this.consulta);
+        
         if (!Validacao.isEmpty(tQuantidade.getText()) && Validacao.isNumeric(tQuantidade.getText())) {
             int quantidade = Integer.parseInt(tQuantidade.getText());
+            
+            if (quantidade < 1) {
+                JOptionPane.showMessageDialog(null, "O campo (Quantidade) deve ser maior que 0 (zero)", "Atenção", JOptionPane.WARNING_MESSAGE);
+                return;
+            }
+            
             if (quantidade > this.consulta.getQntdSessao()) {
                 JOptionPane.showMessageDialog(null, "O campo (Quantidade) deve ser menor ou igual ao campo (Total Sessões)", "Atenção", JOptionPane.WARNING_MESSAGE);
                 return;
-            } else {
-                this.agenda.setQuantidade(quantidade);
             }
+            
+            this.agenda.setQuantidade(quantidade);
         }
         
-        String repetir = (String)jComboBoxRepetir.getSelectedItem();
-        AgendaController ac = new AgendaController();
+        String recorrencia = (String)jComboBoxRepetir.getSelectedItem();
         this.agenda.setRecorrenciaSabado(radioButtonRepetirSabado.isSelected());
-        this.agenda.setRecorrencia(repetir);
-        this.agenda.setConsulta(this.consulta);
+        this.agenda.setRecorrencia(recorrencia);
+       
         this.agenda.setProfissional(this.profissional);
         this.agenda.getConsulta().setPaciente(this.paciente);
         this.agenda.setObservacao(tObservacao.getText());
-        if (ac.checkNumeroSessoesFisioterapia(this.agenda) < this.consulta.getQntdSessao()) {
-            switch (ac.cadastrar(this.agenda)) {
-                case 0:
-                    JOptionPane.showMessageDialog(null, "Ocorreu um erro ao realizar o cadastro. Tente novamente mais tarde ou contate o Administrador do sistema", "Atenção", JOptionPane.ERROR_MESSAGE);
-                    break;
-                case 1:
-                    JOptionPane.showMessageDialog(null, "Agendamento efetuado com sucesso", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
-                    if (this.tela.getTDate().getDate() != null) {
-                        List<Horario> lista = ac.agendamentos(Formatacao.date2StringScreen(this.tela.getTDate().getDate()));
-                        if(lista != null) {
-                            this.tela.tableModelAgenda.addLista(lista);
-                            for(int i = 0; i<20; i++)
-                            this.tela.getTableAgenda().setRowHeight(i, 30);
-                            DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
-                            centerRenderer.setHorizontalAlignment( JLabel.CENTER );
-                            this.tela.getTableAgenda().getColumnModel().getColumn(0).setCellRenderer( centerRenderer );
-                            this.tela.getTableAgenda().getColumnModel().getColumn(0).setMinWidth(100);
-                            this.tela.getTableAgenda().getColumnModel().getColumn(0).setMaxWidth(100);
-                        }
-                    }
-                    this.dispose();
-                    break;
-                case 2:
-                    JOptionPane.showMessageDialog(null, "Não foi possível replicar o agendamento, por motivo de horário cheio.", "Atenção", JOptionPane.ERROR_MESSAGE);
-                    break;
-            }
-        } else {
+        int qntdAgendamentosCadastrados = ac.checkNumeroSessoesConsulta(this.agenda);
+        if (qntdAgendamentosCadastrados == this.consulta.getQntdSessao()) {
             JOptionPane.showMessageDialog(null, "Não é mais possível realziar um novo agendamento para esta consulta, pois a mesma já atingiu a quantidade máxima de sessões.", "Atenção", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+        
+        if ( (this.consulta.getQntdSessao() - qntdAgendamentosCadastrados) < this.agenda.getQuantidade() ) {
+            JOptionPane.showMessageDialog(null, "Não é mais possível realziar um novo agendamento para esta consulta, pois não é possível cadastradar mais sessões do que o permitido (Total Sessões)", "Atenção", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+        
+        switch (ac.cadastrar(this.agenda)) {
+            case 0:
+                JOptionPane.showMessageDialog(null, "Ocorreu um erro ao realizar o cadastro. Tente novamente mais tarde ou contate o Administrador do sistema", "Atenção", JOptionPane.ERROR_MESSAGE);
+                break;
+            case 1:
+                JOptionPane.showMessageDialog(null, "Agendamento efetuado com sucesso", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
+                if (this.tela.getTDate().getDate() != null) {
+                    List<Horario> lista = ac.agendamentos(Formatacao.date2StringScreen(this.tela.getTDate().getDate()));
+                    if(lista != null) {
+                        this.tela.tableModelAgenda.addLista(lista);
+                        for(int i = 0; i<20; i++)
+                        this.tela.getTableAgenda().setRowHeight(i, 30);
+                        DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
+                        centerRenderer.setHorizontalAlignment( JLabel.CENTER );
+                        this.tela.getTableAgenda().getColumnModel().getColumn(0).setCellRenderer( centerRenderer );
+                        this.tela.getTableAgenda().getColumnModel().getColumn(0).setMinWidth(100);
+                        this.tela.getTableAgenda().getColumnModel().getColumn(0).setMaxWidth(100);
+                    }
+                }
+                this.dispose();
+                break;
+            case 2:
+                JOptionPane.showMessageDialog(null, "Não foi possível replicar o agendamento, por motivo de horário cheio.", "Atenção", JOptionPane.ERROR_MESSAGE);
+                break;
         }
     }//GEN-LAST:event_bSalvarAgendamentoMouseClicked
 
@@ -758,6 +759,7 @@ public class NovoAgendamento extends javax.swing.JFrame implements TelaAnteceden
     }//GEN-LAST:event_bSalvarAgendamentoFocusGained
 
     private void bCancelarAgendamentoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_bCancelarAgendamentoKeyPressed
+        this.agenda.setConsulta(null);
         this.dispose();
     }//GEN-LAST:event_bCancelarAgendamentoKeyPressed
 
@@ -770,6 +772,7 @@ public class NovoAgendamento extends javax.swing.JFrame implements TelaAnteceden
     }//GEN-LAST:event_bCancelarAgendamentoMouseEntered
 
     private void bCancelarAgendamentoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bCancelarAgendamentoMouseClicked
+        this.agenda.setConsulta(null);
         this.dispose();
     }//GEN-LAST:event_bCancelarAgendamentoMouseClicked
 
@@ -780,10 +783,6 @@ public class NovoAgendamento extends javax.swing.JFrame implements TelaAnteceden
     private void bCancelarAgendamentoFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_bCancelarAgendamentoFocusGained
         bCancelarAgendamento.setBackground(Color.decode("#AD0000"));
     }//GEN-LAST:event_bCancelarAgendamentoFocusGained
-
-    private void bCancelarAgendamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCancelarAgendamentoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bCancelarAgendamentoActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */

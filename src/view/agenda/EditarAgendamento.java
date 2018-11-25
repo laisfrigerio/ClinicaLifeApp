@@ -597,32 +597,26 @@ public class EditarAgendamento extends javax.swing.JFrame implements TelaAnteced
             JOptionPane.showMessageDialog(null, "Informe uma data válida", "Atenção", JOptionPane.WARNING_MESSAGE);
         } else {
             AgendaController ac = new AgendaController();  
-            if (ac.checkNumeroSessoesFisioterapia(this.agenda) < this.getConsulta().getQntdSessao()) {
-                this.agenda.setObservacao(tObservacao.getText());
-                if (ac.editar(this.agenda)) {
-                    if (this.tela.getTDate().getDate() != null) {
-                        List<Horario> lista = ac.agendamentos(Formatacao.date2StringScreen(this.tela.getTDate().getDate()));
-                        if(lista != null) {
-                            this.tela.tableModelAgenda.addLista(lista);
-                            for(int i = 0; i<20; i++)
-                                this.tela.getTableAgenda().setRowHeight(i, 30);
-                            DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
-                            centerRenderer.setHorizontalAlignment( JLabel.CENTER );
-                            this.tela.getTableAgenda().getColumnModel().getColumn(0).setCellRenderer( centerRenderer );
-                            this.tela.getTableAgenda().getColumnModel().getColumn(0).setMinWidth(100);
-                            this.tela.getTableAgenda().getColumnModel().getColumn(0).setMaxWidth(100);
-                        }
+            this.agenda.setObservacao(tObservacao.getText());
+            if (ac.editar(this.agenda)) {
+                if (this.tela.getTDate().getDate() != null) {
+                    List<Horario> lista = ac.agendamentos(Formatacao.date2StringScreen(this.tela.getTDate().getDate()));
+                    if(lista != null) {
+                        this.tela.tableModelAgenda.addLista(lista);
+                        for(int i = 0; i<20; i++)
+                            this.tela.getTableAgenda().setRowHeight(i, 30);
+                        DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
+                        centerRenderer.setHorizontalAlignment( JLabel.CENTER );
+                        this.tela.getTableAgenda().getColumnModel().getColumn(0).setCellRenderer( centerRenderer );
+                        this.tela.getTableAgenda().getColumnModel().getColumn(0).setMinWidth(100);
+                        this.tela.getTableAgenda().getColumnModel().getColumn(0).setMaxWidth(100);
                     }
-                    this.dispose();
-                    return ;
-                } else {
-                    JOptionPane.showMessageDialog(null, "Ocorreu um erro ao realizar o cadastro. Tente novamente mais tarde ou contate o Administrador do sistema", "Atenção", JOptionPane.ERROR_MESSAGE);
                 }
+                this.dispose();
             } else {
-                JOptionPane.showMessageDialog(null, "Não é mais possível realizar um novo agendamento para esta consulta, pois a mesma já atingiu a quantidade máxima de sessões.", "Atenção", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Ocorreu um erro ao editar este agendamento. Tente novamente mais tarde ou contate o Administrador do sistema", "Atenção", JOptionPane.ERROR_MESSAGE);
             }
         }
-        //this.agenda.setConsulta(null);
     }//GEN-LAST:event_bSalvarAgendamentoMouseClicked
 
     private void bSalvarAgendamentoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bSalvarAgendamentoMouseEntered
