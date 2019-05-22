@@ -14,7 +14,10 @@ Sistema para o gerenciamento de uma clínica de fisioterapias e estética. A seg
 
 ## Funcionalidades
 
-- <strong>Login:</strong> Sistema de autenticação;
+- <strong>Login:</strong> Sistema de autenticação. Utilize os seguintes dados para realizar login na aplicação
+
+> Login: <strong>lais</strong>;
+> Senha: <strong>lais</strong>;
 
 <br/><br/>
 
