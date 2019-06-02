@@ -267,18 +267,22 @@ public class Main extends javax.swing.JFrame {
         lProcedimento = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(920, 640));
+        setMinimumSize(new java.awt.Dimension(920, 840));
 
         bg.setBackground(new java.awt.Color(255, 255, 255));
         bg.setMinimumSize(new java.awt.Dimension(820, 640));
         bg.setPreferredSize(new java.awt.Dimension(820, 600));
 
         content.setBackground(new java.awt.Color(255, 255, 255));
+        content.setMaximumSize(new java.awt.Dimension(600, 600));
         content.setMinimumSize(new java.awt.Dimension(600, 600));
+        content.setName(""); // NOI18N
         content.setPreferredSize(new java.awt.Dimension(580, 600));
         content.setLayout(new java.awt.CardLayout());
 
         contentAgenda.setBackground(new java.awt.Color(255, 255, 255));
+        contentAgenda.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        contentAgenda.setMaximumSize(new java.awt.Dimension(580, 600));
         contentAgenda.setPreferredSize(new java.awt.Dimension(580, 600));
 
         headerAgenda.setBackground(new java.awt.Color(255, 255, 255));
@@ -418,7 +422,7 @@ public class Main extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lPesquisarAgenda)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tBuscarAgenda, javax.swing.GroupLayout.DEFAULT_SIZE, 15, Short.MAX_VALUE)
+                .addComponent(tBuscarAgenda, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(bBuscarAgenda, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -526,7 +530,7 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(pathContentHomePaciente)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(pathPaciente)
-                .addGap(0, 637, Short.MAX_VALUE))
+                .addGap(0, 436, Short.MAX_VALUE))
         );
         headerPacienteLayout.setVerticalGroup(
             headerPacienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -854,7 +858,7 @@ public class Main extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(lPesquisarProfissional)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(tBuscarProfissional, javax.swing.GroupLayout.DEFAULT_SIZE, 297, Short.MAX_VALUE)
+                .addComponent(tBuscarProfissional, javax.swing.GroupLayout.DEFAULT_SIZE, 92, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(bBuscarProfissional, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -956,7 +960,7 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(pathContentHomeUsuario)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(pathUsuario)
-                .addGap(0, 641, Short.MAX_VALUE))
+                .addGap(0, 440, Short.MAX_VALUE))
         );
         headerUsuarioLayout.setVerticalGroup(
             headerUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1161,7 +1165,7 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(pathContentHomeFisioterapia)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(pathFisioterapia)
-                .addGap(0, 416, Short.MAX_VALUE))
+                .addGap(0, 433, Short.MAX_VALUE))
         );
         headerFisioterapiaLayout.setVerticalGroup(
             headerFisioterapiaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1288,7 +1292,7 @@ public class Main extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(lPesquisarFisioterapia)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tBuscarConsulta, javax.swing.GroupLayout.DEFAULT_SIZE, 62, Short.MAX_VALUE)
+                .addComponent(tBuscarConsulta, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(bBuscarConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -1390,7 +1394,7 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(pathContentHomeAvaliacao)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(pathAvaliacao)
-                .addGap(0, 411, Short.MAX_VALUE))
+                .addGap(0, 428, Short.MAX_VALUE))
         );
         headerAvaliacaoLayout.setVerticalGroup(
             headerAvaliacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1720,7 +1724,7 @@ public class Main extends javax.swing.JFrame {
         mainProcedimento.setLayout(mainProcedimentoLayout);
         mainProcedimentoLayout.setHorizontalGroup(
             mainProcedimentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(scrollPanelProcedimento, javax.swing.GroupLayout.DEFAULT_SIZE, 788, Short.MAX_VALUE)
+            .addComponent(scrollPanelProcedimento, javax.swing.GroupLayout.DEFAULT_SIZE, 589, Short.MAX_VALUE)
         );
         mainProcedimentoLayout.setVerticalGroup(
             mainProcedimentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2087,12 +2091,12 @@ public class Main extends javax.swing.JFrame {
             .addGroup(bgLayout.createSequentialGroup()
                 .addComponent(sidebarScroll, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(content, javax.swing.GroupLayout.DEFAULT_SIZE, 602, Short.MAX_VALUE))
+                .addComponent(content, javax.swing.GroupLayout.DEFAULT_SIZE, 601, Short.MAX_VALUE))
         );
         bgLayout.setVerticalGroup(
             bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(content, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(sidebarScroll)
+            .addComponent(content, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(sidebarScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
         );
 
         getContentPane().add(bg, java.awt.BorderLayout.CENTER);

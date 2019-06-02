@@ -4,7 +4,7 @@
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="2"/>
     <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[920, 640]"/>
+      <Dimension value="[920, 840]"/>
     </Property>
   </Properties>
   <SyntheticProperties>
@@ -21,7 +21,7 @@
     <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
-    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,2,-27,0,0,3,-8"/>
+    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,2,-128,0,0,3,52"/>
   </AuxValues>
 
   <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
@@ -50,14 +50,14 @@
               <Group type="102" alignment="0" attributes="0">
                   <Component id="sidebarScroll" min="-2" pref="212" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="content" pref="602" max="32767" attributes="0"/>
+                  <Component id="content" pref="601" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="content" max="32767" attributes="0"/>
-              <Component id="sidebarScroll" max="32767" attributes="0"/>
+              <Component id="content" max="-2" attributes="0"/>
+              <Component id="sidebarScroll" pref="600" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
       </Layout>
@@ -67,9 +67,13 @@
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
+            <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[600, 600]"/>
+            </Property>
             <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[600, 600]"/>
             </Property>
+            <Property name="name" type="java.lang.String" value="" noResource="true"/>
             <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[580, 600]"/>
             </Property>
@@ -81,6 +85,12 @@
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                  <Color id="Cursor Padr&#xe3;o"/>
+                </Property>
+                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[580, 600]"/>
                 </Property>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[580, 600]"/>
@@ -185,7 +195,7 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="lPesquisarAgenda" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="tBuscarAgenda" pref="233" max="32767" attributes="0"/>
+                              <Component id="tBuscarAgenda" pref="25" max="32767" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="bBuscarAgenda" min="-2" pref="49" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -482,7 +492,7 @@
                               <Component id="pathContentHomePaciente" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="pathPaciente" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="637" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="436" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -846,7 +856,7 @@
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="lPesquisarProfissional" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="tBuscarProfissional" pref="297" max="32767" attributes="0"/>
+                              <Component id="tBuscarProfissional" pref="92" max="32767" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="bBuscarProfissional" min="-2" pref="45" max="-2" attributes="0"/>
                           </Group>
@@ -1128,7 +1138,7 @@
                               <Component id="pathContentHomeUsuario" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="pathUsuario" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="641" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="440" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1438,7 +1448,7 @@
                               <Component id="pathContentHomeFisioterapia" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="pathFisioterapia" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="634" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="433" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1498,7 +1508,7 @@
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="lPesquisarFisioterapia" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="tBuscarConsulta" pref="280" max="32767" attributes="0"/>
+                              <Component id="tBuscarConsulta" pref="75" max="32767" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="bBuscarConsulta" min="-2" pref="143" max="-2" attributes="0"/>
                           </Group>
@@ -1782,7 +1792,7 @@
                               <Component id="pathContentHomeAvaliacao" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="pathAvaliacao" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="629" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="428" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -2263,7 +2273,7 @@
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="scrollPanelProcedimento" pref="788" max="32767" attributes="0"/>
+                          <Component id="scrollPanelProcedimento" pref="589" max="32767" attributes="0"/>
                       </Group>
                     </DimensionLayout>
                     <DimensionLayout dim="1">
