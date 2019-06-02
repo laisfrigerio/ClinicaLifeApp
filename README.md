@@ -69,7 +69,7 @@ Sistema para o gerenciamento de uma clínica de fisioterapias e estética. A seg
 
 ## Changelog
 
-- Versão 1.0.0: (08/2017) Não possuia agenda;
+- Versão 1.0.0: (08/2017) Versão inicial com cadastro de pacientes, usuários, fisiotepeutas, fisioterapias e avaliações (Sem agenda);
 - Versão 2.0.0: (02/2018) Adicionado agenda;
 - Versão 3.0.0: (11/2018) Agendamento recorrente;
-- Versão 3.0.2: (06/2019) Ajuste do responsivo da tea na vertical;
+- Versão 3.0.2: (06/2019) Ajuste do responsivo da tela na vertical;
