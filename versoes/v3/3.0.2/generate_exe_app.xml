@@ -3,7 +3,7 @@
   <dontWrapJar>false</dontWrapJar>
   <headerType>gui</headerType>
   <jar>C:\Users\laisf\Documents\Projetos\ClinicaLifeApp\dist\ClinicaLifeApp.jar</jar>
-  <outfile>C:\Users\laisf\Documents\Projetos\ClinicaLifeApp\Clinica Life App v-3.0.1.exe</outfile>
+  <outfile>C:\Users\laisf\Documents\Projetos\ClinicaLifeApp\Clinica Life App v-3.0.2.exe</outfile>
   <errTitle></errTitle>
   <cmdLine></cmdLine>
   <chdir>.</chdir>

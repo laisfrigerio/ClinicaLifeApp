@@ -28,12 +28,12 @@ AppName=Clinica Life Instalador
 AppVersion=1.0.0
 DefaultDirName=C:\Clinica Life
 OutputDir=.
-OutputBaseFilename=Clinica Life Instalador v-3.0.1
+OutputBaseFilename=Clinica Life Instalador v-3.0.2
 SetupIconFile=C:\Users\laisf\Documents\Projetos\ClinicaLifeApp\doctor.ico
 DisableDirPage=no
 
 [Files]
-Source: "Clinica Life App.exe"; DestDir: "{app}"; DestName : "Clinica Life App.exe"
+Source: "Clinica Life App v-3.0.2.exe"; DestDir: "{app}"; DestName : "Clinica Life App.exe"
 
 [Run]
 ; Modifying name from default uninstall .exe file
@@ -41,8 +41,8 @@ Filename: {cmd}; Parameters: "/C Move ""{app}\unins000.exe"" ""{app}\desinstalad
 Filename: {cmd}; Parameters: "/C Move ""{app}\unins000.dat"" ""{app}\desinstalador.dat"""; Flags: RunHidden WaitUntilTerminated;
 
 [Icons]
-Name: "{group}\doctor"; Filename: "{app}\Clinica Life.exe"; IconFilename: "C:\Users\laisf\Documents\Projetos\TesteClinica\doctor.ico"
-Name: "{group}\{cm:UninstallProgram,IconImage}"; Filename: "{uninstallexe}"; IconFilename: "C:\Users\laisf\Documents\Projetos\doctor.ico"
+Name: "{group}\doctor"; Filename: "{app}\Clinica Life.exe"; IconFilename: "C:\Users\laisf\Documents\Projetos\ClinicaLifeApp\doctor.ico"
+Name: "{group}\{cm:UninstallProgram,IconImage}"; Filename: "{uninstallexe}"; IconFilename: "C:\Users\laisf\Documents\Projetos\ClinicaLifeApp\doctor.ico"
 
 ;[Registry]
 ;Root: HKLM; Subkey: "SYSTEM\CurrentControlSet\Control\Session Manager\Environment"; \
