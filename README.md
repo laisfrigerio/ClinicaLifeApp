@@ -1,6 +1,7 @@
 # Clínica Life App
 Sistema para o gerenciamento de uma clínica de fisioterapias e estética. A seguir é apresentado as principais funcionalidades do sistema:
 - Agenda;
+- Gerenciamento de Consultas;
 - Gerenciamento de Pacientes;
 - Gerenciamento de Profissionais - além do controle de especialidades dos profissionais;
 - Gerenciamento de Usuários (acesso ao sistema);
@@ -73,3 +74,4 @@ Sistema para o gerenciamento de uma clínica de fisioterapias e estética. A seg
 - Versão 2.0.0: (02/2018) Adicionado agenda;
 - Versão 3.0.0: (11/2018) Agendamento recorrente;
 - Versão 3.0.2: (06/2019) Ajuste do responsivo da tela na vertical;
+- Versão 3.0.3: (06/2019) Adicionando (novamente) CRUD de Avaliações;
