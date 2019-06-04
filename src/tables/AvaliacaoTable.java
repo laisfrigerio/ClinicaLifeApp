@@ -12,7 +12,7 @@ import model.Formatacao;
 
 public class AvaliacaoTable extends AbstractTableModel {
     private List<Avaliacao> avaliacoes;
-    private final String[] colunas = {"Código", "Fisioterapeuta", "Cliente", "Data"};
+    private final String[] colunas = {"Código", "Profissional", "Cliente", "Data"};
     
     public AvaliacaoTable(){
          this.avaliacoes = new ArrayList(); 

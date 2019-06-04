@@ -4,6 +4,8 @@
 
 package view;
 
+import view.avaliacao.NovoAvaliacao;
+import view.avaliacao.EditarAvaliacao;
 import view.consulta.EditarConsulta;
 import view.usuario.EditarUsuario;
 import view.usuario.NovoUsuario;
@@ -219,6 +221,8 @@ public class Main extends javax.swing.JFrame {
         lPesquisarAvaliacao = new javax.swing.JLabel();
         tBuscarAvaliacao = new javax.swing.JTextField();
         bBuscarAvaliacao = new javax.swing.JButton();
+        bNovoAvaliacao = new javax.swing.JButton();
+        bEditarAvaliacao = new javax.swing.JButton();
         mainAvaliacao = new javax.swing.JPanel();
         scrollPanelAvaliacao = new javax.swing.JScrollPane();
         tableAvaliacoes = new javax.swing.JTable();
@@ -1165,7 +1169,7 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(pathContentHomeFisioterapia)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(pathFisioterapia)
-                .addGap(0, 433, Short.MAX_VALUE))
+                .addGap(0, 412, Short.MAX_VALUE))
         );
         headerFisioterapiaLayout.setVerticalGroup(
             headerFisioterapiaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1292,7 +1296,7 @@ public class Main extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(lPesquisarFisioterapia)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tBuscarConsulta, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
+                .addComponent(tBuscarConsulta, javax.swing.GroupLayout.DEFAULT_SIZE, 54, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(bBuscarConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -1315,11 +1319,13 @@ public class Main extends javax.swing.JFrame {
         );
 
         mainFisioterapia.setBackground(new java.awt.Color(255, 255, 255));
+        mainFisioterapia.setPreferredSize(null);
 
         scrollPanelConsulta.setBackground(new java.awt.Color(255, 255, 255));
         scrollPanelConsulta.setBorder(null);
         scrollPanelConsulta.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         scrollPanelConsulta.setMinimumSize(null);
+        scrollPanelConsulta.setPreferredSize(null);
 
         tableConsultas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -1342,18 +1348,18 @@ public class Main extends javax.swing.JFrame {
         );
         mainFisioterapiaLayout.setVerticalGroup(
             mainFisioterapiaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(scrollPanelConsulta, javax.swing.GroupLayout.DEFAULT_SIZE, 480, Short.MAX_VALUE)
+            .addComponent(scrollPanelConsulta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout contentConsultaLayout = new javax.swing.GroupLayout(contentConsulta);
         contentConsulta.setLayout(contentConsultaLayout);
         contentConsultaLayout.setHorizontalGroup(
             contentConsultaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(contentConsultaLayout.createSequentialGroup()
-                .addGroup(contentConsultaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(mainFisioterapia, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(headerFisioterapia, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(navButtonsFisioterapia, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contentConsultaLayout.createSequentialGroup()
+                .addGroup(contentConsultaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(mainFisioterapia, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(headerFisioterapia, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(navButtonsFisioterapia, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         contentConsultaLayout.setVerticalGroup(
@@ -1364,8 +1370,8 @@ public class Main extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(navButtonsFisioterapia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(11, 11, 11)
-                .addComponent(mainFisioterapia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(153, 153, 153))
+                .addComponent(mainFisioterapia, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         content.add(contentConsulta, "card2");
@@ -1394,7 +1400,7 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(pathContentHomeAvaliacao)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(pathAvaliacao)
-                .addGap(0, 428, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         headerAvaliacaoLayout.setVerticalGroup(
             headerAvaliacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1442,14 +1448,61 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
+        bNovoAvaliacao.setBackground(new java.awt.Color(0, 102, 52));
+        bNovoAvaliacao.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        bNovoAvaliacao.setForeground(new java.awt.Color(255, 255, 255));
+        bNovoAvaliacao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons/plus-black-symbol.png"))); // NOI18N
+        bNovoAvaliacao.setText("Novo");
+        bNovoAvaliacao.setBorder(null);
+        bNovoAvaliacao.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bNovoAvaliacao.setDoubleBuffered(true);
+        bNovoAvaliacao.setFocusPainted(false);
+        bNovoAvaliacao.setFocusable(false);
+        bNovoAvaliacao.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bNovoAvaliacaoMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                bNovoAvaliacaoMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                bNovoAvaliacaoMouseExited(evt);
+            }
+        });
+
+        bEditarAvaliacao.setBackground(new java.awt.Color(0, 102, 52));
+        bEditarAvaliacao.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        bEditarAvaliacao.setForeground(new java.awt.Color(255, 255, 255));
+        bEditarAvaliacao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons/edit.png"))); // NOI18N
+        bEditarAvaliacao.setText("Editar");
+        bEditarAvaliacao.setBorder(null);
+        bEditarAvaliacao.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bEditarAvaliacao.setDoubleBuffered(true);
+        bEditarAvaliacao.setFocusPainted(false);
+        bEditarAvaliacao.setFocusable(false);
+        bEditarAvaliacao.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bEditarAvaliacaoMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                bEditarAvaliacaoMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                bEditarAvaliacaoMouseExited(evt);
+            }
+        });
+
         javax.swing.GroupLayout navButtonsAvaliacaoLayout = new javax.swing.GroupLayout(navButtonsAvaliacao);
         navButtonsAvaliacao.setLayout(navButtonsAvaliacaoLayout);
         navButtonsAvaliacaoLayout.setHorizontalGroup(
             navButtonsAvaliacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(navButtonsAvaliacaoLayout.createSequentialGroup()
-                .addGap(0, 0, 0)
-                .addComponent(lPesquisarAvaliacao)
+                .addComponent(bNovoAvaliacao, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(bEditarAvaliacao, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(lPesquisarAvaliacao)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(tBuscarAvaliacao)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(bBuscarAvaliacao, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1462,7 +1515,10 @@ public class Main extends javax.swing.JFrame {
                     .addGroup(navButtonsAvaliacaoLayout.createSequentialGroup()
                         .addGroup(navButtonsAvaliacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(tBuscarAvaliacao, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lPesquisarAvaliacao))
+                            .addGroup(navButtonsAvaliacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(bNovoAvaliacao, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(bEditarAvaliacao, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lPesquisarAvaliacao)))
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(bBuscarAvaliacao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
@@ -1492,7 +1548,7 @@ public class Main extends javax.swing.JFrame {
         mainAvaliacao.setLayout(mainAvaliacaoLayout);
         mainAvaliacaoLayout.setHorizontalGroup(
             mainAvaliacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(scrollPanelAvaliacao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(scrollPanelAvaliacao, javax.swing.GroupLayout.DEFAULT_SIZE, 589, Short.MAX_VALUE)
         );
         mainAvaliacaoLayout.setVerticalGroup(
             mainAvaliacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2492,6 +2548,10 @@ public class Main extends javax.swing.JFrame {
         //bEditarAvaliacao.setBorder(BorderFactory.createEtchedBorder(0));
         bBuscarAvaliacao.setModel(new FixedButtonModel());
         bBuscarAvaliacao.setBorder(BorderFactory.createEtchedBorder(0));
+        bNovoAvaliacao.setModel(new FixedButtonModel());
+        bNovoAvaliacao.setBorder(BorderFactory.createEtchedBorder(0));
+        bEditarAvaliacao.setModel(new FixedButtonModel());
+        bEditarAvaliacao.setBorder(BorderFactory.createEtchedBorder(0));
         this.setTitle("Gerenciamento de Avaliações");
         this.setIconImage(new ImageIcon(getClass().getResource("/images/icons/check-form.png")).getImage());
         this.currentTela = 5;
@@ -2941,6 +3001,42 @@ public class Main extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_bBuscarConsultaKeyPressed
 
+    private void bNovoAvaliacaoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bNovoAvaliacaoMouseClicked
+        NovoAvaliacao tela = new NovoAvaliacao(this);
+        tela.setVisible(true);
+    }//GEN-LAST:event_bNovoAvaliacaoMouseClicked
+
+    private void bNovoAvaliacaoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bNovoAvaliacaoMouseEntered
+        bNovoAvaliacao.setBackground(Color.decode("#008542"));
+    }//GEN-LAST:event_bNovoAvaliacaoMouseEntered
+
+    private void bNovoAvaliacaoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bNovoAvaliacaoMouseExited
+        bNovoAvaliacao.setBackground(Color.decode("#006634"));
+    }//GEN-LAST:event_bNovoAvaliacaoMouseExited
+
+    private void bEditarAvaliacaoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bEditarAvaliacaoMouseClicked
+        int row = this.tableAvaliacoes.getSelectedRow();
+        if(row > -1){
+            Avaliacao a = this.tableModelAvaliacao.getAvaliacao(row);
+            if (a != null) {
+                EditarAvaliacao ea = new EditarAvaliacao(this, a);
+                ea.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Por favor, selecione uma Avaliação da tabela.", "Atenção", JOptionPane.INFORMATION_MESSAGE);
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Por favor, selecione uma Avaliação da tabela.", "Atenção", JOptionPane.INFORMATION_MESSAGE);
+        }
+    }//GEN-LAST:event_bEditarAvaliacaoMouseClicked
+
+    private void bEditarAvaliacaoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bEditarAvaliacaoMouseEntered
+        bEditarAvaliacao.setBackground(Color.decode("#008542"));
+    }//GEN-LAST:event_bEditarAvaliacaoMouseEntered
+
+    private void bEditarAvaliacaoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bEditarAvaliacaoMouseExited
+        bEditarAvaliacao.setBackground(Color.decode("#006634"));
+    }//GEN-LAST:event_bEditarAvaliacaoMouseExited
+
     /**
      * @param args the command line arguments
      */
@@ -3043,6 +3139,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton bBuscarProfissional;
     private javax.swing.JButton bBuscarUsuario;
     private javax.swing.JButton bEditarAgenda;
+    private javax.swing.JButton bEditarAvaliacao;
     private javax.swing.JButton bEditarConsulta;
     private javax.swing.JButton bEditarPaciente;
     private javax.swing.JButton bEditarProcedimento;
@@ -3051,6 +3148,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton bHistoricoConsulta;
     private javax.swing.JButton bListarEspecialidades;
     private javax.swing.JButton bNovoAgenda;
+    private javax.swing.JButton bNovoAvaliacao;
     private javax.swing.JButton bNovoConsulta;
     private javax.swing.JButton bNovoPaciente;
     private javax.swing.JButton bNovoProcedimento;
