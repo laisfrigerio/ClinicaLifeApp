@@ -698,3 +698,23 @@ Launcher:	C:\Program Files\Java\jre1.8.0_111\bin\javaw.exe
 Launcher args:	-jar "C:\Users\laisf\Documents\Projetos\ClinicaLifeApp\Test-01.exe"
 Args length:	67/32768 chars
 Exit code:	0
+
+
+Version:	3.10
+CmdLine:	C:\Users\laisf\Documents\Projetos\ClinicaLifeApp\Clinica Life App v-3.0.3.exe --l4j-debug
+WOW64:		yes
+Working dir:	C:\Users\laisf\Documents\Projetos\ClinicaLifeApp\.
+Java min ver:	1.8.0
+Java max ver:	
+Bundled JRE:	C:\Program Files\Java\jre1.8.0_111
+Check launcher:	C:\Program Files\Java\jre1.8.0_111\bin\javaw.exe (OK)
+Main class:	clinicalife.ClinicaLife
+Add classpath:	lib\AbsoluteLayout.jar
+Add classpath:	lib\dom4j-1.6.1
+Add classpath:	lib\jcalendar-1.4
+Add classpath:	lib\mysql-connector-java-5.1.23-bin
+Add classpath:	C:\Program Files\Java\jre1.8.0_111
+Launcher:	C:\Program Files\Java\jre1.8.0_111\bin\javaw.exe
+Launcher args:	-classpath "C:\Users\laisf\Documents\Projetos\ClinicaLifeApp\Clinica Life App v-3.0.3.exe;lib\AbsoluteLayout.jar;lib\dom4j-1.6.1;lib\jcalendar-1.4;lib\mysql-connector-java-5.1.23-bin;C:\Program Files\Java\jre1.8.0_111" clinicalife.ClinicaLife
+Args length:	242/32768 chars
+Exit code:	0
