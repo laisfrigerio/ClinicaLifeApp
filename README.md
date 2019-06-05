@@ -8,8 +8,8 @@ Sistema para o gerenciamento de uma clínica de fisioterapias e estética. A seg
 - Gerenciamento de Procedimentos;
 
 **ATENÇÃO**
-- Aplicação desenvolvido em Windows;
-- NÃO foi testado em Linux/Mac OS;
+- Aplicação desenvolvida em um computador Windows;
+- NÃO foi testado em Linux/Mac;
 
 # Conteúdo:
 
@@ -22,7 +22,7 @@ Sistema para o gerenciamento de uma clínica de fisioterapias e estética. A seg
 
 ## Instalação
 
-- Computador com Windows 7 (32/64 bits);
+- Computador com Windows 7 ou superior (32/64 bits);
 - Banco de Dados Mysql instalado localmente na máquina. As credencias do banco devem ser iguais as configuradas no seguinte arquivo de configuração >> [Credenciais do banco de dados](https://github.com/laisfrigerio/ClinicaLifeApp/blob/master/src/resources/config.properties);
 - JRE 1.18.0 (Windows 32/64 bits);
 
@@ -35,7 +35,7 @@ Sistema para o gerenciamento de uma clínica de fisioterapias e estética. A seg
     - [Credenciais do banco de dados](https://github.com/laisfrigerio/ClinicaLifeApp/blob/master/src/resources/config.properties);
 
 - Sobre o Instalador
-  - Apenas é executado em computadores com **Windows 7 e/ou superior (32/64 bits)**;
+  - Apenas é executado em computadores com **Windows 7 ou superior (32/64 bits)**;
   - O instalador foi desenvolvido utilizando a ferramenta **Inno Setup**;
   - Veja o código para gerar o instalador [AQUI](https://github.com/laisfrigerio/ClinicaLifeApp/blob/master/versoes/v3/3.0.3/generate_installer.iss);
   
