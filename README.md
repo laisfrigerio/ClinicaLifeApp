@@ -7,11 +7,49 @@ Sistema para o gerenciamento de uma clínica de fisioterapias e estética. A seg
 - Gerenciamento de Usuários (acesso ao sistema);
 - Gerenciamento de Procedimentos;
 
+**ATENÇÃO**
+- Aplicação desenvolvido em Windows;
+- NÃO foi testado em Linux/Mac OS;
+
 # Conteúdo:
 
+- [Requisitos para instalar a aplicação](https://github.com/laisfrigerio/ClinicaLifeApp#rinstalacao)
+- [Desenvolvimento](https://github.com/laisfrigerio/ClinicaLifeApp#desenvolvimento)
 - [Funcionalidades e screenshots](https://github.com/laisfrigerio/ClinicaLifeApp#funcionalidades)
 - [Tecnologias](https://github.com/laisfrigerio/ClinicaLifeApp#tecnologias)
+- [Testes](https://github.com/laisfrigerio/ClinicaLifeApp#testes)
 - [Changelog](https://github.com/laisfrigerio/ClinicaLifeApp#Changelog)
+
+## Instalação
+
+- Computador com Windows 7 (32/64 bits);
+- Banco de Dados Mysql instalado localmente na máquina. As credencias do banco devem ser iguais as configuradas no seguinte arquivo de configuração >> [Credenciais do banco de dados](https://github.com/laisfrigerio/ClinicaLifeApp/blob/master/src/resources/config.properties);
+- JRE 1.18.0 (Windows 32/64 bits);
+
+## Desenvolvimento
+
+- Local
+  - NetBeans
+  - JRE 1.18.0
+  - Banco de Dados Mysql;
+    - [Credenciais do banco de dados](https://github.com/laisfrigerio/ClinicaLifeApp/blob/master/src/resources/config.properties);
+
+- Sobre o Instalador
+  - Apenas é executado em computadores com **Windows 7 e/ou superior (32/64 bits)**;
+  - O instalador foi desenvolvido utilizando a ferramenta **Inno Setup**;
+  - Veja o código para gerar o instalador [AQUI](https://github.com/laisfrigerio/ClinicaLifeApp/blob/master/versoes/v3/3.0.3/generate_installer.iss);
+  
+- Sobre o executável da aplicação
+  - Através da ferramenta **Launchj4** é gerado o executável da aplicação que contém o **.jar** e as dependências;
+  - Veja o código para gerar o executável [AQUI](https://github.com/laisfrigerio/ClinicaLifeApp/blob/master/versoes/v3/3.0.3/generate_exe_app.xml);
+  
+
+- Para alterar as configurações do banco de dados:
+  - Abra a aplicação em uma IDE de desenvolvimento (NetBeans);
+  - Acesse o arquivo **src/resources/config.properties** e altere as credenciais do banco de dados;
+  - Execute a aplicação para recriar o **.jar**;
+  - Gerar .exe da aplicação através da ferramenta Launchj4;
+  - Gerar o instaldor da aplicação através da ferramenta Inno Setup;
 
 ## Funcionalidades
 
@@ -65,8 +103,18 @@ Sistema para o gerenciamento de uma clínica de fisioterapias e estética. A seg
 
 ## Tecnologias
 
+- Windows 10 64bits (utilizado no desenvolvimento da aplicação);
+- IDE Netbeans;
 - Sistema desenvolvido em JAVA com SWING;
 - Banco de dado MySQL;
+- JRE 1.18.0;
+- Inno Setup;
+- Launchj4;
+
+## Testes
+
+- A aplicação já foi instalada em computadores com Windows 7 de 32 e 64 bits;
+- Já foi instalada em um computador Windows 10 de 64 bits;
 
 ## Changelog
 
