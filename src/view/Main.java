@@ -110,7 +110,7 @@ public class Main extends javax.swing.JFrame {
         tableAvaliacoes.setShowVerticalLines(false);
         tableAvaliacoes.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         tableAgenda.setShowVerticalLines(false);
-        tableAgenda.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+        tableAgenda.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);        
         switch(this.currentTela) {
             case 1:
                 pAgenda.setBackground(Color.decode("#F0F0F0"));
@@ -321,7 +321,7 @@ public class Main extends javax.swing.JFrame {
         bNovoAgenda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons/plus-black-symbol.png"))); // NOI18N
         bNovoAgenda.setText("Novo");
         bNovoAgenda.setBorder(null);
-        bNovoAgenda.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bNovoAgenda.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         bNovoAgenda.setDoubleBuffered(true);
         bNovoAgenda.setFocusPainted(false);
         bNovoAgenda.setFocusable(false);
@@ -329,11 +329,11 @@ public class Main extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 bNovoAgendaMouseClicked(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                bNovoAgendaMouseEntered(evt);
-            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 bNovoAgendaMouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                bNovoAgendaMouseEntered(evt);
             }
         });
 
@@ -343,7 +343,7 @@ public class Main extends javax.swing.JFrame {
         bEditarAgenda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons/edit.png"))); // NOI18N
         bEditarAgenda.setText("Editar");
         bEditarAgenda.setBorder(null);
-        bEditarAgenda.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bEditarAgenda.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         bEditarAgenda.setDoubleBuffered(true);
         bEditarAgenda.setFocusPainted(false);
         bEditarAgenda.setFocusable(false);
@@ -351,34 +351,40 @@ public class Main extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 bEditarAgendaMouseClicked(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                bEditarAgendaMouseEntered(evt);
-            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 bEditarAgendaMouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                bEditarAgendaMouseEntered(evt);
             }
         });
 
         lPesquisarAgenda.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         lPesquisarAgenda.setText("Pesquisar: ");
 
+        tBuscarAgenda.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                tBuscarAgendaKeyPressed(evt);
+            }
+        });
+
         bBuscarAgenda.setBackground(new java.awt.Color(0, 102, 52));
         bBuscarAgenda.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         bBuscarAgenda.setForeground(new java.awt.Color(255, 255, 255));
         bBuscarAgenda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons/search.png"))); // NOI18N
         bBuscarAgenda.setBorder(null);
-        bBuscarAgenda.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bBuscarAgenda.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         bBuscarAgenda.setDoubleBuffered(true);
         bBuscarAgenda.setFocusPainted(false);
         bBuscarAgenda.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 bBuscarAgendaMouseClicked(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                bBuscarAgendaMouseEntered(evt);
-            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 bBuscarAgendaMouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                bBuscarAgendaMouseEntered(evt);
             }
         });
 
@@ -397,7 +403,7 @@ public class Main extends javax.swing.JFrame {
         bRemoverAgenda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons/trash.png"))); // NOI18N
         bRemoverAgenda.setText("Excluir");
         bRemoverAgenda.setBorder(null);
-        bRemoverAgenda.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bRemoverAgenda.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         bRemoverAgenda.setDoubleBuffered(true);
         bRemoverAgenda.setFocusPainted(false);
         bRemoverAgenda.setFocusable(false);
@@ -405,11 +411,11 @@ public class Main extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 bRemoverAgendaMouseClicked(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                bRemoverAgendaMouseEntered(evt);
-            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 bRemoverAgendaMouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                bRemoverAgendaMouseEntered(evt);
             }
         });
 
@@ -426,7 +432,7 @@ public class Main extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lPesquisarAgenda)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tBuscarAgenda, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE)
+                .addComponent(tBuscarAgenda, javax.swing.GroupLayout.DEFAULT_SIZE, 16, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(bBuscarAgenda, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -456,8 +462,12 @@ public class Main extends javax.swing.JFrame {
 
         mainAgenda.setBackground(new java.awt.Color(255, 255, 255));
 
-        scrollPanelAgenda.setBackground(new java.awt.Color(255, 255, 255));
         scrollPanelAgenda.setBorder(null);
+        scrollPanelAgenda.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                scrollPanelAgendaMouseClicked(evt);
+            }
+        });
 
         tableAgenda.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -472,17 +482,24 @@ public class Main extends javax.swing.JFrame {
         ));
         tableAgenda.setIntercellSpacing(new java.awt.Dimension(3, 3));
         tableAgenda.setRowHeight(30);
+        tableAgenda.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tableAgendaMouseClicked(evt);
+            }
+        });
         scrollPanelAgenda.setViewportView(tableAgenda);
 
         javax.swing.GroupLayout mainAgendaLayout = new javax.swing.GroupLayout(mainAgenda);
         mainAgenda.setLayout(mainAgendaLayout);
         mainAgendaLayout.setHorizontalGroup(
             mainAgendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(scrollPanelAgenda)
+            .addComponent(scrollPanelAgenda, javax.swing.GroupLayout.DEFAULT_SIZE, 542, Short.MAX_VALUE)
         );
         mainAgendaLayout.setVerticalGroup(
             mainAgendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(scrollPanelAgenda, javax.swing.GroupLayout.DEFAULT_SIZE, 479, Short.MAX_VALUE)
+            .addGroup(mainAgendaLayout.createSequentialGroup()
+                .addComponent(scrollPanelAgenda, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 153, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout contentAgendaLayout = new javax.swing.GroupLayout(contentAgenda);
@@ -505,7 +522,7 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(navButtonsAgenda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(mainAgenda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(154, 154, 154))
+                .addGap(263, 263, 263))
         );
 
         content.add(contentAgenda, "card2");
@@ -551,7 +568,7 @@ public class Main extends javax.swing.JFrame {
         bNovoPaciente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons/plus-black-symbol.png"))); // NOI18N
         bNovoPaciente.setText("Novo");
         bNovoPaciente.setBorder(null);
-        bNovoPaciente.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bNovoPaciente.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         bNovoPaciente.setDoubleBuffered(true);
         bNovoPaciente.setFocusPainted(false);
         bNovoPaciente.setFocusable(false);
@@ -573,7 +590,7 @@ public class Main extends javax.swing.JFrame {
         bEditarPaciente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons/edit.png"))); // NOI18N
         bEditarPaciente.setText("Editar");
         bEditarPaciente.setBorder(null);
-        bEditarPaciente.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bEditarPaciente.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         bEditarPaciente.setDoubleBuffered(true);
         bEditarPaciente.setFocusPainted(false);
         bEditarPaciente.setFocusable(false);
@@ -598,7 +615,7 @@ public class Main extends javax.swing.JFrame {
         bBuscarPaciente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons/search.png"))); // NOI18N
         bBuscarPaciente.setText("Pesquisar");
         bBuscarPaciente.setBorder(null);
-        bBuscarPaciente.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bBuscarPaciente.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         bBuscarPaciente.setDoubleBuffered(true);
         bBuscarPaciente.setFocusPainted(false);
         bBuscarPaciente.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -660,7 +677,6 @@ public class Main extends javax.swing.JFrame {
 
         mainPaciente.setBackground(new java.awt.Color(255, 255, 255));
 
-        scrollPanelPaciente.setBackground(new java.awt.Color(255, 255, 255));
         scrollPanelPaciente.setBorder(null);
 
         tablePacientes.setModel(new javax.swing.table.DefaultTableModel(
@@ -753,7 +769,7 @@ public class Main extends javax.swing.JFrame {
         bNovoProfissional.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons/plus-black-symbol.png"))); // NOI18N
         bNovoProfissional.setText("Novo");
         bNovoProfissional.setBorder(null);
-        bNovoProfissional.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bNovoProfissional.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         bNovoProfissional.setDoubleBuffered(true);
         bNovoProfissional.setFocusPainted(false);
         bNovoProfissional.setFocusable(false);
@@ -775,7 +791,7 @@ public class Main extends javax.swing.JFrame {
         bEditarProfissional.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons/edit.png"))); // NOI18N
         bEditarProfissional.setText("Editar");
         bEditarProfissional.setBorder(null);
-        bEditarProfissional.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bEditarProfissional.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         bEditarProfissional.setDoubleBuffered(true);
         bEditarProfissional.setFocusPainted(false);
         bEditarProfissional.setFocusable(false);
@@ -799,7 +815,7 @@ public class Main extends javax.swing.JFrame {
         bBuscarProfissional.setForeground(new java.awt.Color(255, 255, 255));
         bBuscarProfissional.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons/search.png"))); // NOI18N
         bBuscarProfissional.setBorder(null);
-        bBuscarProfissional.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bBuscarProfissional.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         bBuscarProfissional.setDoubleBuffered(true);
         bBuscarProfissional.setFocusPainted(false);
         bBuscarProfissional.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -833,7 +849,7 @@ public class Main extends javax.swing.JFrame {
         bListarEspecialidades.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons/portfolio_white.png"))); // NOI18N
         bListarEspecialidades.setText("Especialidades");
         bListarEspecialidades.setBorder(null);
-        bListarEspecialidades.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bListarEspecialidades.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         bListarEspecialidades.setDoubleBuffered(true);
         bListarEspecialidades.setFocusPainted(false);
         bListarEspecialidades.setFocusable(false);
@@ -887,7 +903,6 @@ public class Main extends javax.swing.JFrame {
 
         mainProfissional.setBackground(new java.awt.Color(255, 255, 255));
 
-        scrollPanelProfissional.setBackground(new java.awt.Color(255, 255, 255));
         scrollPanelProfissional.setBorder(null);
         scrollPanelProfissional.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
 
@@ -981,7 +996,7 @@ public class Main extends javax.swing.JFrame {
         bNovoUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons/plus-black-symbol.png"))); // NOI18N
         bNovoUsuario.setText("Novo");
         bNovoUsuario.setBorder(null);
-        bNovoUsuario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bNovoUsuario.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         bNovoUsuario.setDoubleBuffered(true);
         bNovoUsuario.setFocusPainted(false);
         bNovoUsuario.setFocusable(false);
@@ -1003,7 +1018,7 @@ public class Main extends javax.swing.JFrame {
         bEditarUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons/edit.png"))); // NOI18N
         bEditarUsuario.setText("Editar");
         bEditarUsuario.setBorder(null);
-        bEditarUsuario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bEditarUsuario.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         bEditarUsuario.setDoubleBuffered(true);
         bEditarUsuario.setFocusPainted(false);
         bEditarUsuario.setFocusable(false);
@@ -1028,7 +1043,7 @@ public class Main extends javax.swing.JFrame {
         bBuscarUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons/search.png"))); // NOI18N
         bBuscarUsuario.setText("Pesquisar");
         bBuscarUsuario.setBorder(null);
-        bBuscarUsuario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bBuscarUsuario.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         bBuscarUsuario.setDoubleBuffered(true);
         bBuscarUsuario.setFocusPainted(false);
         bBuscarUsuario.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -1090,7 +1105,6 @@ public class Main extends javax.swing.JFrame {
 
         mainUsuario.setBackground(new java.awt.Color(255, 255, 255));
 
-        scrollPanelUsuario.setBackground(new java.awt.Color(255, 255, 255));
         scrollPanelUsuario.setBorder(null);
         scrollPanelUsuario.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
 
@@ -1186,7 +1200,7 @@ public class Main extends javax.swing.JFrame {
         bNovoConsulta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons/plus-black-symbol.png"))); // NOI18N
         bNovoConsulta.setText("Novo");
         bNovoConsulta.setBorder(null);
-        bNovoConsulta.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bNovoConsulta.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         bNovoConsulta.setDoubleBuffered(true);
         bNovoConsulta.setFocusPainted(false);
         bNovoConsulta.setFocusable(false);
@@ -1208,7 +1222,7 @@ public class Main extends javax.swing.JFrame {
         bEditarConsulta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons/edit.png"))); // NOI18N
         bEditarConsulta.setText("Editar");
         bEditarConsulta.setBorder(null);
-        bEditarConsulta.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bEditarConsulta.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         bEditarConsulta.setDoubleBuffered(true);
         bEditarConsulta.setFocusPainted(false);
         bEditarConsulta.setFocusable(false);
@@ -1233,7 +1247,7 @@ public class Main extends javax.swing.JFrame {
         bBuscarConsulta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons/search.png"))); // NOI18N
         bBuscarConsulta.setText("Pesquisar");
         bBuscarConsulta.setBorder(null);
-        bBuscarConsulta.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bBuscarConsulta.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         bBuscarConsulta.setDoubleBuffered(true);
         bBuscarConsulta.setFocusPainted(false);
         bBuscarConsulta.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -1267,7 +1281,7 @@ public class Main extends javax.swing.JFrame {
         bHistoricoConsulta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons/historico.png"))); // NOI18N
         bHistoricoConsulta.setText("Histórico");
         bHistoricoConsulta.setBorder(null);
-        bHistoricoConsulta.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bHistoricoConsulta.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         bHistoricoConsulta.setDoubleBuffered(true);
         bHistoricoConsulta.setFocusPainted(false);
         bHistoricoConsulta.setFocusable(false);
@@ -1319,13 +1333,10 @@ public class Main extends javax.swing.JFrame {
         );
 
         mainFisioterapia.setBackground(new java.awt.Color(255, 255, 255));
-        mainFisioterapia.setPreferredSize(null);
 
-        scrollPanelConsulta.setBackground(new java.awt.Color(255, 255, 255));
         scrollPanelConsulta.setBorder(null);
         scrollPanelConsulta.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         scrollPanelConsulta.setMinimumSize(null);
-        scrollPanelConsulta.setPreferredSize(null);
 
         tableConsultas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -1348,7 +1359,7 @@ public class Main extends javax.swing.JFrame {
         );
         mainFisioterapiaLayout.setVerticalGroup(
             mainFisioterapiaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(scrollPanelConsulta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(scrollPanelConsulta, javax.swing.GroupLayout.DEFAULT_SIZE, 460, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout contentConsultaLayout = new javax.swing.GroupLayout(contentConsulta);
@@ -1365,7 +1376,7 @@ public class Main extends javax.swing.JFrame {
         contentConsultaLayout.setVerticalGroup(
             contentConsultaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(contentConsultaLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(47, Short.MAX_VALUE)
                 .addComponent(headerFisioterapia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(navButtonsFisioterapia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1420,7 +1431,7 @@ public class Main extends javax.swing.JFrame {
         bBuscarAvaliacao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons/search.png"))); // NOI18N
         bBuscarAvaliacao.setText("Pesquisar");
         bBuscarAvaliacao.setBorder(null);
-        bBuscarAvaliacao.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bBuscarAvaliacao.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         bBuscarAvaliacao.setDoubleBuffered(true);
         bBuscarAvaliacao.setFocusPainted(false);
         bBuscarAvaliacao.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -1454,7 +1465,7 @@ public class Main extends javax.swing.JFrame {
         bNovoAvaliacao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons/plus-black-symbol.png"))); // NOI18N
         bNovoAvaliacao.setText("Novo");
         bNovoAvaliacao.setBorder(null);
-        bNovoAvaliacao.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bNovoAvaliacao.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         bNovoAvaliacao.setDoubleBuffered(true);
         bNovoAvaliacao.setFocusPainted(false);
         bNovoAvaliacao.setFocusable(false);
@@ -1476,7 +1487,7 @@ public class Main extends javax.swing.JFrame {
         bEditarAvaliacao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons/edit.png"))); // NOI18N
         bEditarAvaliacao.setText("Editar");
         bEditarAvaliacao.setBorder(null);
-        bEditarAvaliacao.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bEditarAvaliacao.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         bEditarAvaliacao.setDoubleBuffered(true);
         bEditarAvaliacao.setFocusPainted(false);
         bEditarAvaliacao.setFocusable(false);
@@ -1513,12 +1524,12 @@ public class Main extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(navButtonsAvaliacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(navButtonsAvaliacaoLayout.createSequentialGroup()
-                        .addGroup(navButtonsAvaliacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(tBuscarAvaliacao, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(navButtonsAvaliacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(navButtonsAvaliacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(bNovoAvaliacao, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(bEditarAvaliacao, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(lPesquisarAvaliacao)))
+                                .addComponent(lPesquisarAvaliacao))
+                            .addComponent(tBuscarAvaliacao, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(bBuscarAvaliacao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
@@ -1526,7 +1537,6 @@ public class Main extends javax.swing.JFrame {
 
         mainAvaliacao.setBackground(new java.awt.Color(255, 255, 255));
 
-        scrollPanelAvaliacao.setBackground(new java.awt.Color(255, 255, 255));
         scrollPanelAvaliacao.setBorder(null);
         scrollPanelAvaliacao.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         scrollPanelAvaliacao.setMinimumSize(null);
@@ -1621,7 +1631,7 @@ public class Main extends javax.swing.JFrame {
         bNovoProcedimento.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons/plus-black-symbol.png"))); // NOI18N
         bNovoProcedimento.setText("Novo");
         bNovoProcedimento.setBorder(null);
-        bNovoProcedimento.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bNovoProcedimento.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         bNovoProcedimento.setDoubleBuffered(true);
         bNovoProcedimento.setFocusPainted(false);
         bNovoProcedimento.setFocusable(false);
@@ -1630,11 +1640,11 @@ public class Main extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 bNovoProcedimentoMouseClicked(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                bNovoProcedimentoMouseEntered(evt);
-            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 bNovoProcedimentoMouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                bNovoProcedimentoMouseEntered(evt);
             }
         });
 
@@ -1644,7 +1654,7 @@ public class Main extends javax.swing.JFrame {
         bEditarProcedimento.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons/edit.png"))); // NOI18N
         bEditarProcedimento.setText("Editar");
         bEditarProcedimento.setBorder(null);
-        bEditarProcedimento.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bEditarProcedimento.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         bEditarProcedimento.setDoubleBuffered(true);
         bEditarProcedimento.setFocusPainted(false);
         bEditarProcedimento.setFocusable(false);
@@ -1653,11 +1663,11 @@ public class Main extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 bEditarProcedimentoMouseClicked(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                bEditarProcedimentoMouseEntered(evt);
-            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 bEditarProcedimentoMouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                bEditarProcedimentoMouseEntered(evt);
             }
         });
 
@@ -1667,7 +1677,7 @@ public class Main extends javax.swing.JFrame {
         bRemoverProcedimento.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons/trash.png"))); // NOI18N
         bRemoverProcedimento.setText("Excluir");
         bRemoverProcedimento.setBorder(null);
-        bRemoverProcedimento.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bRemoverProcedimento.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         bRemoverProcedimento.setDoubleBuffered(true);
         bRemoverProcedimento.setFocusPainted(false);
         bRemoverProcedimento.setFocusable(false);
@@ -1676,11 +1686,11 @@ public class Main extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 bRemoverProcedimentoMouseClicked(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                bRemoverProcedimentoMouseEntered(evt);
-            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 bRemoverProcedimentoMouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                bRemoverProcedimentoMouseEntered(evt);
             }
         });
 
@@ -1689,7 +1699,7 @@ public class Main extends javax.swing.JFrame {
         bBuscarProcedimento.setForeground(new java.awt.Color(255, 255, 255));
         bBuscarProcedimento.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons/search.png"))); // NOI18N
         bBuscarProcedimento.setBorder(null);
-        bBuscarProcedimento.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bBuscarProcedimento.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         bBuscarProcedimento.setDoubleBuffered(true);
         bBuscarProcedimento.setFocusPainted(false);
         bBuscarProcedimento.setRequestFocusEnabled(false);
@@ -1705,11 +1715,11 @@ public class Main extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 bBuscarProcedimentoMouseClicked(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                bBuscarProcedimentoMouseEntered(evt);
-            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 bBuscarProcedimentoMouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                bBuscarProcedimentoMouseEntered(evt);
             }
         });
         bBuscarProcedimento.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -1757,10 +1767,8 @@ public class Main extends javax.swing.JFrame {
 
         mainProcedimento.setBackground(new java.awt.Color(255, 255, 255));
 
-        scrollPanelProcedimento.setBackground(new java.awt.Color(255, 255, 255));
         scrollPanelProcedimento.setBorder(null);
         scrollPanelProcedimento.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
-        scrollPanelProcedimento.setMinimumSize(null);
         scrollPanelProcedimento.setRequestFocusEnabled(false);
 
         tableProcedimentos.setModel(new javax.swing.table.DefaultTableModel(
@@ -1835,7 +1843,7 @@ public class Main extends javax.swing.JFrame {
         sidenav.add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pAgenda.setBackground(new java.awt.Color(255, 255, 255));
-        pAgenda.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        pAgenda.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         pAgenda.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 pAgendaMouseClicked(evt);
@@ -1873,7 +1881,7 @@ public class Main extends javax.swing.JFrame {
         sidenav.add(pAgenda, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 200, 50));
 
         pPaciente.setBackground(new java.awt.Color(255, 255, 255));
-        pPaciente.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        pPaciente.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         pPaciente.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 pPacienteMouseClicked(evt);
@@ -1911,7 +1919,7 @@ public class Main extends javax.swing.JFrame {
         sidenav.add(pPaciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 200, 50));
 
         pConsulta.setBackground(new java.awt.Color(255, 255, 255));
-        pConsulta.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        pConsulta.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         pConsulta.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 pConsultaMouseClicked(evt);
@@ -1949,7 +1957,7 @@ public class Main extends javax.swing.JFrame {
         sidenav.add(pConsulta, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, 200, 50));
 
         pAvaliacao.setBackground(new java.awt.Color(255, 255, 255));
-        pAvaliacao.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        pAvaliacao.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         pAvaliacao.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 pAvaliacaoMouseClicked(evt);
@@ -1987,7 +1995,7 @@ public class Main extends javax.swing.JFrame {
         sidenav.add(pAvaliacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 310, 200, 50));
 
         pUsuario.setBackground(new java.awt.Color(255, 255, 255));
-        pUsuario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        pUsuario.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         pUsuario.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 pUsuarioMouseClicked(evt);
@@ -2025,16 +2033,16 @@ public class Main extends javax.swing.JFrame {
         sidenav.add(pUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 360, 200, 50));
 
         pSair.setBackground(new java.awt.Color(255, 255, 255));
-        pSair.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        pSair.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         pSair.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 pSairMouseClicked(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                pSairMouseEntered(evt);
-            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 pSairMouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                pSairMouseEntered(evt);
             }
         });
 
@@ -2063,7 +2071,7 @@ public class Main extends javax.swing.JFrame {
         sidenav.add(pSair, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 460, 200, 50));
 
         pProfissional.setBackground(new java.awt.Color(255, 255, 255));
-        pProfissional.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        pProfissional.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         pProfissional.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 pProfissionalMouseClicked(evt);
@@ -2101,7 +2109,7 @@ public class Main extends javax.swing.JFrame {
         sidenav.add(pProfissional, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 200, 50));
 
         pProcedimento.setBackground(new java.awt.Color(255, 255, 255));
-        pProcedimento.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        pProcedimento.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         pProcedimento.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 pProcedimentoMouseClicked(evt);
@@ -2152,7 +2160,7 @@ public class Main extends javax.swing.JFrame {
         bgLayout.setVerticalGroup(
             bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(content, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(sidebarScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
+            .addComponent(sidebarScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 640, Short.MAX_VALUE)
         );
 
         getContentPane().add(bg, java.awt.BorderLayout.CENTER);
@@ -2161,75 +2169,278 @@ public class Main extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void pPacienteMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pPacienteMouseEntered
-       if(this.currentTela != 2) {
-           pPaciente.setBackground(Color.decode("#F0F0F0"));
-           lPaciente.setForeground(Color.decode("#006634"));
-       }
-    }//GEN-LAST:event_pPacienteMouseEntered
-
-    private void pPacienteMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pPacienteMouseExited
-        if(this.currentTela != 2) {
-           pPaciente.setBackground(Color.decode("#FFFFFF"));
-           lPaciente.setForeground(Color.decode("#000000"));
-       }
-    }//GEN-LAST:event_pPacienteMouseExited
-
-    private void pConsultaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pConsultaMouseEntered
-        if(this.currentTela != 4) {
-           pConsulta.setBackground(Color.decode("#F0F0F0"));
-           lConsulta.setForeground(Color.decode("#006634"));
+    private void pProcedimentoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pProcedimentoMouseExited
+        if(this.currentTela != 9) {
+            pProcedimento.setBackground(Color.decode("#FFFFFF"));
+            lProcedimento.setForeground(Color.decode("#000000"));
         }
-    }//GEN-LAST:event_pConsultaMouseEntered
+    }//GEN-LAST:event_pProcedimentoMouseExited
 
-    private void pConsultaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pConsultaMouseExited
-        if(this.currentTela != 4) {
-           pConsulta.setBackground(Color.decode("#FFFFFF"));
-           lConsulta.setForeground(Color.decode("#000000"));
+    private void pProcedimentoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pProcedimentoMouseEntered
+        if(this.currentTela != 9) {
+            pProcedimento.setBackground(Color.decode("#F0F0F0"));
+            lProcedimento.setForeground(Color.decode("#006634"));
         }
-    }//GEN-LAST:event_pConsultaMouseExited
+    }//GEN-LAST:event_pProcedimentoMouseEntered
 
-    private void pAvaliacaoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pAvaliacaoMouseEntered
-        if(this.currentTela != 5) {
-           pAvaliacao.setBackground(Color.decode("#F0F0F0"));
-           lAvaliacao.setForeground(Color.decode("#006634"));
-        }
-    }//GEN-LAST:event_pAvaliacaoMouseEntered
+    private void pProcedimentoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pProcedimentoMouseClicked
+        scrollPanelProcedimento.getViewport().setBackground(Color.WHITE);
+        ProcedimentoController pc = new ProcedimentoController();
+        List<Procedimento> profissionais = pc.procedimentos();
+        if(profissionais!=null)
+        tableModelProcedimentos.addLista(profissionais);
+        tableProcedimentos.setModel(tableModelProcedimentos);
+        // Change column size
+        tableProcedimentos.getColumnModel().getColumn(0).setPreferredWidth(5);
+        bNovoProcedimento.setModel(new FixedButtonModel());
+        bNovoProcedimento.setBorder(BorderFactory.createEtchedBorder(0));
+        bEditarProcedimento.setModel(new FixedButtonModel());
+        bEditarProcedimento.setBorder(BorderFactory.createEtchedBorder(0));
+        bBuscarProcedimento.setModel(new FixedButtonModel());
+        bBuscarProcedimento.setBorder(BorderFactory.createEtchedBorder(0));
+        bRemoverProcedimento.setModel(new FixedButtonModel());
+        bRemoverProcedimento.setBorder(BorderFactory.createEtchedBorder(0));
+        this.setTitle("Gerenciamento de Procedimentos");
+        this.setIconImage(new ImageIcon(getClass().getResource("/images/icons/list.png")).getImage());
+        this.currentTela = 9;
+        content.removeAll();
+        content.repaint();
+        content.revalidate();
+        removeActiveItemMenu();
+        pProcedimento.setBackground(Color.decode("#F0F0F0"));
+        lProcedimento.setForeground(Color.decode("#006634"));
+        content.add(contentProcedimento);
+        this.tBuscarProcedimento.requestFocusInWindow();
+    }//GEN-LAST:event_pProcedimentoMouseClicked
 
-    private void pAvaliacaoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pAvaliacaoMouseExited
-        if(this.currentTela != 5) {
-           pAvaliacao.setBackground(Color.decode("#FFFFFF"));
-           lAvaliacao.setForeground(Color.decode("#000000"));
+    private void pProfissionalMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pProfissionalMouseExited
+        if(this.currentTela != 8) {
+            pProfissional.setBackground(Color.decode("#FFFFFF"));
+            lProfissional.setForeground(Color.decode("#000000"));
         }
-    }//GEN-LAST:event_pAvaliacaoMouseExited
+    }//GEN-LAST:event_pProfissionalMouseExited
 
-    private void pUsuarioMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pUsuarioMouseEntered
-        if(this.currentTela != 7) {
-           pUsuario.setBackground(Color.decode("#F0F0F0"));
-           lUsuario.setForeground(Color.decode("#006634"));
+    private void pProfissionalMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pProfissionalMouseEntered
+        if(this.currentTela != 8) {
+            pProfissional.setBackground(Color.decode("#F0F0F0"));
+            lProfissional.setForeground(Color.decode("#006634"));
         }
-    }//GEN-LAST:event_pUsuarioMouseEntered
+    }//GEN-LAST:event_pProfissionalMouseEntered
 
-    private void pUsuarioMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pUsuarioMouseExited
-        if(this.currentTela != 7) {
-           pUsuario.setBackground(Color.decode("#FFFFFF"));
-           lUsuario.setForeground(Color.decode("#000000"));
-        }
-    }//GEN-LAST:event_pUsuarioMouseExited
+    private void pProfissionalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pProfissionalMouseClicked
+        scrollPanelProfissional.getViewport().setBackground(Color.WHITE);
+        ProfissionalController pc = new ProfissionalController();
+        List<Profissional> profissionais = pc.profissionais();
+        if(profissionais!=null)
+        tableModelProfissional.addLista(profissionais);
+        tableProfissionais.setModel(tableModelProfissional);
+        // Change column size
+        tableProfissionais.getColumnModel().getColumn(0).setPreferredWidth(5);
+        tableProfissionais.getColumnModel().getColumn(1).setPreferredWidth(400);
+        tableProfissionais.getColumnModel().getColumn(2).setPreferredWidth(10);
+        bNovoProfissional.setModel(new FixedButtonModel());
+        bNovoProfissional.setBorder(BorderFactory.createEtchedBorder(0));
+        bEditarProfissional.setModel(new FixedButtonModel());
+        bEditarProfissional.setBorder(BorderFactory.createEtchedBorder(0));
+        bBuscarProfissional.setModel(new FixedButtonModel());
+        bBuscarProfissional.setBorder(BorderFactory.createEtchedBorder(0));
+        bListarEspecialidades.setModel(new FixedButtonModel());
+        bListarEspecialidades.setBorder(BorderFactory.createEtchedBorder(0));
+        this.setTitle("Gerenciamento de Profissionais");
+        this.setIconImage(new ImageIcon(getClass().getResource("/images/icons/doctor.png")).getImage());
+        this.currentTela = 8;
+        content.removeAll();
+        content.repaint();
+        content.revalidate();
+        removeActiveItemMenu();
+        pProfissional.setBackground(Color.decode("#F0F0F0"));
+        lProfissional.setForeground(Color.decode("#006634"));
+        content.add(contentProfissional);
+        this.tBuscarProfissional.requestFocusInWindow();
+    }//GEN-LAST:event_pProfissionalMouseClicked
 
     private void pSairMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pSairMouseEntered
         if(this.currentTela != 8) {
-           pSair.setBackground(Color.decode("#F0F0F0"));
-           lSair.setForeground(Color.decode("#006634"));
+            pSair.setBackground(Color.decode("#F0F0F0"));
+            lSair.setForeground(Color.decode("#006634"));
         }
     }//GEN-LAST:event_pSairMouseEntered
 
     private void pSairMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pSairMouseExited
         if(this.currentTela != 8) {
-           pSair.setBackground(Color.decode("#FFFFFF"));
-           lSair.setForeground(Color.decode("#000000"));
+            pSair.setBackground(Color.decode("#FFFFFF"));
+            lSair.setForeground(Color.decode("#000000"));
         }
     }//GEN-LAST:event_pSairMouseExited
+
+    private void pSairMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pSairMouseClicked
+        int buttonOption = JOptionPane.YES_NO_OPTION;
+        int option = JOptionPane.showConfirmDialog(null, "Tem certeza que deseja realizar logout ?", "Atenção", buttonOption);
+        if(option == JOptionPane.YES_OPTION){
+            dispose();
+            new Login().setVisible(true);
+        }
+    }//GEN-LAST:event_pSairMouseClicked
+
+    private void pUsuarioMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pUsuarioMouseExited
+        if(this.currentTela != 7) {
+            pUsuario.setBackground(Color.decode("#FFFFFF"));
+            lUsuario.setForeground(Color.decode("#000000"));
+        }
+    }//GEN-LAST:event_pUsuarioMouseExited
+
+    private void pUsuarioMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pUsuarioMouseEntered
+        if(this.currentTela != 7) {
+            pUsuario.setBackground(Color.decode("#F0F0F0"));
+            lUsuario.setForeground(Color.decode("#006634"));
+        }
+    }//GEN-LAST:event_pUsuarioMouseEntered
+
+    private void pUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pUsuarioMouseClicked
+        scrollPanelUsuario.getViewport().setBackground(Color.WHITE);
+        // Created table
+        UsuarioController uc = new UsuarioController();
+        List<Usuario> usuarios = uc.usuarios();
+        if(usuarios!=null)
+        tableModelUsuario.addLista(usuarios);
+        tableUsuarios.setModel(tableModelUsuario);
+        // Change column size
+        tableUsuarios.getColumnModel().getColumn(0).setPreferredWidth(5);
+        tableUsuarios.getColumnModel().getColumn(1).setPreferredWidth(400);
+        tableUsuarios.getColumnModel().getColumn(2).setPreferredWidth(10);
+        // Fim created table
+        bNovoUsuario.setModel(new FixedButtonModel());
+        bNovoUsuario.setBorder(BorderFactory.createEtchedBorder(0));
+        bEditarUsuario.setModel(new FixedButtonModel());
+        bEditarUsuario.setBorder(BorderFactory.createEtchedBorder(0));
+        bBuscarUsuario.setModel(new FixedButtonModel());
+        bBuscarUsuario.setBorder(BorderFactory.createEtchedBorder(0));
+        this.setTitle("Gerenciamento de Usuários");
+        this.setIconImage(new ImageIcon(getClass().getResource("/images/icons/user_24.png")).getImage());
+        this.currentTela = 7;
+        content.removeAll();
+        content.repaint();
+        content.revalidate();
+        removeActiveItemMenu();
+        pUsuario.setBackground(Color.decode("#F0F0F0"));
+        lUsuario.setForeground(Color.decode("#006634"));
+        content.add(contentUsuario);
+        this.tBuscarUsuario.requestFocusInWindow();
+    }//GEN-LAST:event_pUsuarioMouseClicked
+
+    private void pAvaliacaoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pAvaliacaoMouseExited
+        if(this.currentTela != 5) {
+            pAvaliacao.setBackground(Color.decode("#FFFFFF"));
+            lAvaliacao.setForeground(Color.decode("#000000"));
+        }
+    }//GEN-LAST:event_pAvaliacaoMouseExited
+
+    private void pAvaliacaoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pAvaliacaoMouseEntered
+        if(this.currentTela != 5) {
+            pAvaliacao.setBackground(Color.decode("#F0F0F0"));
+            lAvaliacao.setForeground(Color.decode("#006634"));
+        }
+    }//GEN-LAST:event_pAvaliacaoMouseEntered
+
+    private void pAvaliacaoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pAvaliacaoMouseClicked
+        scrollPanelConsulta.getViewport().setBackground(Color.WHITE);
+        // Created table
+        AvaliacaoController ac = new AvaliacaoController();
+        List<Avaliacao> avaliacoes = ac.avaliacoes();
+        if(avaliacoes!=null)
+        tableModelAvaliacao.addLista(avaliacoes);
+        tableAvaliacoes.setModel(tableModelAvaliacao);
+        // Change column size
+        tableAvaliacoes.getColumnModel().getColumn(0).setPreferredWidth(5);
+        tableAvaliacoes.getColumnModel().getColumn(1).setPreferredWidth(300);
+        tableAvaliacoes.getColumnModel().getColumn(2).setPreferredWidth(300);
+        tableAvaliacoes.getColumnModel().getColumn(3).setPreferredWidth(10);
+        // Fim created table
+        //bNovoAvaliacao.setModel(new FixedButtonModel());
+        //bNovoAvaliacao.setBorder(BorderFactory.createEtchedBorder(0));
+        //bEditarAvaliacao.setModel(new FixedButtonModel());
+        //bEditarAvaliacao.setBorder(BorderFactory.createEtchedBorder(0));
+        bBuscarAvaliacao.setModel(new FixedButtonModel());
+        bBuscarAvaliacao.setBorder(BorderFactory.createEtchedBorder(0));
+        bNovoAvaliacao.setModel(new FixedButtonModel());
+        bNovoAvaliacao.setBorder(BorderFactory.createEtchedBorder(0));
+        bEditarAvaliacao.setModel(new FixedButtonModel());
+        bEditarAvaliacao.setBorder(BorderFactory.createEtchedBorder(0));
+        this.setTitle("Gerenciamento de Avaliações");
+        this.setIconImage(new ImageIcon(getClass().getResource("/images/icons/check-form.png")).getImage());
+        this.currentTela = 5;
+        content.removeAll();
+        content.repaint();
+        content.revalidate();
+        removeActiveItemMenu();
+        pAvaliacao.setBackground(Color.decode("#F0F0F0"));
+        lAvaliacao.setForeground(Color.decode("#006634"));
+        content.add(contentAvaliacao);
+        this.tBuscarAvaliacao.requestFocusInWindow();
+    }//GEN-LAST:event_pAvaliacaoMouseClicked
+
+    private void pConsultaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pConsultaMouseExited
+        if(this.currentTela != 4) {
+            pConsulta.setBackground(Color.decode("#FFFFFF"));
+            lConsulta.setForeground(Color.decode("#000000"));
+        }
+    }//GEN-LAST:event_pConsultaMouseExited
+
+    private void pConsultaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pConsultaMouseEntered
+        if(this.currentTela != 4) {
+            pConsulta.setBackground(Color.decode("#F0F0F0"));
+            lConsulta.setForeground(Color.decode("#006634"));
+        }
+    }//GEN-LAST:event_pConsultaMouseEntered
+
+    private void pConsultaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pConsultaMouseClicked
+        scrollPanelConsulta.getViewport().setBackground(Color.WHITE);
+        // Created table
+        ConsultaController cc = new ConsultaController();
+        List<Consulta> consultas = cc.consultas();
+        if(consultas!=null)
+        tableModelConsultas.addLista(consultas);
+        tableConsultas.setModel(tableModelConsultas);
+        // Change column size
+        tableConsultas.getColumnModel().getColumn(0).setPreferredWidth(5);
+        tableConsultas.getColumnModel().getColumn(1).setPreferredWidth(300);
+        tableConsultas.getColumnModel().getColumn(2).setPreferredWidth(300);
+        tableConsultas.getColumnModel().getColumn(3).setPreferredWidth(10);
+        // Fim created table
+        bNovoConsulta.setModel(new FixedButtonModel());
+        bNovoConsulta.setBorder(BorderFactory.createEtchedBorder(0));
+        bEditarConsulta.setModel(new FixedButtonModel());
+        bEditarConsulta.setBorder(BorderFactory.createEtchedBorder(0));
+        bBuscarConsulta.setModel(new FixedButtonModel());
+        bBuscarConsulta.setBorder(BorderFactory.createEtchedBorder(0));
+        bHistoricoConsulta.setModel(new FixedButtonModel());
+        bHistoricoConsulta.setBorder(BorderFactory.createEtchedBorder(0));
+        this.setTitle("Gerenciamento de consultas");
+        this.setIconImage(new ImageIcon(getClass().getResource("/images/icons/physiotherapy.png")).getImage());
+        this.currentTela = 4;
+        content.removeAll();
+        content.repaint();
+        content.revalidate();
+        removeActiveItemMenu();
+        pConsulta.setBackground(Color.decode("#F0F0F0"));
+        lConsulta.setForeground(Color.decode("#006634"));
+        content.add(contentConsulta);
+        this.tBuscarConsulta.requestFocusInWindow();
+    }//GEN-LAST:event_pConsultaMouseClicked
+
+    private void pPacienteMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pPacienteMouseExited
+        if(this.currentTela != 2) {
+            pPaciente.setBackground(Color.decode("#FFFFFF"));
+            lPaciente.setForeground(Color.decode("#000000"));
+        }
+    }//GEN-LAST:event_pPacienteMouseExited
+
+    private void pPacienteMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pPacienteMouseEntered
+        if(this.currentTela != 2) {
+            pPaciente.setBackground(Color.decode("#F0F0F0"));
+            lPaciente.setForeground(Color.decode("#006634"));
+        }
+    }//GEN-LAST:event_pPacienteMouseEntered
 
     private void pPacienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pPacienteMouseClicked
         scrollPanelPaciente.getViewport().setBackground(Color.WHITE);
@@ -2260,310 +2471,23 @@ public class Main extends javax.swing.JFrame {
         removeActiveItemMenu();
         pPaciente.setBackground(Color.decode("#F0F0F0"));
         lPaciente.setForeground(Color.decode("#006634"));
-        content.add(contentPaciente);    
+        content.add(contentPaciente);
         this.tBuscarPaciente.requestFocusInWindow();
     }//GEN-LAST:event_pPacienteMouseClicked
 
-    private void bNovoProfissionalMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bNovoProfissionalMouseEntered
-        bNovoProfissional.setBackground(Color.decode("#008542"));
-    }//GEN-LAST:event_bNovoProfissionalMouseEntered
-
-    private void bNovoProfissionalMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bNovoProfissionalMouseExited
-        bNovoProfissional.setBackground(Color.decode("#006634"));
-    }//GEN-LAST:event_bNovoProfissionalMouseExited
-
-    private void bEditarProfissionalMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bEditarProfissionalMouseEntered
-        bEditarProfissional.setBackground(Color.decode("#008542"));
-    }//GEN-LAST:event_bEditarProfissionalMouseEntered
-
-    private void bEditarProfissionalMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bEditarProfissionalMouseExited
-        bEditarProfissional.setBackground(Color.decode("#006634"));
-    }//GEN-LAST:event_bEditarProfissionalMouseExited
-
-    private void bBuscarProfissionalMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bBuscarProfissionalMouseEntered
-        bBuscarProfissional.setBackground(Color.decode("#008542"));
-    }//GEN-LAST:event_bBuscarProfissionalMouseEntered
-
-    private void bBuscarProfissionalMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bBuscarProfissionalMouseExited
-         bBuscarProfissional.setBackground(Color.decode("#006634"));
-    }//GEN-LAST:event_bBuscarProfissionalMouseExited
-
-    private void bNovoPacienteMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bNovoPacienteMouseEntered
-        bNovoPaciente.setBackground(Color.decode("#008542"));
-    }//GEN-LAST:event_bNovoPacienteMouseEntered
-
-    private void bNovoPacienteMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bNovoPacienteMouseExited
-        bNovoPaciente.setBackground(Color.decode("#006634"));
-    }//GEN-LAST:event_bNovoPacienteMouseExited
-
-    private void bEditarPacienteMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bEditarPacienteMouseEntered
-        bEditarPaciente.setBackground(Color.decode("#008542"));
-    }//GEN-LAST:event_bEditarPacienteMouseEntered
-
-    private void bEditarPacienteMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bEditarPacienteMouseExited
-        bEditarPaciente.setBackground(Color.decode("#006643"));
-    }//GEN-LAST:event_bEditarPacienteMouseExited
-
-    private void bBuscarPacienteMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bBuscarPacienteMouseEntered
-        bBuscarPaciente.setBackground(Color.decode("#008542"));
-    }//GEN-LAST:event_bBuscarPacienteMouseEntered
-
-    private void bBuscarPacienteMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bBuscarPacienteMouseExited
-        bBuscarPaciente.setBackground(Color.decode("#006634"));
-    }//GEN-LAST:event_bBuscarPacienteMouseExited
-
-    private void pSairMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pSairMouseClicked
-        int buttonOption = JOptionPane.YES_NO_OPTION;
-        int option = JOptionPane.showConfirmDialog(null, "Tem certeza que deseja realizar logout ?", "Atenção", buttonOption);
-        if(option == JOptionPane.YES_OPTION){
-            dispose();
-            new Login().setVisible(true);
+    private void pAgendaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pAgendaMouseExited
+        if(this.currentTela != 1) {
+            pAgenda.setBackground(Color.decode("#FFFFFF"));
+            lAgenda.setForeground(Color.decode("#000000"));
         }
-    }//GEN-LAST:event_pSairMouseClicked
+    }//GEN-LAST:event_pAgendaMouseExited
 
-    private void bNovoPacienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bNovoPacienteMouseClicked
-        NovoPaciente np = new NovoPaciente(this);
-        np.setVisible(true);
-    }//GEN-LAST:event_bNovoPacienteMouseClicked
-
-    private void bNovoUsuarioMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bNovoUsuarioMouseEntered
-        bNovoUsuario.setBackground(Color.decode("#008542"));
-    }//GEN-LAST:event_bNovoUsuarioMouseEntered
-
-    private void bNovoUsuarioMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bNovoUsuarioMouseExited
-        bNovoUsuario.setBackground(Color.decode("#006634"));
-    }//GEN-LAST:event_bNovoUsuarioMouseExited
-
-    private void bEditarUsuarioMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bEditarUsuarioMouseEntered
-        bEditarUsuario.setBackground(Color.decode("#008542"));
-    }//GEN-LAST:event_bEditarUsuarioMouseEntered
-
-    private void bEditarUsuarioMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bEditarUsuarioMouseExited
-        bEditarUsuario.setBackground(Color.decode("#006634"));
-    }//GEN-LAST:event_bEditarUsuarioMouseExited
-
-    private void bBuscarUsuarioMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bBuscarUsuarioMouseEntered
-        bBuscarUsuario.setBackground(Color.decode("#008542"));
-    }//GEN-LAST:event_bBuscarUsuarioMouseEntered
-
-    private void bBuscarUsuarioMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bBuscarUsuarioMouseExited
-        bBuscarUsuario.setBackground(Color.decode("#006634"));
-    }//GEN-LAST:event_bBuscarUsuarioMouseExited
-
-    private void bNovoUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bNovoUsuarioMouseClicked
-        NovoUsuario nu = new NovoUsuario(this);
-        nu.setVisible(true);
-    }//GEN-LAST:event_bNovoUsuarioMouseClicked
-
-    private void pUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pUsuarioMouseClicked
-        scrollPanelUsuario.getViewport().setBackground(Color.WHITE);
-        // Created table
-        UsuarioController uc = new UsuarioController();
-        List<Usuario> usuarios = uc.usuarios();
-        if(usuarios!=null)
-            tableModelUsuario.addLista(usuarios);
-        tableUsuarios.setModel(tableModelUsuario);
-        // Change column size
-        tableUsuarios.getColumnModel().getColumn(0).setPreferredWidth(5);
-        tableUsuarios.getColumnModel().getColumn(1).setPreferredWidth(400);
-        tableUsuarios.getColumnModel().getColumn(2).setPreferredWidth(10);
-        // Fim created table       
-        bNovoUsuario.setModel(new FixedButtonModel());
-        bNovoUsuario.setBorder(BorderFactory.createEtchedBorder(0));
-        bEditarUsuario.setModel(new FixedButtonModel());
-        bEditarUsuario.setBorder(BorderFactory.createEtchedBorder(0));
-        bBuscarUsuario.setModel(new FixedButtonModel());
-        bBuscarUsuario.setBorder(BorderFactory.createEtchedBorder(0));
-        this.setTitle("Gerenciamento de Usuários");
-        this.setIconImage(new ImageIcon(getClass().getResource("/images/icons/user_24.png")).getImage());
-        this.currentTela = 7;
-        content.removeAll();
-        content.repaint();
-        content.revalidate();
-        removeActiveItemMenu();
-        pUsuario.setBackground(Color.decode("#F0F0F0"));
-        lUsuario.setForeground(Color.decode("#006634"));
-        content.add(contentUsuario); 
-        this.tBuscarUsuario.requestFocusInWindow();
-    }//GEN-LAST:event_pUsuarioMouseClicked
-
-    private void bEditarUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bEditarUsuarioMouseClicked
-        int row = tableUsuarios.getSelectedRow();
-        if(row > -1) {
-            Usuario u = tableModelUsuario.getUsuario(row);
-            EditarUsuario editar = new EditarUsuario(u, this);
-            editar.setVisible(true);
-        } else {
-            JOptionPane.showMessageDialog(null, "Por favor, selecione um usuário da tabela.", "Atenção", JOptionPane.INFORMATION_MESSAGE);
+    private void pAgendaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pAgendaMouseEntered
+        if(this.currentTela != 1) {
+            pAgenda.setBackground(Color.decode("#F0F0F0"));
+            lAgenda.setForeground(Color.decode("#006634"));
         }
-    }//GEN-LAST:event_bEditarUsuarioMouseClicked
-
-    private void bBuscarUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bBuscarUsuarioMouseClicked
-        this.searchUsuario();
-    }//GEN-LAST:event_bBuscarUsuarioMouseClicked
-
-    private void bEditarPacienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bEditarPacienteMouseClicked
-        int row = tablePacientes.getSelectedRow();
-        if(row > -1){
-            Paciente p = this.tableModelPaciente.getPaciente(row);
-            EditarPaciente ep = new EditarPaciente(this, p);
-            ep.setVisible(true);
-        } else {
-            JOptionPane.showMessageDialog(null, "Por favor, selecione um paciente da tabela.", "Atenção", JOptionPane.INFORMATION_MESSAGE);
-        }
-    }//GEN-LAST:event_bEditarPacienteMouseClicked
-
-    private void bBuscarPacienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bBuscarPacienteMouseClicked
-        this.searchPaciente();
-    }//GEN-LAST:event_bBuscarPacienteMouseClicked
-
-    private void bNovoProfissionalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bNovoProfissionalMouseClicked
-        NovoProfissional nf = new NovoProfissional(this);
-        nf.setVisible(true);
-    }//GEN-LAST:event_bNovoProfissionalMouseClicked
-
-    private void bEditarProfissionalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bEditarProfissionalMouseClicked
-        int row = tableProfissionais.getSelectedRow();
-        if(row > -1){
-            Profissional f = this.tableModelProfissional.getFisioterapeuta(row);
-            EditarProfissional ef = new EditarProfissional(this,f);
-            ef.setVisible(true);           
-        } else {
-            JOptionPane.showMessageDialog(null, "Por favor, selecione um(a) profissional da tabela.", "Atenção", JOptionPane.INFORMATION_MESSAGE);
-        }
-    }//GEN-LAST:event_bEditarProfissionalMouseClicked
-
-    private void bNovoConsultaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bNovoConsultaMouseClicked
-        NovoConsulta nf = new NovoConsulta(this);
-        nf.setVisible(true);
-    }//GEN-LAST:event_bNovoConsultaMouseClicked
-
-    private void bNovoConsultaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bNovoConsultaMouseEntered
-        bNovoConsulta.setBackground(Color.decode("#008542"));
-    }//GEN-LAST:event_bNovoConsultaMouseEntered
-
-    private void bNovoConsultaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bNovoConsultaMouseExited
-        bNovoConsulta.setBackground(Color.decode("#006634"));
-    }//GEN-LAST:event_bNovoConsultaMouseExited
-
-    private void bEditarConsultaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bEditarConsultaMouseClicked
-        int row = this.tableConsultas.getSelectedRow();
-        if(row > -1){
-            Consulta f = this.tableModelConsultas.getConsulta(row);
-            EditarConsulta ef = new EditarConsulta(this, f);
-            ef.setVisible(true);
-        } else {
-            JOptionPane.showMessageDialog(null, "Por favor, selecione uma consulta da tabela.", "Atenção", JOptionPane.INFORMATION_MESSAGE);
-        }
-    }//GEN-LAST:event_bEditarConsultaMouseClicked
-
-    private void bEditarConsultaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bEditarConsultaMouseEntered
-        bEditarConsulta.setBackground(Color.decode("#008542"));
-    }//GEN-LAST:event_bEditarConsultaMouseEntered
-
-    private void bEditarConsultaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bEditarConsultaMouseExited
-        bEditarConsulta.setBackground(Color.decode("#006634"));
-    }//GEN-LAST:event_bEditarConsultaMouseExited
-
-    private void bBuscarConsultaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bBuscarConsultaMouseEntered
-       bBuscarConsulta.setBackground(Color.decode("#008542"));
-    }//GEN-LAST:event_bBuscarConsultaMouseEntered
-
-    private void bBuscarConsultaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bBuscarConsultaMouseExited
-        bBuscarConsulta.setBackground(Color.decode("#006634"));
-    }//GEN-LAST:event_bBuscarConsultaMouseExited
-
-    private void bBuscarProfissionalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bBuscarProfissionalMouseClicked
-        this.searchProfissional();
-    }//GEN-LAST:event_bBuscarProfissionalMouseClicked
-
-    private void pConsultaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pConsultaMouseClicked
-        scrollPanelConsulta.getViewport().setBackground(Color.WHITE);
-        // Created table
-        ConsultaController cc = new ConsultaController();
-        List<Consulta> consultas = cc.consultas();
-        if(consultas!=null)
-            tableModelConsultas.addLista(consultas);
-        tableConsultas.setModel(tableModelConsultas);
-        // Change column size
-        tableConsultas.getColumnModel().getColumn(0).setPreferredWidth(5);
-        tableConsultas.getColumnModel().getColumn(1).setPreferredWidth(300);
-        tableConsultas.getColumnModel().getColumn(2).setPreferredWidth(300);
-        tableConsultas.getColumnModel().getColumn(3).setPreferredWidth(10);
-        // Fim created table       
-        bNovoConsulta.setModel(new FixedButtonModel());
-        bNovoConsulta.setBorder(BorderFactory.createEtchedBorder(0));
-        bEditarConsulta.setModel(new FixedButtonModel());
-        bEditarConsulta.setBorder(BorderFactory.createEtchedBorder(0));
-        bBuscarConsulta.setModel(new FixedButtonModel());
-        bBuscarConsulta.setBorder(BorderFactory.createEtchedBorder(0));
-        bHistoricoConsulta.setModel(new FixedButtonModel());
-        bHistoricoConsulta.setBorder(BorderFactory.createEtchedBorder(0));
-        this.setTitle("Gerenciamento de consultas");
-        this.setIconImage(new ImageIcon(getClass().getResource("/images/icons/physiotherapy.png")).getImage());
-        this.currentTela = 4;
-        content.removeAll();
-        content.repaint();
-        content.revalidate();
-        removeActiveItemMenu();
-        pConsulta.setBackground(Color.decode("#F0F0F0"));
-        lConsulta.setForeground(Color.decode("#006634"));
-        content.add(contentConsulta);
-        this.tBuscarConsulta.requestFocusInWindow();
-    }//GEN-LAST:event_pConsultaMouseClicked
-
-    private void bBuscarConsultaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bBuscarConsultaMouseClicked
-        this.searchConsulta();
-    }//GEN-LAST:event_bBuscarConsultaMouseClicked
-
-    private void bBuscarAvaliacaoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bBuscarAvaliacaoMouseClicked
-        this.searchAvaliacao();
-    }//GEN-LAST:event_bBuscarAvaliacaoMouseClicked
-
-    private void bBuscarAvaliacaoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bBuscarAvaliacaoMouseEntered
-        bBuscarAvaliacao.setBackground(Color.decode("#008542"));
-    }//GEN-LAST:event_bBuscarAvaliacaoMouseEntered
-
-    private void bBuscarAvaliacaoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bBuscarAvaliacaoMouseExited
-        bBuscarAvaliacao.setBackground(Color.decode("#006634"));
-    }//GEN-LAST:event_bBuscarAvaliacaoMouseExited
-
-    private void pAvaliacaoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pAvaliacaoMouseClicked
-        scrollPanelConsulta.getViewport().setBackground(Color.WHITE);
-        // Created table
-        AvaliacaoController ac = new AvaliacaoController();
-        List<Avaliacao> avaliacoes = ac.avaliacoes();
-        if(avaliacoes!=null)
-            tableModelAvaliacao.addLista(avaliacoes);
-        tableAvaliacoes.setModel(tableModelAvaliacao);
-        // Change column size
-        tableAvaliacoes.getColumnModel().getColumn(0).setPreferredWidth(5);
-        tableAvaliacoes.getColumnModel().getColumn(1).setPreferredWidth(300);
-        tableAvaliacoes.getColumnModel().getColumn(2).setPreferredWidth(300);
-        tableAvaliacoes.getColumnModel().getColumn(3).setPreferredWidth(10);
-        // Fim created table       
-        //bNovoAvaliacao.setModel(new FixedButtonModel());
-        //bNovoAvaliacao.setBorder(BorderFactory.createEtchedBorder(0));
-        //bEditarAvaliacao.setModel(new FixedButtonModel());
-        //bEditarAvaliacao.setBorder(BorderFactory.createEtchedBorder(0));
-        bBuscarAvaliacao.setModel(new FixedButtonModel());
-        bBuscarAvaliacao.setBorder(BorderFactory.createEtchedBorder(0));
-        bNovoAvaliacao.setModel(new FixedButtonModel());
-        bNovoAvaliacao.setBorder(BorderFactory.createEtchedBorder(0));
-        bEditarAvaliacao.setModel(new FixedButtonModel());
-        bEditarAvaliacao.setBorder(BorderFactory.createEtchedBorder(0));
-        this.setTitle("Gerenciamento de Avaliações");
-        this.setIconImage(new ImageIcon(getClass().getResource("/images/icons/check-form.png")).getImage());
-        this.currentTela = 5;
-        content.removeAll();
-        content.repaint();
-        content.revalidate();
-        removeActiveItemMenu();
-        pAvaliacao.setBackground(Color.decode("#F0F0F0"));
-        lAvaliacao.setForeground(Color.decode("#006634"));
-        content.add(contentAvaliacao);
-        this.tBuscarAvaliacao.requestFocusInWindow();
-    }//GEN-LAST:event_pAvaliacaoMouseClicked
+    }//GEN-LAST:event_pAgendaMouseEntered
 
     private void pAgendaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pAgendaMouseClicked
         this.setTitle("Agenda");
@@ -2571,7 +2495,7 @@ public class Main extends javax.swing.JFrame {
         this.currentTela = 1;
         setHorarios();
         updateAgendaConteudo();
-        
+
         content.removeAll();
         content.repaint();
         content.revalidate();
@@ -2581,438 +2505,13 @@ public class Main extends javax.swing.JFrame {
         content.add(contentAgenda);
     }//GEN-LAST:event_pAgendaMouseClicked
 
-    private void pAgendaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pAgendaMouseEntered
-       if(this.currentTela != 1) {
-           pAgenda.setBackground(Color.decode("#F0F0F0"));
-           lAgenda.setForeground(Color.decode("#006634"));
-        }
-    }//GEN-LAST:event_pAgendaMouseEntered
+    private void bEditarAvaliacaoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bEditarAvaliacaoMouseExited
+        bEditarAvaliacao.setBackground(Color.decode("#006634"));
+    }//GEN-LAST:event_bEditarAvaliacaoMouseExited
 
-    private void pAgendaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pAgendaMouseExited
-        if(this.currentTela != 1) {
-           pAgenda.setBackground(Color.decode("#FFFFFF"));
-           lAgenda.setForeground(Color.decode("#000000"));
-        }
-    }//GEN-LAST:event_pAgendaMouseExited
-
-    private void bNovoAgendaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bNovoAgendaMouseClicked
-        int row = this.tableAgenda.getSelectedRow();
-        int column = this.tableAgenda.getSelectedColumn();
-        if (row > -1  && column > 0) {
-            Agenda a = this.tableModelAgenda.getAgendamento(row, column);
-            String dateTime = Formatacao.date2StringScreen(tDate.getDate()) + " " + Formatacao.time2String(horarios.get(row).getHora());
-            a.setDataAgendamento(new java.sql.Timestamp(Formatacao.string2DateTime(dateTime).getTime()));
-            if (a.getConsulta() != null) {
-                JOptionPane.showMessageDialog(null, "Por favor, selecione um horário disponível.", "Atenção", JOptionPane.INFORMATION_MESSAGE);
-            } else {
-                NovoAgendamento na = new NovoAgendamento(this, a);
-                na.setVisible(true);
-            }
-        }  else {
-            JOptionPane.showMessageDialog(null, "Por favor, selecione um horário.", "Atenção", JOptionPane.INFORMATION_MESSAGE);
-        }
-    }//GEN-LAST:event_bNovoAgendaMouseClicked
-
-    private void bNovoAgendaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bNovoAgendaMouseEntered
-        bNovoAgenda.setBackground(Color.decode("#008542"));
-    }//GEN-LAST:event_bNovoAgendaMouseEntered
-
-    private void bNovoAgendaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bNovoAgendaMouseExited
-        bNovoAgenda.setBackground(Color.decode("#006634"));
-    }//GEN-LAST:event_bNovoAgendaMouseExited
-
-    private void bEditarAgendaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bEditarAgendaMouseClicked
-        int row = this.tableAgenda.getSelectedRow();
-        int column = this.tableAgenda.getSelectedColumn();
-        if(row > -1 && column > -1){
-            Agenda a = this.tableModelAgenda.getAgendamento(row, column);
-            if (a.getConsulta() != null) {
-                EditarAgendamento ea = new EditarAgendamento(this, a);
-                ea.setVisible(true);
-            } else {
-                JOptionPane.showMessageDialog(null, "Por favor, selecione um agendamento da tabela.", "Atenção", JOptionPane.INFORMATION_MESSAGE);
-            }
-        } else {
-            JOptionPane.showMessageDialog(null, "Por favor, selecione um agendamento da tabela.", "Atenção", JOptionPane.INFORMATION_MESSAGE);
-        }
-    }//GEN-LAST:event_bEditarAgendaMouseClicked
-
-    private void bEditarAgendaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bEditarAgendaMouseEntered
-        bEditarAgenda.setBackground(Color.decode("#008542"));
-    }//GEN-LAST:event_bEditarAgendaMouseEntered
-
-    private void bEditarAgendaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bEditarAgendaMouseExited
-        bEditarAgenda.setBackground(Color.decode("#006634"));
-    }//GEN-LAST:event_bEditarAgendaMouseExited
-
-    private void bBuscarAgendaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bBuscarAgendaMouseClicked
-        this.searchAgendamentos();
-    }//GEN-LAST:event_bBuscarAgendaMouseClicked
-
-    private void bBuscarAgendaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bBuscarAgendaMouseEntered
-        bBuscarAgenda.setBackground(Color.decode("#008542"));
-    }//GEN-LAST:event_bBuscarAgendaMouseEntered
-
-    private void bBuscarAgendaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bBuscarAgendaMouseExited
-        bBuscarAgenda.setBackground(Color.decode("#006634"));
-    }//GEN-LAST:event_bBuscarAgendaMouseExited
-
-    private void tDatePropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_tDatePropertyChange
-        if (tDate.getDate() != null) {
-            AgendaController ac = new AgendaController();
-            List<Horario> lista = ac.agendamentos(Formatacao.date2StringScreen(tDate.getDate()));
-            if(lista != null) {
-                this.tableModelAgenda.addLista(lista);
-                for(int i = 0; i<20; i++)
-                    this.tableAgenda.setRowHeight(i, 30);
-                DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
-                centerRenderer.setHorizontalAlignment( JLabel.CENTER );
-                this.tableAgenda.getColumnModel().getColumn(0).setCellRenderer( centerRenderer );
-                this.tableAgenda.getColumnModel().getColumn(0).setMinWidth(100);
-                this.tableAgenda.getColumnModel().getColumn(0).setMaxWidth(100);
-            }
-        }
-    }//GEN-LAST:event_tDatePropertyChange
-
-    private void bRemoverAgendaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bRemoverAgendaMouseClicked
-        int row = this.tableAgenda.getSelectedRow();
-        int column = this.tableAgenda.getSelectedColumn();
-        if(row > -1 && column > -1) {
-            Agenda a = this.tableModelAgenda.getAgendamento(row,column);
-            if (a.getConsulta() == null) {
-                JOptionPane.showMessageDialog(null, "Por favor, selecione um agendamento da tabela.", "Atenção", JOptionPane.INFORMATION_MESSAGE);
-            } else {
-                Object[] options = { "Sim", "Não" };
-                int resp = JOptionPane.showOptionDialog(null, "Deseja realmente excluir este agendamento?", "Informação", JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE , null, options, options[0]);
-                AgendaController ac = new AgendaController();
-                if (resp == 0) {
-                    if (ac.excluir(a)) {
-                        JOptionPane.showMessageDialog(null, "Agendamento excluído com sucesso", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
-                    if (this.getTDate().getDate() != null) {
-                        List<Horario> lista = ac.agendamentos(Formatacao.date2StringScreen(this.getTDate().getDate()));
-                        if(lista != null) {
-                            this.tableModelAgenda.addLista(lista);
-                            for(int i = 0; i<20; i++)
-                                this.getTableAgenda().setRowHeight(i, 30);
-                            DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
-                            centerRenderer.setHorizontalAlignment( JLabel.CENTER );
-                            this.getTableAgenda().getColumnModel().getColumn(0).setCellRenderer( centerRenderer );
-                            this.getTableAgenda().getColumnModel().getColumn(0).setMinWidth(100);
-                            this.getTableAgenda().getColumnModel().getColumn(0).setMaxWidth(100);
-                        }
-                    }
-                } else
-                    JOptionPane.showMessageDialog(null, "Ocorreu um erro ao realizar a exclusão do agendamento. Tente novamente mais tarde ou contate o Administrador do sistema", "Atenção", JOptionPane.WARNING_MESSAGE);
-                }
-            }
-        } else {
-            JOptionPane.showMessageDialog(null, "Por favor, selecione um agendamento da tabela.", "Atenção", JOptionPane.INFORMATION_MESSAGE);
-        }
-    }//GEN-LAST:event_bRemoverAgendaMouseClicked
-
-    private void bRemoverAgendaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bRemoverAgendaMouseEntered
-        bRemoverAgenda.setBackground(Color.decode("#008542"));
-    }//GEN-LAST:event_bRemoverAgendaMouseEntered
-
-    private void bRemoverAgendaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bRemoverAgendaMouseExited
-        bRemoverAgenda.setBackground(Color.decode("#006634"));
-    }//GEN-LAST:event_bRemoverAgendaMouseExited
-
-    private void bHistoricoConsultaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bHistoricoConsultaMouseClicked
-        int row = tableConsultas.getSelectedRow();
-        if (row > -1) {
-            Consulta f = tableModelConsultas.getConsulta(row);
-            HistoricoAtendimento hf = new HistoricoAtendimento(this,f);
-            hf.setVisible(true);
-        } else {
-            JOptionPane.showMessageDialog(null, "Por favor, selecione uma consulta da tabela.", "Atenção", JOptionPane.INFORMATION_MESSAGE);
-        }
-    }//GEN-LAST:event_bHistoricoConsultaMouseClicked
-
-    private void bHistoricoConsultaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bHistoricoConsultaMouseEntered
-        bHistoricoConsulta.setBackground(Color.decode("#008542"));
-    }//GEN-LAST:event_bHistoricoConsultaMouseEntered
-
-    private void bHistoricoConsultaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bHistoricoConsultaMouseExited
-        bHistoricoConsulta.setBackground(Color.decode("#006634"));
-    }//GEN-LAST:event_bHistoricoConsultaMouseExited
-
-    private void bNovoProcedimentoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bNovoProcedimentoMouseClicked
-        NovoProcedimento np = new NovoProcedimento(this);
-        np.setVisible(true); 
-    }//GEN-LAST:event_bNovoProcedimentoMouseClicked
-
-    private void bNovoProcedimentoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bNovoProcedimentoMouseEntered
-        bNovoProcedimento.setBackground(Color.decode("#008542"));
-    }//GEN-LAST:event_bNovoProcedimentoMouseEntered
-
-    private void bNovoProcedimentoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bNovoProcedimentoMouseExited
-        bNovoProcedimento.setBackground(Color.decode("#006634"));
-    }//GEN-LAST:event_bNovoProcedimentoMouseExited
-
-    private void bEditarProcedimentoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bEditarProcedimentoMouseClicked
-        int row = this.tableProcedimentos.getSelectedRow();
-        if(row > -1){
-            Procedimento p = this.tableModelProcedimentos.getProcedimento(row);
-            if (p != null) {
-                EditarProcedimento ea = new EditarProcedimento(this, p);
-                ea.setVisible(true);
-            } else {
-                JOptionPane.showMessageDialog(null, "Por favor, selecione um Procedimento da tabela.", "Atenção", JOptionPane.INFORMATION_MESSAGE);
-            }
-        } else {
-            JOptionPane.showMessageDialog(null, "Por favor, selecione um Procedimento da tabela.", "Atenção", JOptionPane.INFORMATION_MESSAGE);
-        }
-    }//GEN-LAST:event_bEditarProcedimentoMouseClicked
-
-    private void bEditarProcedimentoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bEditarProcedimentoMouseEntered
-        bEditarProcedimento.setBackground(Color.decode("#008542"));
-    }//GEN-LAST:event_bEditarProcedimentoMouseEntered
-
-    private void bEditarProcedimentoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bEditarProcedimentoMouseExited
-        bEditarProcedimento.setBackground(Color.decode("#006634"));
-    }//GEN-LAST:event_bEditarProcedimentoMouseExited
-
-    private void bBuscarProcedimentoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bBuscarProcedimentoMouseClicked
-        this.searchProcedimento();
-    }//GEN-LAST:event_bBuscarProcedimentoMouseClicked
-
-    private void bBuscarProcedimentoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bBuscarProcedimentoMouseEntered
-        bBuscarProcedimento.setBackground(Color.decode("#008542"));
-    }//GEN-LAST:event_bBuscarProcedimentoMouseEntered
-
-    private void bBuscarProcedimentoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bBuscarProcedimentoMouseExited
-       bBuscarProcedimento.setBackground(Color.decode("#006634"));
-    }//GEN-LAST:event_bBuscarProcedimentoMouseExited
-
-    private void pProfissionalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pProfissionalMouseClicked
-        scrollPanelProfissional.getViewport().setBackground(Color.WHITE);
-        ProfissionalController pc = new ProfissionalController();
-        List<Profissional> profissionais = pc.profissionais();
-        if(profissionais!=null)
-            tableModelProfissional.addLista(profissionais);
-        tableProfissionais.setModel(tableModelProfissional);
-        // Change column size
-        tableProfissionais.getColumnModel().getColumn(0).setPreferredWidth(5);
-        tableProfissionais.getColumnModel().getColumn(1).setPreferredWidth(400);
-        tableProfissionais.getColumnModel().getColumn(2).setPreferredWidth(10);
-        bNovoProfissional.setModel(new FixedButtonModel());
-        bNovoProfissional.setBorder(BorderFactory.createEtchedBorder(0));
-        bEditarProfissional.setModel(new FixedButtonModel());
-        bEditarProfissional.setBorder(BorderFactory.createEtchedBorder(0));
-        bBuscarProfissional.setModel(new FixedButtonModel());
-        bBuscarProfissional.setBorder(BorderFactory.createEtchedBorder(0));
-        bListarEspecialidades.setModel(new FixedButtonModel());
-        bListarEspecialidades.setBorder(BorderFactory.createEtchedBorder(0));
-        this.setTitle("Gerenciamento de Profissionais");
-        this.setIconImage(new ImageIcon(getClass().getResource("/images/icons/doctor.png")).getImage());
-        this.currentTela = 8;
-        content.removeAll();
-        content.repaint();
-        content.revalidate();
-        removeActiveItemMenu();
-        pProfissional.setBackground(Color.decode("#F0F0F0"));
-        lProfissional.setForeground(Color.decode("#006634"));
-        content.add(contentProfissional);
-        this.tBuscarProfissional.requestFocusInWindow();
-    }//GEN-LAST:event_pProfissionalMouseClicked
-
-    private void pProfissionalMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pProfissionalMouseEntered
-        if(this.currentTela != 8) {
-           pProfissional.setBackground(Color.decode("#F0F0F0"));
-           lProfissional.setForeground(Color.decode("#006634"));
-        }
-    }//GEN-LAST:event_pProfissionalMouseEntered
-
-    private void pProfissionalMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pProfissionalMouseExited
-        if(this.currentTela != 8) {
-           pProfissional.setBackground(Color.decode("#FFFFFF"));
-           lProfissional.setForeground(Color.decode("#000000"));
-        }
-    }//GEN-LAST:event_pProfissionalMouseExited
-
-    private void bListarEspecialidadesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bListarEspecialidadesMouseClicked
-        Especialidades tela = new Especialidades();
-        tela.setVisible(true);
-    }//GEN-LAST:event_bListarEspecialidadesMouseClicked
-
-    private void bListarEspecialidadesMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bListarEspecialidadesMouseEntered
-        bListarEspecialidades.setBackground(Color.decode("#008542"));
-    }//GEN-LAST:event_bListarEspecialidadesMouseEntered
-
-    private void bListarEspecialidadesMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bListarEspecialidadesMouseExited
-        bListarEspecialidades.setBackground(Color.decode("#006634"));
-    }//GEN-LAST:event_bListarEspecialidadesMouseExited
-
-    private void pProcedimentoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pProcedimentoMouseClicked
-        scrollPanelProcedimento.getViewport().setBackground(Color.WHITE);
-        ProcedimentoController pc = new ProcedimentoController();
-        List<Procedimento> profissionais = pc.procedimentos();
-        if(profissionais!=null)
-            tableModelProcedimentos.addLista(profissionais);
-        tableProcedimentos.setModel(tableModelProcedimentos);
-        // Change column size
-        tableProcedimentos.getColumnModel().getColumn(0).setPreferredWidth(5);
-        bNovoProcedimento.setModel(new FixedButtonModel());
-        bNovoProcedimento.setBorder(BorderFactory.createEtchedBorder(0));
-        bEditarProcedimento.setModel(new FixedButtonModel());
-        bEditarProcedimento.setBorder(BorderFactory.createEtchedBorder(0));
-        bBuscarProcedimento.setModel(new FixedButtonModel());
-        bBuscarProcedimento.setBorder(BorderFactory.createEtchedBorder(0));
-        bRemoverProcedimento.setModel(new FixedButtonModel());
-        bRemoverProcedimento.setBorder(BorderFactory.createEtchedBorder(0));
-        this.setTitle("Gerenciamento de Procedimentos");
-        this.setIconImage(new ImageIcon(getClass().getResource("/images/icons/list.png")).getImage());
-        this.currentTela = 9;
-        content.removeAll();
-        content.repaint();
-        content.revalidate();
-        removeActiveItemMenu();
-        pProcedimento.setBackground(Color.decode("#F0F0F0"));
-        lProcedimento.setForeground(Color.decode("#006634"));
-        content.add(contentProcedimento);
-        this.tBuscarProcedimento.requestFocusInWindow();
-    }//GEN-LAST:event_pProcedimentoMouseClicked
-
-    private void pProcedimentoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pProcedimentoMouseEntered
-        if(this.currentTela != 9) {
-           pProcedimento.setBackground(Color.decode("#F0F0F0"));
-           lProcedimento.setForeground(Color.decode("#006634"));
-        }
-    }//GEN-LAST:event_pProcedimentoMouseEntered
-
-    private void pProcedimentoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pProcedimentoMouseExited
-        if(this.currentTela != 9) {
-           pProcedimento.setBackground(Color.decode("#FFFFFF"));
-           lProcedimento.setForeground(Color.decode("#000000"));
-        }
-    }//GEN-LAST:event_pProcedimentoMouseExited
-
-    private void bRemoverProcedimentoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bRemoverProcedimentoMouseClicked
-        int row = this.tableProcedimentos.getSelectedRow();
-        if (row>-1) {
-            Object[] options = { "Sim", "Não" };
-            int resp = JOptionPane.showOptionDialog(null, "Deseja realmente excluir este procedimento?", "Informação", JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE , null, options, options[0]);
-            if (resp == 0) {
-                Procedimento p = this.tableModelProcedimentos.getProcedimento(row);
-                ProcedimentoController pc = new ProcedimentoController();
-                if(pc.remover(p)) {
-                    List<Procedimento> profissionais = pc.procedimentos();
-                    if(profissionais!=null)
-                        tableModelProcedimentos.addLista(profissionais);
-                } else {
-                    JOptionPane.showMessageDialog(null, "Ocorreu um erro ao realizar a exclusão do procedimento. Tente novamente mais tarde ou contate o Administrador do sistema", "Atenção", JOptionPane.ERROR_MESSAGE);
-                }
-            }
-        } else {
-            JOptionPane.showMessageDialog(null, "Por favor, selecione um agendamento da tabela.", "Atenção", JOptionPane.INFORMATION_MESSAGE);
-        }
-    }//GEN-LAST:event_bRemoverProcedimentoMouseClicked
-
-    private void bRemoverProcedimentoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bRemoverProcedimentoMouseEntered
-        bRemoverProcedimento.setBackground(Color.decode("#008542"));
-    }//GEN-LAST:event_bRemoverProcedimentoMouseEntered
-
-    private void bRemoverProcedimentoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bRemoverProcedimentoMouseExited
-        bRemoverProcedimento.setBackground(Color.decode("#006634"));
-    }//GEN-LAST:event_bRemoverProcedimentoMouseExited
-
-    private void bBuscarPacienteKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_bBuscarPacienteKeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
-            this.searchPaciente();
-        }
-    }//GEN-LAST:event_bBuscarPacienteKeyPressed
-
-    private void bBuscarPacienteFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_bBuscarPacienteFocusGained
-        bBuscarPaciente.setBackground(Color.decode("#008542"));
-    }//GEN-LAST:event_bBuscarPacienteFocusGained
-
-    private void bBuscarPacienteFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_bBuscarPacienteFocusLost
-        bBuscarPaciente.setBackground(Color.decode("#006634"));
-    }//GEN-LAST:event_bBuscarPacienteFocusLost
-
-    private void bBuscarProcedimentoFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_bBuscarProcedimentoFocusGained
-        bBuscarProcedimento.setBackground(Color.decode("#008542"));
-    }//GEN-LAST:event_bBuscarProcedimentoFocusGained
-
-    private void bBuscarProcedimentoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_bBuscarProcedimentoFocusLost
-        bBuscarProcedimento.setBackground(Color.decode("#006634"));
-    }//GEN-LAST:event_bBuscarProcedimentoFocusLost
-
-    private void bBuscarProcedimentoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_bBuscarProcedimentoKeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
-            this.searchProcedimento();
-        }
-    }//GEN-LAST:event_bBuscarProcedimentoKeyPressed
-
-    private void bBuscarProfissionalFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_bBuscarProfissionalFocusGained
-        bBuscarProfissional.setBackground(Color.decode("#008542"));
-    }//GEN-LAST:event_bBuscarProfissionalFocusGained
-
-    private void bBuscarProfissionalFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_bBuscarProfissionalFocusLost
-         bBuscarProfissional.setBackground(Color.decode("#006634"));
-    }//GEN-LAST:event_bBuscarProfissionalFocusLost
-
-    private void bBuscarProfissionalKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_bBuscarProfissionalKeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
-            this.searchProfissional();
-        }
-    }//GEN-LAST:event_bBuscarProfissionalKeyPressed
-
-    private void bBuscarAvaliacaoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_bBuscarAvaliacaoKeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
-            this.searchAvaliacao();
-        }
-    }//GEN-LAST:event_bBuscarAvaliacaoKeyPressed
-
-    private void bBuscarAvaliacaoFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_bBuscarAvaliacaoFocusGained
-        bBuscarAvaliacao.setBackground(Color.decode("#008542"));
-    }//GEN-LAST:event_bBuscarAvaliacaoFocusGained
-
-    private void bBuscarAvaliacaoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_bBuscarAvaliacaoFocusLost
-        bBuscarAvaliacao.setBackground(Color.decode("#006634"));
-    }//GEN-LAST:event_bBuscarAvaliacaoFocusLost
-
-    private void bBuscarUsuarioFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_bBuscarUsuarioFocusGained
-        bBuscarUsuario.setBackground(Color.decode("#008542"));
-    }//GEN-LAST:event_bBuscarUsuarioFocusGained
-
-    private void bBuscarUsuarioFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_bBuscarUsuarioFocusLost
-        bBuscarUsuario.setBackground(Color.decode("#006634"));
-    }//GEN-LAST:event_bBuscarUsuarioFocusLost
-
-    private void bBuscarUsuarioKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_bBuscarUsuarioKeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
-            this.searchUsuario();
-        }
-    }//GEN-LAST:event_bBuscarUsuarioKeyPressed
-
-    private void bBuscarConsultaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_bBuscarConsultaFocusGained
-        bBuscarConsulta.setBackground(Color.decode("#008542"));
-    }//GEN-LAST:event_bBuscarConsultaFocusGained
-
-    private void bBuscarConsultaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_bBuscarConsultaFocusLost
-        bBuscarConsulta.setBackground(Color.decode("#006634"));
-    }//GEN-LAST:event_bBuscarConsultaFocusLost
-
-    private void bBuscarConsultaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_bBuscarConsultaKeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
-            this.searchConsulta();
-        }
-    }//GEN-LAST:event_bBuscarConsultaKeyPressed
-
-    private void bNovoAvaliacaoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bNovoAvaliacaoMouseClicked
-        NovoAvaliacao tela = new NovoAvaliacao(this);
-        tela.setVisible(true);
-    }//GEN-LAST:event_bNovoAvaliacaoMouseClicked
-
-    private void bNovoAvaliacaoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bNovoAvaliacaoMouseEntered
-        bNovoAvaliacao.setBackground(Color.decode("#008542"));
-    }//GEN-LAST:event_bNovoAvaliacaoMouseEntered
-
-    private void bNovoAvaliacaoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bNovoAvaliacaoMouseExited
-        bNovoAvaliacao.setBackground(Color.decode("#006634"));
-    }//GEN-LAST:event_bNovoAvaliacaoMouseExited
+    private void bEditarAvaliacaoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bEditarAvaliacaoMouseEntered
+        bEditarAvaliacao.setBackground(Color.decode("#008542"));
+    }//GEN-LAST:event_bEditarAvaliacaoMouseEntered
 
     private void bEditarAvaliacaoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bEditarAvaliacaoMouseClicked
         int row = this.tableAvaliacoes.getSelectedRow();
@@ -3029,13 +2528,526 @@ public class Main extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_bEditarAvaliacaoMouseClicked
 
-    private void bEditarAvaliacaoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bEditarAvaliacaoMouseEntered
-        bEditarAvaliacao.setBackground(Color.decode("#008542"));
-    }//GEN-LAST:event_bEditarAvaliacaoMouseEntered
+    private void bNovoAvaliacaoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bNovoAvaliacaoMouseExited
+        bNovoAvaliacao.setBackground(Color.decode("#006634"));
+    }//GEN-LAST:event_bNovoAvaliacaoMouseExited
 
-    private void bEditarAvaliacaoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bEditarAvaliacaoMouseExited
-        bEditarAvaliacao.setBackground(Color.decode("#006634"));
-    }//GEN-LAST:event_bEditarAvaliacaoMouseExited
+    private void bNovoAvaliacaoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bNovoAvaliacaoMouseEntered
+        bNovoAvaliacao.setBackground(Color.decode("#008542"));
+    }//GEN-LAST:event_bNovoAvaliacaoMouseEntered
+
+    private void bNovoAvaliacaoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bNovoAvaliacaoMouseClicked
+        NovoAvaliacao tela = new NovoAvaliacao(this);
+        tela.setVisible(true);
+    }//GEN-LAST:event_bNovoAvaliacaoMouseClicked
+
+    private void bBuscarAvaliacaoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_bBuscarAvaliacaoKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            this.searchAvaliacao();
+        }
+    }//GEN-LAST:event_bBuscarAvaliacaoKeyPressed
+
+    private void bBuscarAvaliacaoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bBuscarAvaliacaoMouseExited
+        bBuscarAvaliacao.setBackground(Color.decode("#006634"));
+    }//GEN-LAST:event_bBuscarAvaliacaoMouseExited
+
+    private void bBuscarAvaliacaoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bBuscarAvaliacaoMouseEntered
+        bBuscarAvaliacao.setBackground(Color.decode("#008542"));
+    }//GEN-LAST:event_bBuscarAvaliacaoMouseEntered
+
+    private void bBuscarAvaliacaoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bBuscarAvaliacaoMouseClicked
+        this.searchAvaliacao();
+    }//GEN-LAST:event_bBuscarAvaliacaoMouseClicked
+
+    private void bBuscarAvaliacaoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_bBuscarAvaliacaoFocusLost
+        bBuscarAvaliacao.setBackground(Color.decode("#006634"));
+    }//GEN-LAST:event_bBuscarAvaliacaoFocusLost
+
+    private void bBuscarAvaliacaoFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_bBuscarAvaliacaoFocusGained
+        bBuscarAvaliacao.setBackground(Color.decode("#008542"));
+    }//GEN-LAST:event_bBuscarAvaliacaoFocusGained
+
+    private void bHistoricoConsultaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bHistoricoConsultaMouseExited
+        bHistoricoConsulta.setBackground(Color.decode("#006634"));
+    }//GEN-LAST:event_bHistoricoConsultaMouseExited
+
+    private void bHistoricoConsultaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bHistoricoConsultaMouseEntered
+        bHistoricoConsulta.setBackground(Color.decode("#008542"));
+    }//GEN-LAST:event_bHistoricoConsultaMouseEntered
+
+    private void bHistoricoConsultaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bHistoricoConsultaMouseClicked
+        int row = tableConsultas.getSelectedRow();
+        if (row > -1) {
+            Consulta f = tableModelConsultas.getConsulta(row);
+            HistoricoAtendimento hf = new HistoricoAtendimento(this,f);
+            hf.setVisible(true);
+        } else {
+            JOptionPane.showMessageDialog(null, "Por favor, selecione uma consulta da tabela.", "Atenção", JOptionPane.INFORMATION_MESSAGE);
+        }
+    }//GEN-LAST:event_bHistoricoConsultaMouseClicked
+
+    private void bBuscarConsultaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_bBuscarConsultaKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            this.searchConsulta();
+        }
+    }//GEN-LAST:event_bBuscarConsultaKeyPressed
+
+    private void bBuscarConsultaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bBuscarConsultaMouseExited
+        bBuscarConsulta.setBackground(Color.decode("#006634"));
+    }//GEN-LAST:event_bBuscarConsultaMouseExited
+
+    private void bBuscarConsultaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bBuscarConsultaMouseEntered
+        bBuscarConsulta.setBackground(Color.decode("#008542"));
+    }//GEN-LAST:event_bBuscarConsultaMouseEntered
+
+    private void bBuscarConsultaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bBuscarConsultaMouseClicked
+        this.searchConsulta();
+    }//GEN-LAST:event_bBuscarConsultaMouseClicked
+
+    private void bBuscarConsultaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_bBuscarConsultaFocusLost
+        bBuscarConsulta.setBackground(Color.decode("#006634"));
+    }//GEN-LAST:event_bBuscarConsultaFocusLost
+
+    private void bBuscarConsultaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_bBuscarConsultaFocusGained
+        bBuscarConsulta.setBackground(Color.decode("#008542"));
+    }//GEN-LAST:event_bBuscarConsultaFocusGained
+
+    private void bEditarConsultaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bEditarConsultaMouseExited
+        bEditarConsulta.setBackground(Color.decode("#006634"));
+    }//GEN-LAST:event_bEditarConsultaMouseExited
+
+    private void bEditarConsultaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bEditarConsultaMouseEntered
+        bEditarConsulta.setBackground(Color.decode("#008542"));
+    }//GEN-LAST:event_bEditarConsultaMouseEntered
+
+    private void bEditarConsultaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bEditarConsultaMouseClicked
+        int row = this.tableConsultas.getSelectedRow();
+        if(row > -1){
+            Consulta f = this.tableModelConsultas.getConsulta(row);
+            EditarConsulta ef = new EditarConsulta(this, f);
+            ef.setVisible(true);
+        } else {
+            JOptionPane.showMessageDialog(null, "Por favor, selecione uma consulta da tabela.", "Atenção", JOptionPane.INFORMATION_MESSAGE);
+        }
+    }//GEN-LAST:event_bEditarConsultaMouseClicked
+
+    private void bNovoConsultaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bNovoConsultaMouseExited
+        bNovoConsulta.setBackground(Color.decode("#006634"));
+    }//GEN-LAST:event_bNovoConsultaMouseExited
+
+    private void bNovoConsultaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bNovoConsultaMouseEntered
+        bNovoConsulta.setBackground(Color.decode("#008542"));
+    }//GEN-LAST:event_bNovoConsultaMouseEntered
+
+    private void bNovoConsultaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bNovoConsultaMouseClicked
+        NovoConsulta nf = new NovoConsulta(this);
+        nf.setVisible(true);
+    }//GEN-LAST:event_bNovoConsultaMouseClicked
+
+    private void bBuscarUsuarioKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_bBuscarUsuarioKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            this.searchUsuario();
+        }
+    }//GEN-LAST:event_bBuscarUsuarioKeyPressed
+
+    private void bBuscarUsuarioMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bBuscarUsuarioMouseExited
+        bBuscarUsuario.setBackground(Color.decode("#006634"));
+    }//GEN-LAST:event_bBuscarUsuarioMouseExited
+
+    private void bBuscarUsuarioMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bBuscarUsuarioMouseEntered
+        bBuscarUsuario.setBackground(Color.decode("#008542"));
+    }//GEN-LAST:event_bBuscarUsuarioMouseEntered
+
+    private void bBuscarUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bBuscarUsuarioMouseClicked
+        this.searchUsuario();
+    }//GEN-LAST:event_bBuscarUsuarioMouseClicked
+
+    private void bBuscarUsuarioFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_bBuscarUsuarioFocusLost
+        bBuscarUsuario.setBackground(Color.decode("#006634"));
+    }//GEN-LAST:event_bBuscarUsuarioFocusLost
+
+    private void bBuscarUsuarioFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_bBuscarUsuarioFocusGained
+        bBuscarUsuario.setBackground(Color.decode("#008542"));
+    }//GEN-LAST:event_bBuscarUsuarioFocusGained
+
+    private void bEditarUsuarioMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bEditarUsuarioMouseExited
+        bEditarUsuario.setBackground(Color.decode("#006634"));
+    }//GEN-LAST:event_bEditarUsuarioMouseExited
+
+    private void bEditarUsuarioMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bEditarUsuarioMouseEntered
+        bEditarUsuario.setBackground(Color.decode("#008542"));
+    }//GEN-LAST:event_bEditarUsuarioMouseEntered
+
+    private void bEditarUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bEditarUsuarioMouseClicked
+        int row = tableUsuarios.getSelectedRow();
+        if(row > -1) {
+            Usuario u = tableModelUsuario.getUsuario(row);
+            EditarUsuario editar = new EditarUsuario(u, this);
+            editar.setVisible(true);
+        } else {
+            JOptionPane.showMessageDialog(null, "Por favor, selecione um usuário da tabela.", "Atenção", JOptionPane.INFORMATION_MESSAGE);
+        }
+    }//GEN-LAST:event_bEditarUsuarioMouseClicked
+
+    private void bNovoUsuarioMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bNovoUsuarioMouseExited
+        bNovoUsuario.setBackground(Color.decode("#006634"));
+    }//GEN-LAST:event_bNovoUsuarioMouseExited
+
+    private void bNovoUsuarioMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bNovoUsuarioMouseEntered
+        bNovoUsuario.setBackground(Color.decode("#008542"));
+    }//GEN-LAST:event_bNovoUsuarioMouseEntered
+
+    private void bNovoUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bNovoUsuarioMouseClicked
+        NovoUsuario nu = new NovoUsuario(this);
+        nu.setVisible(true);
+    }//GEN-LAST:event_bNovoUsuarioMouseClicked
+
+    private void bListarEspecialidadesMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bListarEspecialidadesMouseExited
+        bListarEspecialidades.setBackground(Color.decode("#006634"));
+    }//GEN-LAST:event_bListarEspecialidadesMouseExited
+
+    private void bListarEspecialidadesMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bListarEspecialidadesMouseEntered
+        bListarEspecialidades.setBackground(Color.decode("#008542"));
+    }//GEN-LAST:event_bListarEspecialidadesMouseEntered
+
+    private void bListarEspecialidadesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bListarEspecialidadesMouseClicked
+        Especialidades tela = new Especialidades();
+        tela.setVisible(true);
+    }//GEN-LAST:event_bListarEspecialidadesMouseClicked
+
+    private void bBuscarProfissionalKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_bBuscarProfissionalKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            this.searchProfissional();
+        }
+    }//GEN-LAST:event_bBuscarProfissionalKeyPressed
+
+    private void bBuscarProfissionalMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bBuscarProfissionalMouseExited
+        bBuscarProfissional.setBackground(Color.decode("#006634"));
+    }//GEN-LAST:event_bBuscarProfissionalMouseExited
+
+    private void bBuscarProfissionalMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bBuscarProfissionalMouseEntered
+        bBuscarProfissional.setBackground(Color.decode("#008542"));
+    }//GEN-LAST:event_bBuscarProfissionalMouseEntered
+
+    private void bBuscarProfissionalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bBuscarProfissionalMouseClicked
+        this.searchProfissional();
+    }//GEN-LAST:event_bBuscarProfissionalMouseClicked
+
+    private void bBuscarProfissionalFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_bBuscarProfissionalFocusLost
+        bBuscarProfissional.setBackground(Color.decode("#006634"));
+    }//GEN-LAST:event_bBuscarProfissionalFocusLost
+
+    private void bBuscarProfissionalFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_bBuscarProfissionalFocusGained
+        bBuscarProfissional.setBackground(Color.decode("#008542"));
+    }//GEN-LAST:event_bBuscarProfissionalFocusGained
+
+    private void bEditarProfissionalMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bEditarProfissionalMouseExited
+        bEditarProfissional.setBackground(Color.decode("#006634"));
+    }//GEN-LAST:event_bEditarProfissionalMouseExited
+
+    private void bEditarProfissionalMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bEditarProfissionalMouseEntered
+        bEditarProfissional.setBackground(Color.decode("#008542"));
+    }//GEN-LAST:event_bEditarProfissionalMouseEntered
+
+    private void bEditarProfissionalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bEditarProfissionalMouseClicked
+        int row = tableProfissionais.getSelectedRow();
+        if(row > -1){
+            Profissional f = this.tableModelProfissional.getFisioterapeuta(row);
+            EditarProfissional ef = new EditarProfissional(this,f);
+            ef.setVisible(true);
+        } else {
+            JOptionPane.showMessageDialog(null, "Por favor, selecione um(a) profissional da tabela.", "Atenção", JOptionPane.INFORMATION_MESSAGE);
+        }
+    }//GEN-LAST:event_bEditarProfissionalMouseClicked
+
+    private void bNovoProfissionalMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bNovoProfissionalMouseExited
+        bNovoProfissional.setBackground(Color.decode("#006634"));
+    }//GEN-LAST:event_bNovoProfissionalMouseExited
+
+    private void bNovoProfissionalMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bNovoProfissionalMouseEntered
+        bNovoProfissional.setBackground(Color.decode("#008542"));
+    }//GEN-LAST:event_bNovoProfissionalMouseEntered
+
+    private void bNovoProfissionalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bNovoProfissionalMouseClicked
+        NovoProfissional nf = new NovoProfissional(this);
+        nf.setVisible(true);
+    }//GEN-LAST:event_bNovoProfissionalMouseClicked
+
+    private void bBuscarPacienteKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_bBuscarPacienteKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            this.searchPaciente();
+        }
+    }//GEN-LAST:event_bBuscarPacienteKeyPressed
+
+    private void bBuscarPacienteMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bBuscarPacienteMouseExited
+        bBuscarPaciente.setBackground(Color.decode("#006634"));
+    }//GEN-LAST:event_bBuscarPacienteMouseExited
+
+    private void bBuscarPacienteMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bBuscarPacienteMouseEntered
+        bBuscarPaciente.setBackground(Color.decode("#008542"));
+    }//GEN-LAST:event_bBuscarPacienteMouseEntered
+
+    private void bBuscarPacienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bBuscarPacienteMouseClicked
+        this.searchPaciente();
+    }//GEN-LAST:event_bBuscarPacienteMouseClicked
+
+    private void bBuscarPacienteFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_bBuscarPacienteFocusLost
+        bBuscarPaciente.setBackground(Color.decode("#006634"));
+    }//GEN-LAST:event_bBuscarPacienteFocusLost
+
+    private void bBuscarPacienteFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_bBuscarPacienteFocusGained
+        bBuscarPaciente.setBackground(Color.decode("#008542"));
+    }//GEN-LAST:event_bBuscarPacienteFocusGained
+
+    private void bEditarPacienteMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bEditarPacienteMouseExited
+        bEditarPaciente.setBackground(Color.decode("#006643"));
+    }//GEN-LAST:event_bEditarPacienteMouseExited
+
+    private void bEditarPacienteMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bEditarPacienteMouseEntered
+        bEditarPaciente.setBackground(Color.decode("#008542"));
+    }//GEN-LAST:event_bEditarPacienteMouseEntered
+
+    private void bEditarPacienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bEditarPacienteMouseClicked
+        int row = tablePacientes.getSelectedRow();
+        if(row > -1){
+            Paciente p = this.tableModelPaciente.getPaciente(row);
+            EditarPaciente ep = new EditarPaciente(this, p);
+            ep.setVisible(true);
+        } else {
+            JOptionPane.showMessageDialog(null, "Por favor, selecione um paciente da tabela.", "Atenção", JOptionPane.INFORMATION_MESSAGE);
+        }
+    }//GEN-LAST:event_bEditarPacienteMouseClicked
+
+    private void bNovoPacienteMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bNovoPacienteMouseExited
+        bNovoPaciente.setBackground(Color.decode("#006634"));
+    }//GEN-LAST:event_bNovoPacienteMouseExited
+
+    private void bNovoPacienteMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bNovoPacienteMouseEntered
+        bNovoPaciente.setBackground(Color.decode("#008542"));
+    }//GEN-LAST:event_bNovoPacienteMouseEntered
+
+    private void bNovoPacienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bNovoPacienteMouseClicked
+        NovoPaciente np = new NovoPaciente(this);
+        np.setVisible(true);
+    }//GEN-LAST:event_bNovoPacienteMouseClicked
+
+    private void scrollPanelAgendaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_scrollPanelAgendaMouseClicked
+        
+    }//GEN-LAST:event_scrollPanelAgendaMouseClicked
+
+    private void tableAgendaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tableAgendaMouseClicked
+        if(evt.getClickCount()==2){
+            editar();
+        }
+    }//GEN-LAST:event_tableAgendaMouseClicked
+
+    private void bRemoverAgendaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bRemoverAgendaMouseEntered
+        bRemoverAgenda.setBackground(Color.decode("#008542"));
+    }//GEN-LAST:event_bRemoverAgendaMouseEntered
+
+    private void bRemoverAgendaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bRemoverAgendaMouseExited
+        bRemoverAgenda.setBackground(Color.decode("#006634"));
+    }//GEN-LAST:event_bRemoverAgendaMouseExited
+
+    private void bRemoverAgendaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bRemoverAgendaMouseClicked
+        int row = this.tableAgenda.getSelectedRow();
+        int column = this.tableAgenda.getSelectedColumn();
+        if(row > -1 && column > -1) {
+            Agenda a = this.tableModelAgenda.getAgendamento(row,column);
+            if (a.getConsulta() == null) {
+                JOptionPane.showMessageDialog(null, "Por favor, selecione um agendamento da tabela.", "Atenção", JOptionPane.INFORMATION_MESSAGE);
+            } else {
+                Object[] options = { "Sim", "Não" };
+                int resp = JOptionPane.showOptionDialog(null, "Deseja realmente excluir este agendamento?", "Informação", JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE , null, options, options[0]);
+                AgendaController ac = new AgendaController();
+                if (resp == 0) {
+                    if (ac.excluir(a)) {
+                        JOptionPane.showMessageDialog(null, "Agendamento excluído com sucesso", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
+                        if (this.getTDate().getDate() != null) {
+                            List<Horario> lista = ac.agendamentos(Formatacao.date2StringScreen(this.getTDate().getDate()));
+                            if(lista != null) {
+                                this.tableModelAgenda.addLista(lista);
+                                for(int i = 0; i<20; i++)
+                                this.getTableAgenda().setRowHeight(i, 30);
+                                DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
+                                centerRenderer.setHorizontalAlignment( JLabel.CENTER );
+                                this.getTableAgenda().getColumnModel().getColumn(0).setCellRenderer( centerRenderer );
+                                this.getTableAgenda().getColumnModel().getColumn(0).setMinWidth(100);
+                                this.getTableAgenda().getColumnModel().getColumn(0).setMaxWidth(100);
+                            }
+                        }
+                    } else
+                    JOptionPane.showMessageDialog(null, "Ocorreu um erro ao realizar a exclusão do agendamento. Tente novamente mais tarde ou contate o Administrador do sistema", "Atenção", JOptionPane.WARNING_MESSAGE);
+                }
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Por favor, selecione um agendamento da tabela.", "Atenção", JOptionPane.INFORMATION_MESSAGE);
+        }
+    }//GEN-LAST:event_bRemoverAgendaMouseClicked
+
+    private void tDatePropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_tDatePropertyChange
+        if (tDate.getDate() != null) {
+            AgendaController ac = new AgendaController();
+            List<Horario> lista = ac.agendamentos(Formatacao.date2StringScreen(tDate.getDate()));
+            if(lista != null) {
+                this.tableModelAgenda.addLista(lista);
+                for(int i = 0; i<20; i++)
+                this.tableAgenda.setRowHeight(i, 30);
+                DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
+                centerRenderer.setHorizontalAlignment( JLabel.CENTER );
+                this.tableAgenda.getColumnModel().getColumn(0).setCellRenderer( centerRenderer );
+                this.tableAgenda.getColumnModel().getColumn(0).setMinWidth(100);
+                this.tableAgenda.getColumnModel().getColumn(0).setMaxWidth(100);
+            }
+        }
+    }//GEN-LAST:event_tDatePropertyChange
+
+    private void bBuscarAgendaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bBuscarAgendaMouseEntered
+        bBuscarAgenda.setBackground(Color.decode("#008542"));
+    }//GEN-LAST:event_bBuscarAgendaMouseEntered
+
+    private void bBuscarAgendaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bBuscarAgendaMouseExited
+        bBuscarAgenda.setBackground(Color.decode("#006634"));
+    }//GEN-LAST:event_bBuscarAgendaMouseExited
+
+    private void bBuscarAgendaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bBuscarAgendaMouseClicked
+        this.searchAgendamentos();
+    }//GEN-LAST:event_bBuscarAgendaMouseClicked
+
+    private void tBuscarAgendaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tBuscarAgendaKeyPressed
+        if(evt.getKeyCode()==KeyEvent.VK_ENTER){
+            searchAgendamentos();
+        }
+    }//GEN-LAST:event_tBuscarAgendaKeyPressed
+
+    private void bEditarAgendaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bEditarAgendaMouseEntered
+        bEditarAgenda.setBackground(Color.decode("#008542"));
+    }//GEN-LAST:event_bEditarAgendaMouseEntered
+
+    private void bEditarAgendaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bEditarAgendaMouseExited
+        bEditarAgenda.setBackground(Color.decode("#006634"));
+    }//GEN-LAST:event_bEditarAgendaMouseExited
+
+    private void bEditarAgendaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bEditarAgendaMouseClicked
+        editar();
+    }//GEN-LAST:event_bEditarAgendaMouseClicked
+
+    private void bNovoAgendaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bNovoAgendaMouseExited
+        bNovoAgenda.setBackground(Color.decode("#006634"));
+    }//GEN-LAST:event_bNovoAgendaMouseExited
+
+    private void bNovoAgendaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bNovoAgendaMouseEntered
+        bNovoAgenda.setBackground(Color.decode("#008542"));
+    }//GEN-LAST:event_bNovoAgendaMouseEntered
+
+    private void bNovoAgendaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bNovoAgendaMouseClicked
+        int row = this.tableAgenda.getSelectedRow();
+        int column = this.tableAgenda.getSelectedColumn();
+        if (row >=0  && column > 0) {
+            Agenda a = this.tableModelAgenda.getAgendamento(row, column);
+            String dateTime = Formatacao.date2StringScreen(tDate.getDate()) + " " + Formatacao.time2String(horarios.get(row).getHora());
+            a.setDataAgendamento(new java.sql.Timestamp(Formatacao.string2DateTime(dateTime).getTime()));
+            if (a.getConsulta() != null) {
+                JOptionPane.showMessageDialog(null, "Por favor, selecione um horário disponível.", "Atenção", JOptionPane.INFORMATION_MESSAGE);
+            } else {
+                NovoAgendamento na = new NovoAgendamento(this, a);
+                na.setVisible(true);
+            }
+        }  else {
+            JOptionPane.showMessageDialog(null, "Por favor, selecione um horário.", "Atenção", JOptionPane.INFORMATION_MESSAGE);
+        }
+    }//GEN-LAST:event_bNovoAgendaMouseClicked
+
+    private void bBuscarProcedimentoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_bBuscarProcedimentoKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            this.searchProcedimento();
+        }
+    }//GEN-LAST:event_bBuscarProcedimentoKeyPressed
+
+    private void bBuscarProcedimentoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bBuscarProcedimentoMouseEntered
+        bBuscarProcedimento.setBackground(Color.decode("#008542"));
+    }//GEN-LAST:event_bBuscarProcedimentoMouseEntered
+
+    private void bBuscarProcedimentoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bBuscarProcedimentoMouseExited
+        bBuscarProcedimento.setBackground(Color.decode("#006634"));
+    }//GEN-LAST:event_bBuscarProcedimentoMouseExited
+
+    private void bBuscarProcedimentoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bBuscarProcedimentoMouseClicked
+        this.searchProcedimento();
+    }//GEN-LAST:event_bBuscarProcedimentoMouseClicked
+
+    private void bBuscarProcedimentoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_bBuscarProcedimentoFocusLost
+        bBuscarProcedimento.setBackground(Color.decode("#006634"));
+    }//GEN-LAST:event_bBuscarProcedimentoFocusLost
+
+    private void bBuscarProcedimentoFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_bBuscarProcedimentoFocusGained
+        bBuscarProcedimento.setBackground(Color.decode("#008542"));
+    }//GEN-LAST:event_bBuscarProcedimentoFocusGained
+
+    private void bRemoverProcedimentoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bRemoverProcedimentoMouseEntered
+        bRemoverProcedimento.setBackground(Color.decode("#008542"));
+    }//GEN-LAST:event_bRemoverProcedimentoMouseEntered
+
+    private void bRemoverProcedimentoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bRemoverProcedimentoMouseExited
+        bRemoverProcedimento.setBackground(Color.decode("#006634"));
+    }//GEN-LAST:event_bRemoverProcedimentoMouseExited
+
+    private void bRemoverProcedimentoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bRemoverProcedimentoMouseClicked
+        int row = this.tableProcedimentos.getSelectedRow();
+        if (row>-1) {
+            Object[] options = { "Sim", "Não" };
+            int resp = JOptionPane.showOptionDialog(null, "Deseja realmente excluir este procedimento?", "Informação", JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE , null, options, options[0]);
+            if (resp == 0) {
+                Procedimento p = this.tableModelProcedimentos.getProcedimento(row);
+                ProcedimentoController pc = new ProcedimentoController();
+                if(pc.remover(p)) {
+                    List<Procedimento> profissionais = pc.procedimentos();
+                    if(profissionais!=null)
+                    tableModelProcedimentos.addLista(profissionais);
+                } else {
+                    JOptionPane.showMessageDialog(null, "Ocorreu um erro ao realizar a exclusão do procedimento. Tente novamente mais tarde ou contate o Administrador do sistema", "Atenção", JOptionPane.ERROR_MESSAGE);
+                }
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Por favor, selecione um agendamento da tabela.", "Atenção", JOptionPane.INFORMATION_MESSAGE);
+        }
+    }//GEN-LAST:event_bRemoverProcedimentoMouseClicked
+
+    private void bEditarProcedimentoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bEditarProcedimentoMouseEntered
+        bEditarProcedimento.setBackground(Color.decode("#008542"));
+    }//GEN-LAST:event_bEditarProcedimentoMouseEntered
+
+    private void bEditarProcedimentoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bEditarProcedimentoMouseExited
+        bEditarProcedimento.setBackground(Color.decode("#006634"));
+    }//GEN-LAST:event_bEditarProcedimentoMouseExited
+
+    private void bEditarProcedimentoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bEditarProcedimentoMouseClicked
+        int row = this.tableProcedimentos.getSelectedRow();
+        if(row > -1){
+            Procedimento p = this.tableModelProcedimentos.getProcedimento(row);
+            if (p != null) {
+                EditarProcedimento ea = new EditarProcedimento(this, p);
+                ea.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Por favor, selecione um Procedimento da tabela.", "Atenção", JOptionPane.INFORMATION_MESSAGE);
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Por favor, selecione um Procedimento da tabela.", "Atenção", JOptionPane.INFORMATION_MESSAGE);
+        }
+    }//GEN-LAST:event_bEditarProcedimentoMouseClicked
+
+    private void bNovoProcedimentoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bNovoProcedimentoMouseEntered
+        bNovoProcedimento.setBackground(Color.decode("#008542"));
+    }//GEN-LAST:event_bNovoProcedimentoMouseEntered
+
+    private void bNovoProcedimentoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bNovoProcedimentoMouseExited
+        bNovoProcedimento.setBackground(Color.decode("#006634"));
+    }//GEN-LAST:event_bNovoProcedimentoMouseExited
+
+    private void bNovoProcedimentoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bNovoProcedimentoMouseClicked
+        NovoProcedimento np = new NovoProcedimento(this);
+        np.setVisible(true);
+    }//GEN-LAST:event_bNovoProcedimentoMouseClicked
 
     /**
      * @param args the command line arguments
@@ -3370,4 +3382,21 @@ public class Main extends javax.swing.JFrame {
         this.tBuscarAgenda.requestFocusInWindow();
         bBuscarAgenda.setBackground(Color.decode("#008542"));
     }
+    
+    private void editar(){
+        int row = this.tableAgenda.getSelectedRow();
+        int column = this.tableAgenda.getSelectedColumn();
+        if(row > -1 && column > -1){
+            Agenda a = this.tableModelAgenda.getAgendamento(row, column);
+            if (a.getConsulta() != null) {
+                EditarAgendamento ea = new EditarAgendamento(this, a);
+                ea.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Por favor, selecione um agendamento da tabela.", "Atenção", JOptionPane.INFORMATION_MESSAGE);
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Por favor, selecione um agendamento da tabela.", "Atenção", JOptionPane.INFORMATION_MESSAGE);
+        }
+    }
+    
 }

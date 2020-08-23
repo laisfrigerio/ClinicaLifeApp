@@ -94,7 +94,7 @@ public class BuscarPaciente extends javax.swing.JFrame {
         bOkPaciente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons/checked.png"))); // NOI18N
         bOkPaciente.setText("Ok");
         bOkPaciente.setBorder(null);
-        bOkPaciente.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bOkPaciente.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         bOkPaciente.setDoubleBuffered(true);
         bOkPaciente.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
@@ -122,7 +122,7 @@ public class BuscarPaciente extends javax.swing.JFrame {
         bCancelarPaciente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons/error.png"))); // NOI18N
         bCancelarPaciente.setText("Cancelar");
         bCancelarPaciente.setBorder(null);
-        bCancelarPaciente.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bCancelarPaciente.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         bCancelarPaciente.setDoubleBuffered(true);
         bCancelarPaciente.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
@@ -155,7 +155,7 @@ public class BuscarPaciente extends javax.swing.JFrame {
         tBuscarPaciente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons/search.png"))); // NOI18N
         tBuscarPaciente.setText("Pesquisar");
         tBuscarPaciente.setBorder(null);
-        tBuscarPaciente.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        tBuscarPaciente.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         tBuscarPaciente.setDoubleBuffered(true);
         tBuscarPaciente.setFocusPainted(false);
         tBuscarPaciente.addFocusListener(new java.awt.event.FocusAdapter() {

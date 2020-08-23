@@ -110,12 +110,15 @@ public class Login extends javax.swing.JFrame {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 tloginKeyTyped(evt);
             }
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                tloginKeyPressed(evt);
+            }
         });
         loginPanel.add(tlogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 180, 263, -1));
 
         bottao.setActionCommand("button");
         bottao.setBackground(new java.awt.Color(0, 102, 52));
-        bottao.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bottao.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         bottao.setForeground(new java.awt.Color(255, 255, 255));
         bottao.setLabel("Acessar");
         bottao.setName("Acessar"); // NOI18N
@@ -147,6 +150,11 @@ public class Login extends javax.swing.JFrame {
             }
             public void focusLost(java.awt.event.FocusEvent evt) {
                 tpasswordFocusLost(evt);
+            }
+        });
+        tpassword.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                tpasswordKeyPressed(evt);
             }
         });
         loginPanel.add(tpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 220, 260, 20));
@@ -264,6 +272,18 @@ public class Login extends javax.swing.JFrame {
            this.doLogin();
         }
     }//GEN-LAST:event_bottaoKeyPressed
+
+    private void tloginKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tloginKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+           this.doLogin();
+        }
+    }//GEN-LAST:event_tloginKeyPressed
+
+    private void tpasswordKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tpasswordKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+           this.doLogin();
+        }
+    }//GEN-LAST:event_tpasswordKeyPressed
 
     /**
      * @param args the command line arguments
